@@ -5,6 +5,28 @@ import React from "react";
 import Logo from "../../../public/images/logo.png";
 import SmallScreenMenu from "@/components/SmallScreenMenu";
 import Cart from "../svg/Cart";
+import HeaderLink from "./HeaderLink";
+
+const Links = [
+  {
+    name:"Home",
+    href:"/"
+  },
+  {
+    name:"Shop",
+    href:"/"
+  },
+  {
+    name:"Contact",
+    href:"/contact"
+  },
+  {
+    name:"Login",
+    href:"/login"
+  },
+  
+
+]
 
 const Header = () => {
   return (
@@ -17,21 +39,12 @@ const Header = () => {
         <div className="flex gap-2 items-center ">
 
           <div className="flex gap-2 max-md:hidden" >
-            <Link className="hover:text-zinc-400 transition-1" href="/">
-              Home
-            </Link>
 
-            <Link className="hover:text-zinc-400 transition-1" href="/">
-              Shop
-            </Link>
-
-            <Link className="hover:text-zinc-400 transition-1" href="/contact">
-              Contact
-            </Link>
-
-            <Link className="hover:text-zinc-400 transition-1" href="/login">
-              Login
-            </Link>
+            {Links.map((items,i)=>(
+              <HeaderLink key={i} name={items.name} href={items.href} />
+            ))}
+            
+            
 
           </div>
 
@@ -47,7 +60,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <SmallScreenMenu />
+          <SmallScreenMenu links={Links} />
         </div>
       </div>
     </>

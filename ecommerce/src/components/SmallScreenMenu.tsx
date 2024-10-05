@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 
-import Link from "next/link";
-
 import Image from "next/image";
 import Logo from "../../public/images/logo.png";
 import HamburgerIcon from "../app/svg/HamburgerIcon";
@@ -12,8 +10,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import { AnimatePresence, motion } from "framer-motion";
+import HeaderLink from "@/app/_layout/HeaderLink";
 
-const SmallScreenMenu = () => {
+type Props = {
+  links: { name: string; href: string }[]; //we have to specify the type and mention it is an array as well.
+}
+
+const SmallScreenMenu = ({links}:Props) => {
   const [menuBox, setMenuBox] = useState(true);
 
   return (
@@ -58,21 +61,12 @@ const SmallScreenMenu = () => {
                 <Image alt="logo" src={Logo} className="w-8" />
               </div>
 
-              <Link className="hover:text-zinc-400 transition-1" href="/">
-                Home
-              </Link>
+             
+             {links.map((items,i)=>(
+              <HeaderLink key={i} name={items.name} href={items.href} />
+             ))}
 
-              <Link className="hover:text-zinc-400 transition-1" href="/">
-                Shop
-              </Link>
-
-              <Link className="hover:text-zinc-400 transition-1" href="/">
-                Contact
-              </Link>
-
-              <Link className="hover:text-zinc-400 transition-1" href="/">
-                Login
-              </Link>
+             
             </motion.div>
           </div>
         )}
