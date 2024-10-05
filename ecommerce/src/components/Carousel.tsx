@@ -89,6 +89,8 @@ const Carousel = () => {
           className="absolute top-1/2 right-0 size-5 text-white opacity-25  cursor-pointer hover:size-6 hover:opacity-50 pr-3 transition-2 z-10"
         />
 
+        
+
         <div className="relative h-screen w-full bg-black overflow-hidden">
           <AnimatePresence mode="wait">
             {/* 
@@ -144,6 +146,13 @@ const Carousel = () => {
               {gallery!.at(activeImage)?.text.description}
             </h5>
           </motion.div>
+        </div>
+
+        <div className="absolute bottom-2 w-full justify-center flex gap-3">
+          <div className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 0})}></div>
+          <div className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 1})}></div>
+          <div className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 2})}></div>
+          
         </div>
       </div>
     </>

@@ -25,11 +25,11 @@ const Header = () => {
               Shop
             </Link>
 
-            <Link className="hover:text-zinc-400 transition-1" href="/">
+            <Link className="hover:text-zinc-400 transition-1" href="/contact">
               Contact
             </Link>
 
-            <Link className="hover:text-zinc-400 transition-1" href="/">
+            <Link className="hover:text-zinc-400 transition-1" href="/login">
               Login
             </Link>
 
