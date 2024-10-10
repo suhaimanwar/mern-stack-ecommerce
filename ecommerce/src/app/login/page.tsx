@@ -19,7 +19,7 @@ const containerVariants = {
   visible: { opacity: 1, y: 0, transition : { duration: 0.3 } },
 };
 
-const page = () => {
+const Page = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -35,7 +35,7 @@ const page = () => {
 
    
       <motion.div
-        initial="hidden"
+        initial="hidden" 
         animate="visible"
         variants={containerVariants}
         className="relative z-10 bg-white/10 backdrop-blur-md rounded-md p-8 w-full max-w-md mx-auto text-center max-sm:px-5"
@@ -54,6 +54,7 @@ const page = () => {
 
        
         <form className="flex flex-col gap-4" action="">
+          
           <input
             className="rounded-md pl-3 py-3 bg-white/80 w-full text-black outline-none focus:ring-2 focus:ring-white focus:bg-white"
             type="text"
@@ -89,7 +90,7 @@ const page = () => {
       
         <div className="text-white flex justify-center gap-1 mt-4 text-sm">
           <p className="select-none">Don&apos;t have an account?</p>
-          <Link className="font-semibold underline select-none" href="/">
+          <Link className="font-semibold underline select-none" href="/signup">
             Sign Up
           </Link>
         </div>
@@ -98,4 +99,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

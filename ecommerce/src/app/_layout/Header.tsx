@@ -14,7 +14,7 @@ const Links = [
   },
   {
     name:"Shop",
-    href:"/"
+    href:"/shop"
   },
   {
     name:"Contact",
