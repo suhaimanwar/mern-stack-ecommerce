@@ -39,7 +39,7 @@ const {
 });
  
 const submit = async(data:TLoginSchema) => {
-    console.log('submitteddata::::', data.username)
+    // console.log('submitteddata::::', data.username)
 }
 
   return (

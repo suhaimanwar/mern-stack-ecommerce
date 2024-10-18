@@ -15,6 +15,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.1.9",
     "@hookform/resolvers": "^3.9.0",
+    "@mrvautin/react-shoppingcart": "^1.0.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.9.0",
     "next": "14.2.13",

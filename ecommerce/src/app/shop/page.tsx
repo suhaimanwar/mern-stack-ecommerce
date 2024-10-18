@@ -9,6 +9,7 @@ import image2 from "@public/images/carousel (4).png";
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false
 });
 
 // const ShopData = [
@@ -60,7 +61,7 @@ const Shop = async () => {
         <p className="font-bold text-2xl tracking-normal">Shop by category</p>
       </div>
 
-      <div className="grid w-full grid-cols-4 gap-2 mb-1 px-1">
+      <div className="grid w-full grid-cols-4 max-md:grid-cols-1 gap-2 mb-1 px-1">
         {ShopData.map((data: string, i: React.Key | null | undefined) => (
           <ShopCategory key={i} name={data} 
           src={image2}

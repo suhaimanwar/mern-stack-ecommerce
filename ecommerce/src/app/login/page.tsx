@@ -9,22 +9,47 @@ import EyeOff from "../svg/eye-off";
 
 import { motion } from "framer-motion";
 
+import { useForm } from "react-hook-form";
+
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const containerVariants = {
   hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0, transition : { duration: 0.3 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
 const Page = () => {
+  const loginSchema = z.object({
+    username: z.string().min(1, "This field is required."),
+    password: z.string().min(1, "This field is required."),
+  });
+
+  type TLoginSchema = z.infer<typeof loginSchema>;
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<TLoginSchema>({
+    resolver: zodResolver(loginSchema),
+  });
+
+  const submit = async (data: TLoginSchema) => {
+    // console.log("submitteddata::::", data.username);
+  };
+
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="relative flex flex-col items-center justify-center h-screen bg-black/50">
- 
       <Image
         src={Image2}
         fill
@@ -33,9 +58,8 @@ const Page = () => {
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-   
       <motion.div
-        initial="hidden" 
+        initial="hidden"
         animate="visible"
         variants={containerVariants}
         className="relative z-10 bg-white/10 backdrop-blur-md rounded-md p-8 w-full max-w-md mx-auto text-center max-sm:px-5"
@@ -52,17 +76,25 @@ const Page = () => {
           Please enter your details.
         </p>
 
-       
-        <form className="flex flex-col gap-4" action="">
-          
+        <form
+          onSubmit={handleSubmit(submit)}
+          className="flex flex-col gap-4"
+          action=""
+        >
           <input
+            {...register("username")}
             className="rounded-md pl-3 py-3 bg-white/80 w-full text-black outline-none focus:ring-2 focus:ring-white focus:bg-white"
             type="text"
             placeholder="Username"
           />
 
+          {errors.username && (
+            <p className="text-red-500 text-left  mt-1">{`${errors.username.message}`}</p>
+          )}
+
           <div className="relative">
             <input
+              {...register("password")}
               className="rounded-md pl-3 py-3 bg-white/80 w-full text-black outline-none focus:ring-2 focus:ring-white focus:bg-white"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
@@ -79,6 +111,10 @@ const Page = () => {
             </div>
           </div>
 
+          {errors.password && (
+            <p className="text-red-500 text-left  mt-1">{`${errors.password.message}`}</p>
+          )}
+
           <button
             className="bg-white select-none text-black py-2 rounded-lg font-bold hover:bg-black hover:text-white hover:border-white transition-colors duration-300 w-full"
             type="submit"
@@ -87,7 +123,6 @@ const Page = () => {
           </button>
         </form>
 
-      
         <div className="text-white flex justify-center gap-1 mt-4 text-sm">
           <p className="select-none">Don&apos;t have an account?</p>
           <Link className="font-semibold underline select-none" href="/signup">

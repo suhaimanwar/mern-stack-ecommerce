@@ -19,6 +19,7 @@ import { Bebas_Neue } from "next/font/google";
 const bebasNeue = Bebas_Neue({
   weight: '400', // You can specify different weights like '400', '700' based on your design.
   subsets: ['latin'],
+  display: 'swap', adjustFontFallback: false
 });
 
 const gallery = [

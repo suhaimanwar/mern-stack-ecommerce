@@ -4,10 +4,11 @@ import "./globals.css";
 import Header from "./_layout/Header";
 import Footer from "./_layout/Footer";
 import { Montserrat } from "next/font/google";
+import ProviderClient from "./provider/Providers";
 
 
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"], display: 'swap', adjustFontFallback: false});
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -35,12 +36,18 @@ export default function RootLayout({
       <body
         className={montserrat.className  }
       >
+        
+
+        <ProviderClient>
+        
         <Header/>
-      
-
         {children}
-
         <Footer/>
+        
+        </ProviderClient>
+        
+
+
       </body>
     </html>
   );

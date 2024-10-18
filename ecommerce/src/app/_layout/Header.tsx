@@ -7,6 +7,11 @@ import SmallScreenMenu from "@/components/SmallScreenMenu";
 import Cart from "../svg/Cart";
 import HeaderLink from "./HeaderLink";
 
+
+
+import CartNumber from "./CartNumber";
+
+
 const Links = [
   {
     name:"Home",
@@ -29,6 +34,9 @@ const Links = [
 ]
 
 const Header = () => {
+
+
+
   return (
     <>
       <div className="bg-image w-full text-white p-3 flex justify-between  items-center sticky top-0 z-20">
@@ -50,13 +58,13 @@ const Header = () => {
 
          
 
-          <Link href="/">
+          <Link href="/cart">
             <div className="relative mr-3">
               <Cart className="size-[1.5rem] " />
 
-              <p className="absolute -top-2 -right-3 flex items-center justify-center bg-slate-300 p-1 text-black rounded-full size-4 font-bold">
-                1
-              </p>
+              <CartNumber />
+
+              
             </div>
           </Link>
 

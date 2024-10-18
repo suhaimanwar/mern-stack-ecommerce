@@ -19,6 +19,7 @@ import ProductsComponent from "./_components/ProductsComponent";
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false
 });
 
 // const ProductsData = [
@@ -84,7 +85,7 @@ const Page = async ({ params }: { params: { products: string } }) => {
 
   const res = await fetch('https://dummyjson.com/products/category/' + params.products)
   const ProductsData = await res.json()
-  console.log(ProductsData.products)
+  // console.log(ProductsData.products)
 
   const productss = ProductsData.products
 
@@ -129,6 +130,8 @@ const Page = async ({ params }: { params: { products: string } }) => {
         {productss.map((data:any, i:any) => (
           <ProductsComponent
             key={i}
+            id={data.id}
+            params={params.products}
             product={data.title}
             brand={data.brand}
             price={data.price}
