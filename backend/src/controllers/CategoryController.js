@@ -1,5 +1,5 @@
-import { CategoryModel } from "../models/CategoryModel";
-import { serverError } from "../utils/errorHandler";
+import { CategoryModel } from "../models/CategoryModel.js";
+import { serverError } from "../utils/errorHandler.js";
 
 export const createCategory = async (req, res, next) => {
     try {
@@ -59,8 +59,42 @@ export const deleteCategory = async (req, res, next) => {
         
         const categoryToDelete = await CategoryModel.findOne({_id: categoryId})
 
-        
+        categoryToDelete.deletedAt = new Date()
+
+        categoryToDelete.save()
+
+        return res.status(200).json({
+            success: true,
+            message: 'Category Deleted Successfully'
+        })
+
      } catch (error) {
-        
+        next(serverError(error))
     }
+}
+
+export const updateCategory = async (req, res, next) => {
+
+    try {
+        const categoryId = req.params.id;
+
+        const {name, description} = req.body
+
+        const category = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
+
+        category.name= name;
+
+        category.description = description;
+
+        await category.save()
+
+        return res.status(200).json({
+            success: true,
+            message: "Category Updated Successfully"
+        })
+        
+    } catch (error) {
+        return next(serverError(error))
+    }
+    
 }

@@ -30,3 +30,286 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
   timestamp: '2024-10-21 17:04:47'
 }
+{
+  errors: {
+    image: ValidatorError: Path `image` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `image` is required.',
+        type: 'required',
+        path: 'image',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'image',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'categories validation failed',
+  level: 'error',
+  message: '\tInternal Server Error categories validation failed: image: Path `image` is required.',
+  stack: 'ValidationError: categories validation failed: image: Path `image` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3079:17\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1388:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2024-10-22 11:58:03'
+}
+{
+  errors: {
+    brand: ValidatorError: Path `brand` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `brand` is required.',
+        type: 'required',
+        path: 'brand',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'brand',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    subCategory: ValidatorError: Path `subCategory` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `subCategory` is required.',
+        type: 'required',
+        path: 'subCategory',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'subCategory',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    category: ValidatorError: Path `category` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `category` is required.',
+        type: 'required',
+        path: 'category',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'category',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'products validation failed',
+  level: 'error',
+  message: '\tInternal Server Error products validation failed: brand: Path `brand` is required., subCategory: Path `subCategory` is required., category: Path `category` is required.',
+  stack: 'ValidationError: products validation failed: brand: Path `brand` is required., subCategory: Path `subCategory` is required., category: Path `category` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3079:17\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1388:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2024-10-22 13:30:24'
+}
+{
+  stringValue: '"6717300dec4c52a268b17fef2"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '6717300dec4c52a268b17fef2',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "6717300dec4c52a268b17fef2" (type string) at path "_id" for model "brands"',
+  stack: 'CastError: Cast to ObjectId failed for value "6717300dec4c52a268b17fef2" (type string) at path "_id" for model "brands"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:40:23)',
+  timestamp: '2024-10-22 15:14:41'
+}
+{
+  stringValue: '"6717300dec4c52a2617fef2"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '6717300dec4c52a2617fef2',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "6717300dec4c52a2617fef2" (type string) at path "_id" for model "brands"',
+  stack: 'CastError: Cast to ObjectId failed for value "6717300dec4c52a2617fef2" (type string) at path "_id" for model "brands"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:40:23)',
+  timestamp: '2024-10-22 15:14:49'
+}
+{
+  stringValue: '"6717300dec4c52a2617fef2"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '6717300dec4c52a2617fef2',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "6717300dec4c52a2617fef2" (type string) at path "_id" for model "brands"',
+  stack: 'CastError: Cast to ObjectId failed for value "6717300dec4c52a2617fef2" (type string) at path "_id" for model "brands"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:40:23)',
+  timestamp: '2024-10-22 15:16:40'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error validationError is not defined',
+  stack: 'ReferenceError: validationError is not defined\n' +
+    '    at getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:46:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-10-22 15:17:14'
+}
+{
+  stringValue: '"6717300de4c52a268b18fef"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '6717300de4c52a268b18fef',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "6717300de4c52a268b18fef" (type string) at path "_id" for model "brands"',
+  stack: 'CastError: Cast to ObjectId failed for value "6717300de4c52a268b18fef" (type string) at path "_id" for model "brands"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:40:23)',
+  timestamp: '2024-10-22 15:20:40'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error validationError is not defined',
+  stack: 'ReferenceError: validationError is not defined\n' +
+    '    at getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:46:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-10-22 15:21:00'
+}
+{
+  stringValue: '"6717300de4c52a268b18ef2"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: '6717300de4c52a268b18ef2',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "6717300de4c52a268b18ef2" (type string) at path "_id" for model "brands"',
+  stack: 'CastError: Cast to ObjectId failed for value "6717300de4c52a268b18ef2" (type string) at path "_id" for model "brands"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getBrandById (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/BrandController.js:40:23)',
+  timestamp: '2024-10-22 15:21:25'
+}

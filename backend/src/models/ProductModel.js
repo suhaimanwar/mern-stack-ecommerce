@@ -4,15 +4,15 @@ const productSchema = new mongoose.Schema(
   {
     category: {
       type: mongoose.Types.ObjectId,
-      required: true,
+      required: false,
     },
     subCategory: {
       type: mongoose.Types.ObjectId,
-      required: true,
+      required: false,
     },
     brand: {
       type: mongoose.Types.ObjectId,
-      required: true,
+      required: false,
     },
     name: {
       type: String,

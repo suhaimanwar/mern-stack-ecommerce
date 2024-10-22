@@ -1,9 +1,9 @@
 import { BrandModel } from "../models/BrandModel.js";
-import { serverError } from "../utils/errorHandler.js";
+import { serverError, validationError } from "../utils/errorHandler.js";
 
 export const createBrand = async (req, res, next) => {
   try {
-    const { name, description } = req.body; //Destructuring name and description from req.body (aka from the frontend)
+    const { name, description } = req.body; //Destructuring name and description from req.body (aka from the Model)
 
     await BrandModel.create({
       name: name, //Placing the input name Here
@@ -42,11 +42,16 @@ export const getBrandById = async (req, res, next) => {
       deletedAt: null,
     }); //Returns Object //
 
+    if (!brandData) {
+      return next(validationError("Brand not found!"));
+    }
+
     return res.status(200).json({
       success: true,
       message: "Brand Fetched Successfully",
       data: { brand: brandData },
     });
+    
   } catch (error) {
     return next(serverError(error));
   }
