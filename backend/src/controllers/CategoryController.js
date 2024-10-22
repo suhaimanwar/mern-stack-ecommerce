@@ -1,5 +1,5 @@
 import { CategoryModel } from "../models/CategoryModel.js";
-import { serverError } from "../utils/errorHandler.js";
+import { serverError, validationError } from "../utils/errorHandler.js";
 
 export const createCategory = async (req, res, next) => {
     try {
@@ -40,6 +40,10 @@ export const getCategorybyId = async (req, res, next) => {
     try {
         const categoryId = req.params.id;
         const categoryData = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
+
+        if (!categoryData) {
+            return next(validationError("Category not found!"));
+          }
 
         return res.status(200).json({
             success: true,

@@ -1,5 +1,5 @@
 import { ProductModel } from "../models/ProductModel.js";
-import { serverError } from "../utils/errorHandler.js";
+import { serverError, validationError } from "../utils/errorHandler.js";
 
 export const createProduct = async (req, res, next) => {
     try {
@@ -39,6 +39,10 @@ export const getProductbyId = async (req, res, next) => {
     try {
         const productId = req.params.id;
         const productData = await ProductModel.findOne({_id: productId, deletedAt:null})
+
+        if (!productData) {
+            return next(validationError("Product not found!"));
+          }
 
         return res.status(200).json({
             success: true,
