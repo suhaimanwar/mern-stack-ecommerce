@@ -1,0 +1,66 @@
+import { CategoryModel } from "../models/CategoryModel";
+import { serverError } from "../utils/errorHandler";
+
+export const createCategory = async (req, res, next) => {
+    try {
+      const { name, description } = req.body; //Destructuring name and description from req.body (aka from the model)
+  
+      await CategoryModel.create({
+        name: name, //Placing the input name Here
+        description: description, //Placing the nput description here.
+        deletedAt: null,
+      });
+  
+      return res.status(200).json({
+        // If the data is send as a response successfully, this message should be displayed.
+        success: true,
+        message: "Category Created Successfully",
+      });
+    } catch (error) {
+      return next(serverError(error)); //The error will be logged here. serverError is from errorHandler.
+    }
+  };
+
+
+export const getAllCategories = async (req, res, next) => {
+    try {
+        const categories = await CategoryModel.find({deletedAt: null})
+
+        return res.status(200).json({
+            success:true,
+            message: "Categories Fetched Successfully",
+            data: {categories : categories}
+        })
+    } catch (error) {
+        return next(serverError(error))
+    }
+}
+
+export const getCategorybyId = async (req, res, next) => {
+    try {
+        const categoryId = req.params.id;
+        const categoryData = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
+
+        return res.status(200).json({
+            success: true,
+            message: 'Category Fetched Successfully',
+            data: {category: categoryData}
+        })
+        
+    } catch (error) {
+       return next(serverError(error))
+    }
+}
+
+
+export const deleteCategory = async (req, res, next) => {
+    try {
+        const categoryId = req.params.id;
+        
+        const categoryToDelete = await CategoryModel.findOne({_id: categoryId})
+
+        
+     } catch (error) {
+        
+    }
+}

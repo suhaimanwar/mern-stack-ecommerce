@@ -1,0 +1,25 @@
+import mongoose from "mongoose";
+
+const categorySchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    deletedAt: {
+      type: Date,
+      required: false,
+    },
+  },
+  { timestamps: true }
+);
+
+export const CategoryModel = mongoose.model("categories", categorySchema);

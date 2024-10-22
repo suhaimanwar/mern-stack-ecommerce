@@ -1,7 +1,11 @@
 import cors from 'cors'
 import express from 'express'
 import { ConnectMongoDB } from './src/config/db.js';
-
+import helmet from 'helmet';
+import mongoSanitize from 'express-mongo-sanitize';
+import { notFoundError } from './src/utils/errorHandler.js';
+import { statusCode } from './src/enum/StatusCodes.js';
+import DashboardRouter from './src/routes/MainRoutes.js';
 
 const port = 5000;
 
@@ -13,7 +17,57 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+app.use(
+	helmet({
+		crossOriginEmbedderPolicy: false,
+		crossOriginResourcePolicy: { policy: 'cross-origin' },
+		contentSecurityPolicy: {
+			directives: {
+				// eslint-disable-next-line quotes
+				defaultSrc: ["'self'"],
+				// eslint-disable-next-line quotes
+				imgSrc: ["'self'", 'data:', '*.ubnhb.in'],
+				// eslint-disable-next-line quotes
+				connectSrc: ["'self'", '*.ubnhb.in'],
+			},
+		},
+	}),
+);
+
+app.use(mongoSanitize())
+
+
+app.use('/api', DashboardRouter)
+
 ConnectMongoDB();
+ 
+//page-not-foud
+app.use((req, res, next)=>{
+    next(notFoundError())
+})
+
+//error handler
+app.use((err, req, res, next)=>{
+    if (err.status === statusCode.notFound) {
+        const errorMessage = err.message || 'Page not found';
+
+        res.status(statusCode.notFound).json({
+            success: false,
+            message: errorMessage
+        })
+    } else {
+        const errorStatus = err.status || statusCode.serverError;
+        const errorMessage = err.message || 'Something Went Wrong';
+
+        res.status(errorStatus).json({
+            success: false,
+            status: errorStatus,
+            message: errorMessage
+        })
+
+        next()
+    }
+})
 
 // App should listen to the port. 
 
@@ -30,4 +84,4 @@ app.get("/test/api", async()=> {
 
 app.post("/test/api", async()=> {
     console.log("Hello Server : POST Method")
-})
+})  
