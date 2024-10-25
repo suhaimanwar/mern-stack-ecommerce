@@ -5,6 +5,8 @@ export const createBrand = async (req, res, next) => {
   try {
     const { name, description } = req.body; //Destructuring name and description from req.body (aka from the Model)
 
+    console.log('reqbodyy',req.body)
+
     await BrandModel.create({
       name: name, //Placing the input name Here
       description: description, //Placing the nput description here.

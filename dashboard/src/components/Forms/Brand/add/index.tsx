@@ -8,12 +8,13 @@ import Image from "next/image";
 import DropzoneWrapper from "@/components/FileUpload/Dropzone";
 import { Typography } from "@mui/material";
 import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
+import { brandApi } from "@/api/brandApi";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const brandSchema = z.object({
-  brandName: z.string().min(1, "Name is required"),
-  brandDesc: z.string().min(1, "Description is required"),
+  name: z.string().min(1, "Name is required"),
+  description: z.string().min(1, "Description is required"),
   attachedFile: z.any().refine(
     (value) => {
       const acceptedTypes = ACCEPTED_IMAGE_TYPES;
@@ -39,12 +40,22 @@ const BrandAddForm = () => {
     register,
     control,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema) });
 
-  const onSubmit = (data: typeBrandSchema) => {
+  const onSubmit  = async (data: typeBrandSchema) => {
     console.log("submittedd::", data);
+
+    await brandApi.createBrand(data)  //Calling an API
   };
+
+  // const [imageFile, setImageFile] = useState(null);
+
+  // const handleReset = () => {
+  //   reset(); // <-- Changed: Resets form fields
+  //   setImageFile(null); // <-- Changed: Clears the image
+  // };
 
  
   return (
@@ -70,13 +81,13 @@ const BrandAddForm = () => {
                   Name
                 </label>
                 <input
-                  {...register("brandName")}
+                  {...register("name")}
                   type="text"
                   placeholder="Name"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 />
 
-                <p className="mt-2 text-red">{errors.brandName?.message}</p>
+                <p className="mt-2 text-red">{errors.name?.message}</p>
               </div>
 
               <div>
@@ -84,12 +95,12 @@ const BrandAddForm = () => {
                   Description
                 </label>
                 <textarea
-                  {...register("brandDesc")}
+                  {...register("description")}
                   rows={3}
                   placeholder="Description"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 ></textarea>
-                <p className="mt-2 text-red">{errors.brandDesc?.message}</p>
+                <p className="mt-2 text-red">{errors.description?.message}</p>
               </div>
 
               <div>
@@ -112,7 +123,9 @@ const BrandAddForm = () => {
                     )}
                   />
                 </DropzoneWrapper>
-                {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+                {/* 
+                
+                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Add Logo
                 </label>
                 <input
@@ -128,7 +141,8 @@ const BrandAddForm = () => {
                     Invalid Image format {!!errors.attachedFile}
                   </p> {/* {!!errors.image && (
                       <span style={{ color: 'red', fontSize: '14px' }}>Invalid Image format {!!errors.image}</span>
-                    )} */}
+                    )} */
+                    }
               
 
 

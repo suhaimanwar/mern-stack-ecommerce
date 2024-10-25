@@ -2,6 +2,7 @@ import ECommerce from "@/components/Dashboard/E-commerce";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import React from "react";
+import BrandTable from "@/components/Tables/Brand";
 
 export const metadata: Metadata = {
   title:
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <DefaultLayout>
         <ECommerce />
+        {/* <BrandTable/> */}
         
       </DefaultLayout>
     </>
