@@ -47,14 +47,14 @@ const BrandTable = () => {
           <thead>
             <tr className="bg-[#F7F9FC] text-left dark:bg-dark-2">
               <th className="min-w-[220px] px-4 py-4 font-medium text-dark dark:text-white xl:pl-7.5">
-                Package
+                Brand Name
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-dark dark:text-white">
-                Invoice date
+                Brand Description
               </th>
-              <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
+              {/* <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
                 Status
-              </th>
+              </th> */}
               <th className="px-4 py-4 text-right font-medium text-dark dark:text-white xl:pr-7.5">
                 Actions
               </th>
@@ -69,9 +69,9 @@ const BrandTable = () => {
                   <h5 className="text-dark dark:text-white">
                     {packageItem.name}
                   </h5>
-                  <p className="mt-[3px] text-body-sm font-medium">
+                  {/* <p className="mt-[3px] text-body-sm font-medium">
                     ${packageItem.price}
-                  </p>
+                  </p> */}
                 </td>
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
@@ -80,7 +80,7 @@ const BrandTable = () => {
                     {packageItem.invoiceDate}
                   </p>
                 </td>
-                <td
+                {/* <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p
@@ -94,7 +94,7 @@ const BrandTable = () => {
                   >
                     {packageItem.status}
                   </p>
-                </td>
+                </td> */}
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
@@ -149,7 +149,7 @@ const BrandTable = () => {
                         />
                       </svg>
                     </button>
-                    <button className="hover:text-primary">
+                    {/* <button className="hover:text-primary">
                       <svg
                         className="fill-current"
                         width="20"
@@ -167,7 +167,7 @@ const BrandTable = () => {
                           fill=""
                         />
                       </svg>
-                    </button>
+                    </button> */}
                   </div>
                 </td>
               </tr>
