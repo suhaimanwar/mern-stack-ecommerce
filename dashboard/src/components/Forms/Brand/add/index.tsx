@@ -1,10 +1,13 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import Image from "next/image";
+import DropzoneWrapper from "@/components/FileUpload/Dropzone";
+import { Typography } from "@mui/material";
+import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
@@ -17,7 +20,7 @@ const brandSchema = z.object({
       if (typeof value === "string") {
         return true;
       } else if (typeof value === "object") {
-        const isTypeAccepted = acceptedTypes.includes(value[0]?.type);
+        const isTypeAccepted = acceptedTypes.includes(value?.type);
         return isTypeAccepted;
       }
 
@@ -34,6 +37,7 @@ type typeBrandSchema = z.infer<typeof brandSchema>;
 const BrandAddForm = () => {
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema) });
@@ -42,15 +46,7 @@ const BrandAddForm = () => {
     console.log("submittedd::", data);
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]; // will access the first image uploaded by the user.
-
-    const imageUrl = URL.createObjectURL(file)  //Creates a temporary URL for selected image
-    setImagePreview(imageUrl) //Sets the image preview to the url
-  }
-
-  const [imagePreview, setImagePreview] = useState(null) //Current state is null - Will se setImagePreview to update Image Preview
-
+ 
   return (
     <>
       <Breadcrumb pageName="Add Brand" />
@@ -97,40 +93,53 @@ const BrandAddForm = () => {
               </div>
 
               <div>
-                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+
+              <DropzoneWrapper>
+                  <Typography variant='h6' sx={{ mb: 2.5 }}>
+                    Image:
+                    {!!errors.attachedFile && (
+                      <span className="text-red ml-3">Invalid Image format {!!errors.attachedFile}</span>
+                    )}
+                  </Typography>
+                  <Controller
+                    name='attachedFile'
+                    control={control}
+                  
+                    render={({ field }) => (
+                      <div>
+                        <FileUploaderSingle file={field.value} setFile={field.onChange} error={errors.attachedFile} />
+                      </div>
+                    )}
+                  />
+                </DropzoneWrapper>
+                {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Add Logo
                 </label>
                 <input
                   {...register("attachedFile")}
                   type="file"
-                  onChange={handleImageChange} //1
+             
                   className="w-full cursor-pointer rounded-[7px] border-[1.5px] border-stroke bg-transparent outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-stroke file:bg-[#E2E8F0] file:px-6.5 file:py-[13px] file:text-body-sm file:font-medium file:text-dark-5 file:hover:bg-primary file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-dark dark:border-dark-3 dark:bg-dark-2 dark:file:border-dark-3 dark:file:bg-white/30 dark:file:text-white dark:focus:border-primary"
                 />
 
-                {imagePreview && (
-                  <div className="mt-4">
-                    <Image src={imagePreview} alt="Image"
-                    width={128}
-                    height={128}
-                    className="object-cover"
-                    unoptimized // allows it to be displayed. 
-                    />
-
-
-                  </div>
-                )}
 
                 {!!errors.attachedFile && (
                   <p className="mt-2 text-red-500">
                     Invalid Image format {!!errors.attachedFile}
-                  </p>
-                )}
+                  </p> {/* {!!errors.image && (
+                      <span style={{ color: 'red', fontSize: '14px' }}>Invalid Image format {!!errors.image}</span>
+                    )} */}
+              
+
+
               </div>
+
+              
 
               <div className="flex">
                 <button
                   type="reset"
-                  onClick={() => setImagePreview(null)}   
+                    
                   className="mb-2 me-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-red-500 dark:hover:bg-red-700 dark:focus:ring-gray-700"
                 >
                   Reset
