@@ -2,10 +2,10 @@
 
 
 import multer from "multer"
-import { getUploadDir } from "./fileUtils"
+import { getUploadDir } from "../../fileUtils.js"
 import slugify from "slugify"
 
-export const uploadImageFIle = (path)=>{
+export const uploadImageFile = (path)=>{
     const whitelist = ['image/png', 'image/jpeg', 'image/jpg','image/webp']
     return multerStorage(path, whitelist)
 

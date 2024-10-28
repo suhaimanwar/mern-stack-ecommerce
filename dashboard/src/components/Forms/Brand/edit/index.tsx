@@ -1,8 +1,11 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import DropzoneWrapper from "@/components/FileUpload/Dropzone";
+import { Typography } from "@mui/material";
+import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
@@ -15,7 +18,7 @@ const brandSchema = z.object({
       if (typeof value === "string") {
         return true;
       } else if (typeof value === "object") {
-        const isTypeAccepted = acceptedTypes.includes(value[0]?.type);
+        const isTypeAccepted = acceptedTypes.includes(value?.type);
         return isTypeAccepted;
       }
 
@@ -32,6 +35,7 @@ type typeBrandSchema = z.infer<typeof brandSchema>;
 const BrandEditForm = () => {
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema) });
@@ -89,7 +93,7 @@ const BrandEditForm = () => {
               </div>
 
               <div>
-                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+                {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Add Logo
                 </label>
                 <input
@@ -102,7 +106,26 @@ const BrandEditForm = () => {
                   <p className="mt-2 text-red-500">
                     Invalid Image format {!!errors.attachedFile}
                   </p>
-                )}
+                )} */}
+
+<DropzoneWrapper>
+                  <Typography variant='h6' sx={{ mb: 2.5 }}>
+                    Image:
+                    {!!errors.attachedFile && (
+                      <span className="text-red ml-3">Invalid Image format {!!errors.attachedFile}</span>
+                    )}
+                  </Typography>
+                  <Controller
+                    name='attachedFile'
+                    control={control}
+                  
+                    render={({ field }) => (
+                      <div>
+                        <FileUploaderSingle file={field.value} setFile={field.onChange} error={errors.attachedFile} />
+                      </div>
+                    )}
+                  />
+                </DropzoneWrapper>
               </div>
 
               <div className="flex">
