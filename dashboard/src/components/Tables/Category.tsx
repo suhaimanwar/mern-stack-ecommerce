@@ -1,34 +1,44 @@
 import { Package } from "@/types/package";
 import Link from "next/link";
 
-const packageData: Package[] = [
-  {
-    name: "CAT",
-    price: 0.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
-  },
-  {
-    name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
-  },
-  {
-    name: "Business Package",
-    price: 99.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Unpaid",
-  },
-  {
-    name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Pending",
-  },
-];
+// const data: Package[] = [
+//   {
+//     name: "CAT",
+//     price: 0.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Paid",
+//   },
+//   {
+//     name: "Standard Package",
+//     price: 59.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Paid",
+//   },
+//   {
+//     name: "Business Package",
+//     price: 99.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Unpaid",
+//   },
+//   {
+//     name: "Standard Package",
+//     price: 59.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Pending",
+//   },
+// ];
 
-const CategoryTable = () => {
+type Props = {
+  data: [
+    {
+      length: number;
+      name: string,
+      description: string
+    }
+  ]
+}
+
+const CategoryTable = ({data}: Props) => {
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
       <div className="flex w-full justify-end">
@@ -61,42 +71,42 @@ const CategoryTable = () => {
             </tr>
           </thead>
           <tbody>
-            {packageData.map((packageItem, index) => (
+            {data.map((data, index) => (
               <tr key={index}>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <h5 className="text-dark dark:text-white">
-                    {packageItem.name}
+                    {data.name}
                   </h5>
                   {/* <p className="mt-[3px] text-body-sm font-medium">
-                    ${packageItem.price}
+                    ${data.price}
                   </p> */}
                 </td>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p className="text-dark dark:text-white">
-                    {packageItem.invoiceDate}
+                    {data.description}
                   </p>
                 </td>
                 {/* <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p
                     className={`inline-flex rounded-full px-3.5 py-1 text-body-sm font-medium ${
-                      packageItem.status === "Paid"
+                      data.status === "Paid"
                         ? "bg-[#219653]/[0.08] text-[#219653]"
-                        : packageItem.status === "Unpaid"
+                        : data.status === "Unpaid"
                           ? "bg-[#D34053]/[0.08] text-[#D34053]"
                           : "bg-[#FFA70B]/[0.08] text-[#FFA70B]"
                     }`}
                   >
-                    {packageItem.status}
+                    {data.status}
                   </p>
                 </td> */}
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
                   <Link className="flex" href={ `/forms/category/edit`}>

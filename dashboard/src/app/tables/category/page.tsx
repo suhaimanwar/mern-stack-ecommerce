@@ -6,13 +6,24 @@ import TableTwo from "@/components/Tables/TableTwo";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import CategoryTable from "@/components/Tables/Category";
+import { categoryApi } from "@/api/categoryApi";
 
 export const metadata: Metadata = {
   title: "Next.js Tables Page | NextAdmin - Next.js Dashboard Kit",
   description: "This is Next.js Tables page for NextAdmin Dashboard Kit",
 };
 
-const TablesPage = () => {
+const getAllCategory = async () => {
+  const res = await categoryApi.getAllCategory()
+  // console.log(':::::::',res.data.data.categories)
+  return res.data.data.categories
+}
+
+const TablesPage = async() => {
+
+  const data = await getAllCategory()
+
+
   return (
     <DefaultLayout>
       <Breadcrumb pageName="Categories" />
@@ -22,7 +33,7 @@ const TablesPage = () => {
         <TableTwo /> */}
         {/* <TableThree /> */}
 
-        <CategoryTable/>
+        <CategoryTable data={data} /> 
       </div>
     </DefaultLayout>
   );

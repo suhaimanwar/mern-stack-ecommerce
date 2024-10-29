@@ -6,10 +6,12 @@ export const createBrand = async (req, res, next) => {
     const { name, description } = req.body; //Destructuring name and description from req.body (aka from the Model)
 
     console.log('reqbodyy',req.body)
+    console.log('reqfileee', req.file)
 
     await BrandModel.create({
       name: name, //Placing the input name Here
       description: description, //Placing the nput description here.
+      image: req.file.filename,
       deletedAt: null,
     });
 
@@ -62,6 +64,8 @@ export const getBrandById = async (req, res, next) => {
 export const deleteBrand = async (req, res, next) => {
   try {
     const brandId = req.params.id;
+
+    console.log('brandIIIDDD:::::',brandId)
 
     // await BrandModel.deleteOne({ _id: brandId }); //Hard Delete
 

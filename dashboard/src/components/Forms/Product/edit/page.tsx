@@ -1,17 +1,21 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import SelectGroupOne from "@/components/FormElements/SelectGroup/SelectGroupOne";
 import BrandSelect from "@/components/FormElements/SelectGroup/BrandSelect";
 import CategorySelect from "@/components/FormElements/SelectGroup/CategorySelect";
+import DropzoneWrapper from "@/components/FileUpload/Dropzone";
+import { Typography } from "@mui/material";
+import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const productSchema = z.object({
   productName: z.string().nonempty({ message: "Name is required" }),
   productDesc: z.string().nonempty({ message: "Description is required" }),
+
   attachedFile: z.any().refine(
     (value) => {
       const acceptedTypes = ACCEPTED_IMAGE_TYPES;
@@ -38,6 +42,7 @@ const ProductEditForm = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<typeProductShema>({ resolver: zodResolver(productSchema) });
 
@@ -64,6 +69,7 @@ const ProductEditForm = () => {
               className="flex flex-col gap-5.5 p-6.5"
             >
               <div>
+              
                 <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Name
                 </label>
@@ -98,7 +104,7 @@ const ProductEditForm = () => {
 <CategorySelect register={register('category')} error={errors.category} />
 
               <div>
-                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+                {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Edit Logo
                 </label>
                 <input
@@ -111,7 +117,26 @@ const ProductEditForm = () => {
                   <p className="mt-2 text-red-500">
                     Invalid Image format {!!errors.attachedFile}
                   </p>
-                )}
+                )} */}
+
+<DropzoneWrapper>
+                  <Typography variant='h6' sx={{ mb: 2.5 }}>
+                    Image:
+                    {!!errors.attachedFile && (
+                      <span className="text-red ml-3">Invalid Image format {!!errors.attachedFile}</span>
+                    )}
+                  </Typography>
+                  <Controller
+                    name='attachedFile'
+                    control={control}
+                  
+                    render={({ field }) => (
+                      <div>
+                        <FileUploaderSingle file={field.value} setFile={field.onChange} error={errors.attachedFile} />
+                      </div>
+                    )}
+                  />
+                </DropzoneWrapper>
               </div>
 
               <div className="flex">

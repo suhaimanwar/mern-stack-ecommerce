@@ -1,21 +1,25 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
+import DropzoneWrapper from "@/components/FileUpload/Dropzone";
+import { Typography } from "@mui/material";
+import { categoryApi } from "@/api/categoryApi";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const categorySchema = z.object({
-  categoryName: z.string().nonempty({ message: "Name is required" }),
-  categoryDesc: z.string().nonempty({ message: "Description is required" }),
+  name: z.string().nonempty({ message: "Name is required" }),
+  description: z.string().nonempty({ message: "Description is required" }),
   attachedFile: z.any().refine(
     (value) => {
       const acceptedTypes = ACCEPTED_IMAGE_TYPES;
       if (typeof value === "string") {
         return true;
       } else if (typeof value === "object") {
-        const isTypeAccepted = acceptedTypes.includes(value[0]?.type);
+        const isTypeAccepted = acceptedTypes.includes(value?.type);
         return isTypeAccepted;
       }
 
@@ -32,12 +36,15 @@ type typeCategorySchema = z.infer<typeof categorySchema>;
 const CategoryAddForm = () => {
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm<typeCategorySchema>({ resolver: zodResolver(categorySchema) });
 
-  const onSubmit = (data: typeCategorySchema) => {
+  const onSubmit = async (data: typeCategorySchema) => {
     console.log("submittedd::", data);
+
+    await categoryApi.createCategory(data);
   };
 
   return (
@@ -63,12 +70,12 @@ const CategoryAddForm = () => {
                   Name
                 </label>
                 <input
-                  {...register("categoryName")}
+                  {...register("name")}
                   type="text"
                   placeholder="Name"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 />
-                {errors.categoryName && (
+                {errors.name && (
                   <p className="mt-2 text-red">Category name is required.</p>
                 )}
               </div>
@@ -78,18 +85,18 @@ const CategoryAddForm = () => {
                   Description
                 </label>
                 <textarea
-                  {...register("categoryDesc")}
+                  {...register("description")}
                   rows={3}
                   placeholder="Description"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 ></textarea>
-                {errors.categoryName && (
+                {errors.name && (
                   <p className="mt-1 text-red">Description is required.</p>
                 )}
               </div>
 
               <div>
-                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+                {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Add Logo
                 </label>
                 <input
@@ -102,7 +109,31 @@ const CategoryAddForm = () => {
                   <p className="mt-2 text-red-500">
                     Invalid Image format {!!errors.attachedFile}
                   </p>
-                )}
+                )} */}
+
+                <DropzoneWrapper>
+                  <Typography variant="h6" sx={{ mb: 2.5 }}>
+                    Image:
+                    {!!errors.attachedFile && (
+                      <span className="ml-3 text-red">
+                        Invalid Image format {!!errors.attachedFile}
+                      </span>
+                    )}
+                  </Typography>
+                  <Controller
+                    name="attachedFile"
+                    control={control}
+                    render={({ field }) => (
+                      <div>
+                        <FileUploaderSingle
+                          file={field.value}
+                          setFile={field.onChange}
+                          error={errors.attachedFile}
+                        />
+                      </div> 
+                    )}
+                  />
+                </DropzoneWrapper>
               </div>
 
               <div className="flex">

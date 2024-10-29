@@ -15,5 +15,18 @@ export const brandApi = {
                 }
             }
         )
+    },
+
+    getAllBrands: async function () {
+        
+        return await axios.get(
+            "http://localhost:5000/api/brands/", //Add the api route as per the brand router from the backend, it includes the port
+            //While getting the data, We won't add any body here.
+        )
+    },
+
+
+    deleteBrand: async function (id:string) {
+        return await axios.delete(`http://localhost:5000/api/brands/delete/${id}`)
     }
 }

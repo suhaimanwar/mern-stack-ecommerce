@@ -46,9 +46,8 @@ const BrandAddForm = () => {
 
   const onSubmit  = async (data: typeBrandSchema) => {
     console.log("submittedd::", data);
-
     await brandApi.createBrand(data)  //Calling an API
-  };
+  }; 
 
   // const [imageFile, setImageFile] = useState(null);
 

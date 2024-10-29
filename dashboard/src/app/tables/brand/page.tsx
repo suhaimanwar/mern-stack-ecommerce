@@ -6,13 +6,26 @@ import TableTwo from "@/components/Tables/TableTwo";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import BrandTable from "@/components/Tables/Brand";
+import { brandApi } from "@/api/brandApi";
 
 export const metadata: Metadata = {
   title: "Next.js Tables Page | NextAdmin - Next.js Dashboard Kit",
   description: "This is Next.js Tables page for NextAdmin Dashboard Kit",
 };
 
-const TablesPage = () => {
+const getAllBrands = async () => {
+  const res = await brandApi.getAllBrands() // calling getAllBrands from brandApi
+// console.log('responsee:::', res.data.data.brands)
+
+return res.data.data.brands
+}
+
+const TablesPage = async () => {
+
+  const data = await getAllBrands()
+
+  // console.log('daaaaaaata::',data)
+
   return (
     <DefaultLayout>
       <Breadcrumb pageName="Brands" />
@@ -21,8 +34,8 @@ const TablesPage = () => {
         {/* <TableOne />
         <TableTwo /> */}
         {/* <TableThree /> */}
-
-        <BrandTable /> 
+ 
+        <BrandTable data={data} /> 
       </div>
     </DefaultLayout>
   );
