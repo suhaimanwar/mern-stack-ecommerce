@@ -6,19 +6,21 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import DropzoneWrapper from "@/components/FileUpload/Dropzone";
 import { Typography } from "@mui/material";
 import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
+import { categoryApi } from "@/api/categoryApi";
+import { useRouter } from "next/navigation";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const categorySchema = z.object({
-  categoryName: z.string().nonempty({ message: "Name is required" }),
-  categoryDesc: z.string().nonempty({ message: "Description is required" }),
+  name: z.string().nonempty({ message: "Name is required" }),
+  description: z.string().nonempty({ message: "Description is required" }),
   attachedFile: z.any().refine(
     (value) => {
       const acceptedTypes = ACCEPTED_IMAGE_TYPES;
       if (typeof value === "string") {
         return true;
       } else if (typeof value === "object") {
-        const isTypeAccepted = acceptedTypes.includes(value[0]?.type);
+        const isTypeAccepted = acceptedTypes.includes(value?.type);
         return isTypeAccepted;
       }
 
@@ -32,16 +34,34 @@ const categorySchema = z.object({
 
 type typeCategorySchema = z.infer<typeof categorySchema>;
 
-const CategoryEditForm = () => {
+type Props = {
+  categoryData:any
+}
+
+const CategoryEditForm = ({categoryData}: Props) => {
+  console.log('catDATTTT::',categoryData)
   const {
     register,
-    control,
+    control, 
     handleSubmit,
     formState: { errors },
-  } = useForm<typeCategorySchema>({ resolver: zodResolver(categorySchema) });
+    
+  } = useForm<typeCategorySchema>({ resolver: zodResolver(categorySchema),
+    defaultValues:{
+      name: categoryData.name,
+      description: categoryData.description
+    }
+   });
 
-  const onSubmit = (data: typeCategorySchema) => {
+   const router = useRouter()
+
+  const onSubmit = async(data: typeCategorySchema) => {
     console.log("submittedd::", data);
+
+    await categoryApi.updateCategory(categoryData._id , data)
+
+    router.push('/tables/brand')
+    router.refresh()
   };
 
   return (
@@ -52,6 +72,7 @@ const CategoryEditForm = () => {
         <div className="flex flex-col gap-9">
           {/* <!-- Input Fields --> */}
           <div className="rounded-[10px] border border-stroke bg-white shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card">
+            
             {/* <div className="border-b border-stroke px-6.5 py-4 dark:border-dark-3">
               <h3 className="font-medium text-dark dark:text-white">
                 Input Fields
@@ -67,12 +88,12 @@ const CategoryEditForm = () => {
                   Name
                 </label>
                 <input
-                  {...register("categoryName")}
+                  {...register("name")}
                   type="text"
                   placeholder="Name"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 />
-                {errors.categoryName && (
+                {errors.name && (
                   <p className="mt-2 text-red">Category name is required.</p>
                 )}
               </div>
@@ -82,12 +103,12 @@ const CategoryEditForm = () => {
                   Description
                 </label>
                 <textarea
-                  {...register("categoryDesc")}
+                  {...register("description")}
                   rows={3}
                   placeholder="Description"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 ></textarea>
-                {errors.categoryName && (
+                {errors.name && (
                   <p className="mt-1 text-red">Description is required.</p>
                 )}
               </div>

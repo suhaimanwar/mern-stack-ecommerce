@@ -33,7 +33,7 @@ const TablesPage = async() => {
         <TableTwo /> */}
         {/* <TableThree /> */}
 
-        <CategoryTable data={data} /> 
+        <CategoryTable categoryData={data} /> 
       </div>
     </DefaultLayout>
   );

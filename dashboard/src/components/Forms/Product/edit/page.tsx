@@ -33,12 +33,27 @@ const productSchema = z.object({
     },
   ),
   brand: z.string().refine((value) => value !== "", "Please select a Brand."),
-  category: z.string().refine((value) => value !== "", "Please select a Category."),
+  category: z
+    .string()
+    .refine((value) => value !== "", "Please select a Category."),
 });
 
 type typeProductShema = z.infer<typeof productSchema>;
 
-const ProductEditForm = () => {
+type Props = {
+  dropdownData: {
+    brandResponse: any;
+    categoryResponse: any;
+  },
+}
+
+
+const ProductEditForm = ({dropdownData}: Props) => {
+
+  const brandDrop = dropdownData.brandResponse
+  
+  const categoryDrop = dropdownData.categoryResponse
+  
   const {
     register,
     handleSubmit,
@@ -69,7 +84,6 @@ const ProductEditForm = () => {
               className="flex flex-col gap-5.5 p-6.5"
             >
               <div>
-              
                 <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Name
                 </label>
@@ -99,9 +113,12 @@ const ProductEditForm = () => {
                 )}
               </div>
 
-              <BrandSelect register={register('brand')} error={errors.brand} />
+              <BrandSelect brandDrop={brandDrop} register={register("brand")} error={errors.brand} />
 
-<CategorySelect register={register('category')} error={errors.category} />
+              <CategorySelect categoryDrop={categoryDrop}
+                register={register("category")}
+                error={errors.category}
+              />
 
               <div>
                 {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
@@ -119,20 +136,25 @@ const ProductEditForm = () => {
                   </p>
                 )} */}
 
-<DropzoneWrapper>
-                  <Typography variant='h6' sx={{ mb: 2.5 }}>
+                <DropzoneWrapper>
+                  <Typography variant="h6" sx={{ mb: 2.5 }}>
                     Image:
                     {!!errors.attachedFile && (
-                      <span className="text-red ml-3">Invalid Image format {!!errors.attachedFile}</span>
+                      <span className="ml-3 text-red">
+                        Invalid Image format {!!errors.attachedFile}
+                      </span>
                     )}
                   </Typography>
                   <Controller
-                    name='attachedFile'
+                    name="attachedFile"
                     control={control}
-                  
                     render={({ field }) => (
                       <div>
-                        <FileUploaderSingle file={field.value} setFile={field.onChange} error={errors.attachedFile} />
+                        <FileUploaderSingle
+                          file={field.value}
+                          setFile={field.onChange}
+                          error={errors.attachedFile}
+                        />
                       </div>
                     )}
                   />

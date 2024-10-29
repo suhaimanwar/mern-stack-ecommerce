@@ -6,9 +6,13 @@ type Props= {
     register: UseFormRegisterReturn;
 
     error?: FieldError | Merge <FieldError, FieldErrorsImpl<any>> | undefined;
+
+    categoryDrop:{
+      map(arg0: (item: { name: string; _id: string; }) => React.JSX.Element): React.ReactNode;_id:string, name: string
+}
 }
 
-const CategorySelect = ({register,error}:Props) => {
+const CategorySelect = ({categoryDrop,register,error}:Props) => {
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [isOptionSelected, setIsOptionSelected] = useState<boolean>(false);
 
@@ -37,15 +41,19 @@ const CategorySelect = ({register,error}:Props) => {
           <option value="" disabled className="text-dark-6">
             Select your subject
           </option>
-          <option value="USA" className="text-dark-6">
-            Men
+
+          {categoryDrop.map((item: {name:string, _id:string})=>(
+            <option value={item._id} className="text-dark-6">
+            {item.name}
           </option>
-          <option value="UK" className="text-dark-6">
-            Women
-          </option>
-          <option value="Canada" className="text-dark-6">
-            Kids
-          </option>
+          ))}
+          
+            {/* <option value="UK" className="text-dark-6">
+              Women
+            </option>
+            <option value="Canada" className="text-dark-6">
+              Kids
+            </option> */}
         </select>
 
         <span className="absolute right-4 top-1/2 z-30 -translate-y-1/2">

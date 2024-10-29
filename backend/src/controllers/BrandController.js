@@ -89,10 +89,14 @@ export const updateBrand = async (req, res, next) => {
   try {
     const brandId = req.params.id;
 
+
+
     // const name = req.body.name;
     // const description = req.body.description;
 
     const {name, description} = req.body
+
+    // console.log('""""""',req.body)
 
     const brand = await BrandModel.findOne({_id:brandId, deletedAt:null})
 

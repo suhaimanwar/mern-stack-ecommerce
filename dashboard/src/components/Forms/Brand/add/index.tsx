@@ -9,6 +9,7 @@ import DropzoneWrapper from "@/components/FileUpload/Dropzone";
 import { Typography } from "@mui/material";
 import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 import { brandApi } from "@/api/brandApi";
+import { useRouter } from "next/navigation";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
@@ -44,9 +45,14 @@ const BrandAddForm = () => {
     formState: { errors },
   } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema) });
 
+  const router = useRouter()
+
   const onSubmit  = async (data: typeBrandSchema) => {
     console.log("submittedd::", data);
     await brandApi.createBrand(data)  //Calling an API
+
+    router.push('/tables/brand')
+    router.refresh()
   }; 
 
   // const [imageFile, setImageFile] = useState(null);

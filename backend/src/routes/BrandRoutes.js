@@ -14,6 +14,6 @@ BrandRouter.get("/", getAllBrands);
 BrandRouter.post("/create", uploadImageFile('brands').single('attachedFile'), createBrand); //We are calling the middleware in between - fileUploader.js, middleware runs in the middle. In this case, we are creating the folders before getting the data, we're sorting it out.
 BrandRouter.get("/view/:id", getBrandById);
 BrandRouter.delete("/delete/:id", deleteBrand);
-BrandRouter.put("/update/:id", updateBrand); 
+BrandRouter.put("/update/:id",uploadImageFile('brands').single('attachedFile'), updateBrand); 
 
 export default BrandRouter;

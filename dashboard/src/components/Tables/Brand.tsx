@@ -50,8 +50,6 @@ const BrandTable = ({data}: Props) => {
   console.log('datas:::::::::',data)
 
   const router = useRouter();
-  
-
 
   const onDelete = async(id:string) => {
     // console.log('id::::::',id)
@@ -129,12 +127,12 @@ const BrandTable = ({data}: Props) => {
                   >
                     {item.status}
                   </p>
-                </td> */}
+                </td> */} 
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                  <Link className="flex" href={ `/forms/brand/edit`}>
+                  <Link className="flex" href={ `/forms/brand/edit/${item._id}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

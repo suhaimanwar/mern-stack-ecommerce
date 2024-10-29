@@ -49,6 +49,12 @@ type Props = {
 const ProductAddForm = ({dropdownData}: Props) => {
 
   console.log('DROPPPPPPPPPPPPPP::::',dropdownData)
+
+  const brandDrop = dropdownData.brandResponse
+  
+  const categoryDrop = dropdownData.categoryResponse
+
+
   const {
     register,
     handleSubmit,
@@ -111,9 +117,9 @@ const ProductAddForm = ({dropdownData}: Props) => {
                 )}
               </div>
 
-              <BrandSelect register={register('brand')} error={errors.brand} />
+              <BrandSelect brandDrop={brandDrop} register={register('brand')} error={errors.brand} />
 
-              <CategorySelect register={register('category')} error={errors.category} />
+              <CategorySelect categoryDrop={categoryDrop}  register={register('category')} error={errors.category} />
 
               <div>
 

@@ -9,7 +9,7 @@ CategoryRouter.get('/', getAllCategories)
 CategoryRouter.post('/create', uploadImageFile('categories').single('attachedFile'), createCategory)
 CategoryRouter.get('/view/:id', getCategorybyId)
 CategoryRouter.delete('/delete/:id', deleteCategory)
-CategoryRouter.put('/update/:id', updateCategory)
+CategoryRouter.put('/update/:id',  uploadImageFile('categories').single('attachedFile'), updateCategory)
 
 
 export default CategoryRouter;

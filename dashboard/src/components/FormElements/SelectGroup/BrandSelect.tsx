@@ -3,14 +3,21 @@ import React, { useState } from "react";
 import { FieldError, FieldErrorsImpl, Merge, UseFormRegisterReturn } from "react-hook-form";
 import { string } from "zod";
 
-
 type Props= {
     register: UseFormRegisterReturn;
 
+    
+
     error?: FieldError | Merge <FieldError, FieldErrorsImpl<any>> | undefined;
+
+    brandDrop:{
+      map(arg0: (item: { name: string; _id: string; }) => React.JSX.Element): React.ReactNode;_id:string, name: string
+}
 }
 
-const BrandSelect = ({register, error}: Props) => {
+const BrandSelect = ({brandDrop, register, error}: Props) => {
+
+  // console.log('brandDROOP',brandDrop)
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [isOptionSelected, setIsOptionSelected] = useState<boolean>(false);
 
@@ -39,7 +46,15 @@ const BrandSelect = ({register, error}: Props) => {
           <option value="" disabled  className="text-dark-6">
             Select your Brand
           </option>
-          <option value="Adidas" className="text-dark-6">
+
+          {brandDrop.map((item: {name:string, _id:string}) => (
+   <option value={item._id} className="text-dark-6">
+   {item.name}
+ </option>
+))}
+
+
+          {/* <option value="Adidas" className="text-dark-6">
             Adidas
           </option>
           <option value="Puma" className="text-dark-6">
@@ -47,7 +62,7 @@ const BrandSelect = ({register, error}: Props) => {
           </option>
           <option value="Reebok" className="text-dark-6">
             Reebok
-          </option>
+          </option> */}
         </select>
 
         <span className="absolute right-4 top-1/2 z-30 -translate-y-1/2">

@@ -1,5 +1,8 @@
+"use client"
+import { categoryApi } from "@/api/categoryApi";
 import { Package } from "@/types/package";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // const data: Package[] = [
 //   {
@@ -29,8 +32,9 @@ import Link from "next/link";
 // ];
 
 type Props = {
-  data: [
+  categoryData: [
     {
+      _id: string,
       length: number;
       name: string,
       description: string
@@ -38,7 +42,17 @@ type Props = {
   ]
 }
 
-const CategoryTable = ({data}: Props) => {
+const CategoryTable = ({categoryData}: Props) => {
+
+  const router = useRouter();
+
+  const onDelete = async(id:string) => {
+    // console.log('id::::::',id)
+     await categoryApi.deleteCategory(id)
+
+     router.refresh();
+
+  }
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
       <div className="flex w-full justify-end">
@@ -50,7 +64,7 @@ const CategoryTable = ({data}: Props) => {
             Add Category
           </button>
         </Link>
-      </div>
+      </div> 
       
       <div className="max-w-full overflow-x-auto">
         <table className="w-full table-auto">
@@ -71,45 +85,45 @@ const CategoryTable = ({data}: Props) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((data, index) => (
+            {categoryData.map((categoryData, index) => (
               <tr key={index}>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === categoryData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <h5 className="text-dark dark:text-white">
-                    {data.name}
+                    {categoryData.name}
                   </h5>
                   {/* <p className="mt-[3px] text-body-sm font-medium">
-                    ${data.price}
+                    ${categoryData.price}
                   </p> */}
                 </td>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === categoryData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p className="text-dark dark:text-white">
-                    {data.description}
+                    {categoryData.description}
                   </p>
                 </td>
                 {/* <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === categoryData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p
                     className={`inline-flex rounded-full px-3.5 py-1 text-body-sm font-medium ${
-                      data.status === "Paid"
+                      categoryData.status === "Paid"
                         ? "bg-[#219653]/[0.08] text-[#219653]"
-                        : data.status === "Unpaid"
+                        : categoryData.status === "Unpaid"
                           ? "bg-[#D34053]/[0.08] text-[#D34053]"
                           : "bg-[#FFA70B]/[0.08] text-[#FFA70B]"
                     }`}
                   >
-                    {data.status}
+                    {categoryData.status}
                   </p>
                 </td> */}
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === categoryData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                  <Link className="flex" href={ `/forms/category/edit`}>
+                  <Link className="flex" href={ `/forms/category/edit/${categoryData._id}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +144,7 @@ const CategoryTable = ({data}: Props) => {
                         </svg>
                       </button>
                     </Link>
-                    <button className="hover:text-primary">
+                    <button onClick={()=>onDelete(categoryData._id)} className="hover:text-primary">
                       <svg
                         className="fill-current"
                         width="20"

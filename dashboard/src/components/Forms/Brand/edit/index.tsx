@@ -6,12 +6,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import DropzoneWrapper from "@/components/FileUpload/Dropzone";
 import { Typography } from "@mui/material";
 import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
+import { brandApi } from "@/api/brandApi";
+import { useRouter } from "next/navigation";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const brandSchema = z.object({
-  brandName: z.string().nonempty({ message: "Name is required" }),
-  brandDesc: z.string().nonempty({ message: "Description is required" }),
+  name: z.string().nonempty({ message: "Name is required" }),
+  description: z.string().nonempty({ message: "Description is required" }),
   attachedFile: z.any().refine(
     (value) => {
       const acceptedTypes = ACCEPTED_IMAGE_TYPES;
@@ -32,16 +34,37 @@ const brandSchema = z.object({
 
 type typeBrandSchema = z.infer<typeof brandSchema>;
 
-const BrandEditForm = () => {
+type Props = {
+  brandData: any;
+};
+
+const BrandEditForm = ({ brandData }: Props) => {
+  console.log("dataa::", brandData); 
+
   const {
     register,
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema) });
+  } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema),
+    defaultValues: {
+      name: brandData.name,
+      description: brandData.description,
+      // attachedFile: brandData.
+    }
+  });
 
-  const onSubmit = (data: typeBrandSchema) => {
+ const router = useRouter()
+
+  const onSubmit = async (data: typeBrandSchema) => {
     console.log("submittedd::", data);
+
+    await brandApi.updateBrand(brandData._id , data)
+
+    router.push('/tables/brand')
+    router.refresh()
+
+    // await brandApi.createBrand(data)
   };
 
   return (
@@ -57,7 +80,6 @@ const BrandEditForm = () => {
                 Input Fields
               </h3>
             </div> */}
-
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col gap-5.5 p-6.5"
@@ -67,12 +89,13 @@ const BrandEditForm = () => {
                   Name
                 </label>
                 <input
-                  {...register("brandName")}
+                  {...register("name")}
                   type="text"
+              
                   placeholder="Name"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 />
-                {errors.brandName && (
+                {errors.name && (
                   <p className="mt-2 text-red">Brand name is required.</p>
                 )}
               </div>
@@ -82,12 +105,13 @@ const BrandEditForm = () => {
                   Description
                 </label>
                 <textarea
-                  {...register("brandDesc")}
+                  {...register("description")}
+                
                   rows={3}
                   placeholder="Description"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 ></textarea>
-                {errors.brandName && (
+                {errors.name && (
                   <p className="mt-1 text-red">Description is required.</p>
                 )}
               </div>
@@ -108,20 +132,25 @@ const BrandEditForm = () => {
                   </p>
                 )} */}
 
-<DropzoneWrapper>
-                  <Typography variant='h6' sx={{ mb: 2.5 }}>
+                <DropzoneWrapper>
+                  <Typography variant="h6" sx={{ mb: 2.5 }}>
                     Image:
                     {!!errors.attachedFile && (
-                      <span className="text-red ml-3">Invalid Image format {!!errors.attachedFile}</span>
+                      <span className="ml-3 text-red">
+                        Invalid Image format {!!errors.attachedFile}
+                      </span>
                     )}
                   </Typography>
                   <Controller
-                    name='attachedFile'
+                    name="attachedFile"
                     control={control}
-                  
                     render={({ field }) => (
                       <div>
-                        <FileUploaderSingle file={field.value} setFile={field.onChange} error={errors.attachedFile} />
+                        <FileUploaderSingle
+                          file={field.value}
+                          setFile={field.onChange}
+                          error={errors.attachedFile}
+                        />
                       </div>
                     )}
                   />
