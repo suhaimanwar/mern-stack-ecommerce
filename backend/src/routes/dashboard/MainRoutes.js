@@ -1,7 +1,9 @@
 import express from 'express'
-import BrandRouter from "./BrandRoutes.js"
-import CategoryRouter from './CategoryRoutes.js'
-import ProductRouter from './ProductRoutes.js'
+import BrandRouter from './routes/BrandRoutes.js'
+import CategoryRouter from './routes/CategoryRoutes.js'
+import ProductRouter from './routes/ProductRoutes.js'
+
+
 
 const DashboardRouter = express.Router()
 

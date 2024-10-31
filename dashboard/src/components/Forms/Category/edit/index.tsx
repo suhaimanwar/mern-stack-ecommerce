@@ -39,10 +39,12 @@ type Props = {
 }
 
 const CategoryEditForm = ({categoryData}: Props) => {
-  console.log('catDATTTT::',categoryData)
+  // console.log('catDATTTT::',categoryData)
   const {
     register,
     control, 
+    reset,
+    setValue,
     handleSubmit,
     formState: { errors },
     
@@ -60,8 +62,16 @@ const CategoryEditForm = ({categoryData}: Props) => {
 
     await categoryApi.updateCategory(categoryData._id , data)
 
-    router.push('/tables/brand')
+    router.push('/tables/category')
     router.refresh()
+  };
+
+  const handleReset = () => {
+    reset(); // Reset to default values
+    setValue("attachedFile", null); 
+    
+    setValue("name", "")
+    setValue("description", "")
   };
 
   return (
@@ -151,13 +161,15 @@ const CategoryEditForm = ({categoryData}: Props) => {
 
               <div className="flex">
                 <button
-                  type="reset"
+                  type="button"
+                  onClick={handleReset}
                   className="mb-2 me-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-red-500 dark:hover:bg-red-700 dark:focus:ring-gray-700"
                 >
                   Reset
                 </button>
 
                 <button
+              
                   type="submit"
                   className="mb-2 me-2 w-full rounded-full bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                 >

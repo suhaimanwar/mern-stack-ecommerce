@@ -3843,3 +3843,1840 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
   timestamp: '2024-10-29 15:59:36'
 }
+{
+  errors: {
+    name: ValidatorError: Path `name` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `name` is required.',
+        type: 'required',
+        path: 'name',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    description: ValidatorError: Path `description` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `description` is required.',
+        type: 'required',
+        path: 'description',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'description',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'products validation failed',
+  level: 'error',
+  message: '\tInternal Server Error products validation failed: name: Path `name` is required., description: Path `description` is required.',
+  stack: 'ValidationError: products validation failed: name: Path `name` is required., description: Path `description` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3079:17\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1388:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2024-10-30 11:07:13'
+}
+{
+  errors: {
+    name: ValidatorError: Path `name` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `name` is required.',
+        type: 'required',
+        path: 'name',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    description: ValidatorError: Path `description` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `description` is required.',
+        type: 'required',
+        path: 'description',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'description',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'products validation failed',
+  level: 'error',
+  message: '\tInternal Server Error products validation failed: name: Path `name` is required., description: Path `description` is required.',
+  stack: 'ValidationError: products validation failed: name: Path `name` is required., description: Path `description` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3079:17\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1388:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2024-10-30 11:07:38'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:35:56'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:36:08'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:36:54'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:37:01'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:37:20'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:38:20'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:38:22'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:38:26'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:40:10'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:40:12'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:40:14'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:40:38'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:40:43'
+}
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "products"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/ProductController.js:41:29)',
+  timestamp: '2024-10-30 11:40:46'
+}
+{
+  errors: {
+    name: ValidatorError: Path `name` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `name` is required.',
+        type: 'required',
+        path: 'name',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'name',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    description: ValidatorError: Path `description` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `description` is required.',
+        type: 'required',
+        path: 'description',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'description',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'products validation failed',
+  level: 'error',
+  message: '\tInternal Server Error products validation failed: name: Path `name` is required., description: Path `description` is required.',
+  stack: 'ValidationError: products validation failed: name: Path `name` is required., description: Path `description` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3079:17\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1388:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2024-10-30 11:54:28'
+}
+{
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  level: 'error',
+  message: '\tInternal Server Error read ECONNRESET',
+  stack: 'Error: read ECONNRESET\n' +
+    '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+  timestamp: '2024-10-30 12:21:20'
+}
+{
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  level: 'error',
+  message: '\tInternal Server Error read ECONNRESET',
+  stack: 'Error: read ECONNRESET\n' +
+    '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+  timestamp: '2024-10-30 12:21:25'
+}
+{
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  level: 'error',
+  message: '\tInternal Server Error read ECONNRESET',
+  stack: 'Error: read ECONNRESET\n' +
+    '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+  timestamp: '2024-10-30 12:21:26'
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398392167,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398392127,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398392127,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:182:22)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:21:38',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398393698,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398393650,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398393650,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:21:39',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398408525,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398408524,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398408525,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:21:55',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398523227,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535798,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535289,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:24:07',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398523227,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535798,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535289,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:24:09',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398523227,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535798,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535289,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:24:11',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398547330,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535798,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535289,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:24:13',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398547330,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398535798,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 398547831,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000080'),
+    maxSetVersion: 125,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async FindCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:51:26)\n' +
+    '    at async FindCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async FindCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async FindCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async FindCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async model.Query._find (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2322:14)',
+  timestamp: '2024-10-30 12:24:15',
+  [Symbol(errorLabels)]: Set(0) {}
+}

@@ -1,6 +1,6 @@
 import express from "express";
-import { createCategory, deleteCategory, getAllCategories, getCategorybyId, updateCategory } from "../controllers/CategoryController.js";
-import { uploadImageFile } from "../utils/fileUploader.js";
+import { createCategory, deleteCategory, getAllCategories, getCategorybyId, updateCategory } from "../../../controllers/dashboard/CategoryController.js";
+import { uploadImageFile } from "../../../utils/fileUploader.js";
 
 
 const CategoryRouter = express.Router(); // express.router is used to to define routes

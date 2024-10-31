@@ -44,6 +44,8 @@ const BrandEditForm = ({ brandData }: Props) => {
   const {
     register,
     control,
+    reset,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm<typeBrandSchema>({ resolver: zodResolver(brandSchema),
@@ -65,6 +67,13 @@ const BrandEditForm = ({ brandData }: Props) => {
     router.refresh()
 
     // await brandApi.createBrand(data)
+  };
+
+  const handleReset = () => {
+    reset(); // Reset to default values
+    setValue("attachedFile", null); 
+    setValue("name", "")
+    setValue("description", "")
   };
 
   return (
@@ -159,7 +168,8 @@ const BrandEditForm = ({ brandData }: Props) => {
 
               <div className="flex">
                 <button
-                  type="reset"
+                  type="button"
+                  onClick={handleReset}
                   className="mb-2 me-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-red-500 dark:hover:bg-red-700 dark:focus:ring-gray-700"
                 >
                   Reset

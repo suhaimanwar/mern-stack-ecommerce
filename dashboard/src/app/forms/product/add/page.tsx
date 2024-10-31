@@ -24,10 +24,10 @@ const getDropdown = async () => {
 const FormElementsPage = async() => {
 
   const dropdownData = await getDropdown()
-  // console.log('brandresss:::::',dropdownData)
+  console.log('brandresss:::::',dropdownData)
 
   return (
-
+ 
     <DefaultLayout> 
       <ProductAddForm dropdownData={dropdownData} />
     </DefaultLayout> 

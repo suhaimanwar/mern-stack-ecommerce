@@ -23,7 +23,6 @@ const TablesPage = async() => {
 
   const data = await getAllCategory()
 
-
   return (
     <DefaultLayout>
       <Breadcrumb pageName="Categories" />

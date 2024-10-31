@@ -8,6 +8,7 @@ import ProductAddForm from "@/components/Forms/Product/add";
 import ProductEditForm from "@/components/Forms/Product/edit/page";
 import { brandApi } from "@/api/brandApi";
 import { categoryApi } from "@/api/categoryApi";
+import { productApi } from "@/api/productApi";
 
 export const metadata: Metadata = {
   title: "Next.js Form Elements Page | NextAdmin - Next.js Dashboard Kit",
@@ -17,16 +18,29 @@ export const metadata: Metadata = {
 const getDropdown = async () => {
   const brandResponse = await brandApi.getAllBrands()
   const categoryResponse = await categoryApi.getAllCategory()
-
+  
   return {brandResponse: brandResponse.data.data.brands, 
     categoryResponse: categoryResponse.data.data.categories}
+
 }
-const FormElementsPage = async() => {
+
+type Props = {
+  params: {id: string}
+}
+const FormElementsPage = async({params}: Props) => {
+
+  // console.log('paraaaaaaaaams',params)
+
+  const res = await productApi.getProductbyId(params.id)
+
+  const productData = res.data.data.product
+
+  // console.log('prooooooooo',productData)
 
   const dropdownData = await getDropdown()
   return (
     <DefaultLayout>
-      <ProductEditForm  dropdownData={dropdownData}  />
+      <ProductEditForm  dropdownData={dropdownData} singleProductData={productData}  />
     </DefaultLayout>
   );
 };

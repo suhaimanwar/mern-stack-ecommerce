@@ -21,7 +21,7 @@ const CategorySelect = ({categoryDrop,register,error}:Props) => {
   };
 
   return (
-    <div className="">
+    <div className="w-full">
       <label className="mb-3 block text-body-sm text-dark dark:text-white">
         Category
       </label>
@@ -39,10 +39,11 @@ const CategorySelect = ({categoryDrop,register,error}:Props) => {
           }`}
         >
           <option value="" disabled className="text-dark-6">
-            Select your subject
+            Select your Category
           </option>
 
           {categoryDrop.map((item: {name:string, _id:string})=>(
+            // eslint-disable-next-line react/jsx-key
             <option value={item._id} className="text-dark-6">
             {item.name}
           </option>

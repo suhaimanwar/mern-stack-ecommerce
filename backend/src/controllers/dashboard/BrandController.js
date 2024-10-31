@@ -1,12 +1,12 @@
-import { BrandModel } from "../models/BrandModel.js";
-import { serverError, validationError } from "../utils/errorHandler.js";
+import { BrandModel } from "../../models/BrandModel.js";
+import { serverError, validationError } from "../../utils/errorHandler.js";
 
 export const createBrand = async (req, res, next) => {
   try {
     const { name, description } = req.body; //Destructuring name and description from req.body (aka from the Model)
 
-    console.log('reqbodyy',req.body)
-    console.log('reqfileee', req.file)
+    // console.log('reqbodyy',req.body)
+    // console.log('reqfileee', req.file)
 
     await BrandModel.create({
       name: name, //Placing the input name Here

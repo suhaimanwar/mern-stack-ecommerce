@@ -1,34 +1,67 @@
+"use client"
+
+import { productApi } from "@/api/productApi";
 import { Package } from "@/types/package";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const packageData: Package[] = [
-  {
-    name: "product",
-    price: 0.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
-  },
-  {
-    name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
-  },
-  {
-    name: "Business Package",
-    price: 99.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Unpaid",
-  },
-  {
-    name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Pending",
-  },
-];
+// const packageData: Package[] = [
+//   {
+//     name: "product",
+//     price: 0.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Paid",
+//   },
+//   {
+//     name: "Standard Package",
+//     price: 59.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Paid",
+//   },
+//   {
+//     name: "Business Package",
+//     price: 99.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Unpaid",
+//   },
+//   {
+//     name: "Standard Package",
+//     price: 59.0,
+//     invoiceDate: `Jan 13,2023`,
+//     status: "Pending",
+//   },
+// ];
 
-const ProductTable = () => {
+type Props = {
+  productData: [
+    {
+      _id: string,
+      length: number,
+      name: string,
+      description: string,
+      category: string,
+    }
+  ]
+
+  brandData: any,
+
+  categoryData:any,
+}
+
+const ProductTable = ({productData, brandData, categoryData}: Props) => {
+
+  const router = useRouter()
+const onDelete = async(id:string) => {
+  // console.log('id::::::',id)
+   await productApi.deleteProduct(id)
+
+   router.refresh();
+
+}
+  // console.log('proddddddductt::::::::',productData)
+
+  // console.log('braaaaaand::',brandData)
+  // console.log('caaaaaaaat::',categoryData)
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
       <div className="flex w-full justify-end">
@@ -61,45 +94,41 @@ const ProductTable = () => {
             </tr>
           </thead>
           <tbody>
-            {packageData.map((packageItem, index) => (
+            {productData.map((item, index) => (
               <tr key={index}>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <h5 className="text-dark dark:text-white">
-                    {packageItem.name}
+                    {item.name}
                   </h5>
                   {/* <p className="mt-[3px] text-body-sm font-medium">
-                    ${packageItem.price}
+                    ${item.price}
                   </p> */}
                 </td>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p className="text-dark dark:text-white">
-                    {packageItem.invoiceDate}
+                    {item.description}
                   </p>
                 </td>
+
+               
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p
-                    className={`inline-flex rounded-full px-3.5 py-1 text-body-sm font-medium ${
-                      packageItem.status === "Paid"
-                        ? "bg-[#219653]/[0.08] text-[#219653]"
-                        : packageItem.status === "Unpaid"
-                          ? "bg-[#D34053]/[0.08] text-[#D34053]"
-                          : "bg-[#FFA70B]/[0.08] text-[#FFA70B]"
-                    }`}
+                    className={``}
                   >
-                    {packageItem.status}
+                    {item.name}
                   </p>
                 </td>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                  <Link className="flex" href={ `/forms/product/edit`}>
+                  <Link className="flex" href={ `/forms/product/edit/${item._id}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +149,7 @@ const ProductTable = () => {
                         </svg>
                       </button>
                     </Link>
-                    <button className="hover:text-primary">
+                    <button onClick={()=>onDelete(item._id)} className="hover:text-primary">
                       <svg
                         className="fill-current"
                         width="20"

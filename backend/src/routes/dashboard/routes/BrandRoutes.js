@@ -5,8 +5,8 @@ import {
   getAllBrands,
   getBrandById,
   updateBrand,
-} from "../controllers/BrandController.js";
-import { uploadImageFile } from "../utils/fileUploader.js";
+} from "../../../controllers/dashboard/BrandController.js";
+import { uploadImageFile } from "../../../utils/fileUploader.js";
 
 const BrandRouter = express.Router(); // express.router is used to to define routes
 

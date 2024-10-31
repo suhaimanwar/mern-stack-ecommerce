@@ -1,11 +1,11 @@
-import { CategoryModel } from "../models/CategoryModel.js";
-import { serverError, validationError } from "../utils/errorHandler.js";
+import { CategoryModel } from "../../models/CategoryModel.js";
+import { serverError, validationError } from "../../utils/errorHandler.js";
 
 export const createCategory = async (req, res, next) => {
     try {
       const { name, description } = req.body; //Destructuring name and description from req.body (aka from the model)
 
-      console.log('reqfileee',req.file)
+    //   console.log('reqfileee',req.file)
   
       await CategoryModel.create({
         name: name, //Placing the input name Here

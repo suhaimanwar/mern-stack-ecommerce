@@ -5,7 +5,9 @@ import helmet from 'helmet';
 import mongoSanitize from 'express-mongo-sanitize';
 import { notFoundError } from './src/utils/errorHandler.js';
 import { statusCode } from './src/enum/StatusCodes.js';
-import DashboardRouter from './src/routes/MainRoutes.js';
+import DashboardRouter from './src/routes/dashboard/MainRoutes.js';
+import FrontendRouter from './src/routes/frontend/MainRoutes.js';
+
 
 const port = 5000;
 
@@ -38,6 +40,7 @@ app.use(mongoSanitize())
 
 
 app.use('/api', DashboardRouter)
+app.use('/api/frontend', FrontendRouter)
 
 ConnectMongoDB();
  

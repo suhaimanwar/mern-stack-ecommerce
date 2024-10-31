@@ -7,6 +7,7 @@ import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 import DropzoneWrapper from "@/components/FileUpload/Dropzone";
 import { Typography } from "@mui/material";
 import { categoryApi } from "@/api/categoryApi";
+import { useRouter } from "next/navigation";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
@@ -37,14 +38,26 @@ const CategoryAddForm = () => {
   const {
     register,
     control,
+    reset,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm<typeCategorySchema>({ resolver: zodResolver(categorySchema) });
+
+  const router = useRouter()
 
   const onSubmit = async (data: typeCategorySchema) => {
     console.log("submittedd::", data);
 
     await categoryApi.createCategory(data);
+
+    router.push('/tables/category')
+    router.refresh()
+  };
+
+  const handleReset = () => {
+    reset(); // Reset to default values
+    setValue("attachedFile", null); 
   };
 
   return (
@@ -138,7 +151,8 @@ const CategoryAddForm = () => {
 
               <div className="flex">
                 <button
-                  type="reset"
+                  type="button"
+                  onClick={handleReset}
                   className="mb-2 me-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-red-500 dark:hover:bg-red-700 dark:focus:ring-gray-700"
                 >
                   Reset

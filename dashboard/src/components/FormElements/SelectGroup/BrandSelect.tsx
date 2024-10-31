@@ -5,9 +5,6 @@ import { string } from "zod";
 
 type Props= {
     register: UseFormRegisterReturn;
-
-    
-
     error?: FieldError | Merge <FieldError, FieldErrorsImpl<any>> | undefined;
 
     brandDrop:{
@@ -26,7 +23,7 @@ const BrandSelect = ({brandDrop, register, error}: Props) => {
   };
 
   return (
-    <div className="">
+    <div className="w-full">
       <label className="mb-3 block text-body-sm text-dark dark:text-white">
         Brand
       </label>
@@ -48,6 +45,7 @@ const BrandSelect = ({brandDrop, register, error}: Props) => {
           </option>
 
           {brandDrop.map((item: {name:string, _id:string}) => (
+   // eslint-disable-next-line react/jsx-key
    <option value={item._id} className="text-dark-6">
    {item.name}
  </option>

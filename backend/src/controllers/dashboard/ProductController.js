@@ -1,13 +1,15 @@
-import { ProductModel } from "../models/ProductModel.js";
-import { serverError, validationError } from "../utils/errorHandler.js";
+import { ProductModel } from "../../models/ProductModel.js";
+import { serverError, validationError } from "../../utils/errorHandler.js";
 
 export const createProduct = async (req, res, next) => {
     try {
-      const { name, description } = req.body; //Destructuring name and description from req.body (aka from the model)
+      const { name, description, brand, category } = req.body; //Destructuring name and description from req.body (aka from the model)
   
       await ProductModel.create({
         name: name, //Placing the input name Here
         description: description, //Placing the nput description here.
+        brand: brand, 
+        category: category,
         deletedAt: null,
       });
   
@@ -82,13 +84,14 @@ export const updateProduct = async (req, res, next) => {
     try {
         const productId = req.params.id;
 
-        const {name, description} = req.body
+        const {name, description, brand, category} = req.body
 
         const product = await ProductModel.findOne({_id: productId, deletedAt:null})
 
         product.name= name;
-
         product.description = description;
+        product.brand = brand;
+        product.category = category;
 
         await product.save()
 

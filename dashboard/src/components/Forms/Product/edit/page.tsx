@@ -9,12 +9,15 @@ import CategorySelect from "@/components/FormElements/SelectGroup/CategorySelect
 import DropzoneWrapper from "@/components/FileUpload/Dropzone";
 import { Typography } from "@mui/material";
 import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
+import { productApi } from "@/api/productApi";
+import { useRouter } from "next/navigation";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const productSchema = z.object({
-  productName: z.string().nonempty({ message: "Name is required" }),
-  productDesc: z.string().nonempty({ message: "Description is required" }),
+  name: z.string().nonempty({ message: "Name is required" }),
+  description: z.string().nonempty({ message: "Description is required" }),
+  
 
   attachedFile: z.any().refine(
     (value) => {
@@ -22,7 +25,7 @@ const productSchema = z.object({
       if (typeof value === "string") {
         return true;
       } else if (typeof value === "object") {
-        const isTypeAccepted = acceptedTypes.includes(value[0]?.type);
+        const isTypeAccepted = acceptedTypes.includes(value?.type);
         return isTypeAccepted;
       }
 
@@ -45,10 +48,14 @@ type Props = {
     brandResponse: any;
     categoryResponse: any;
   },
+
+  singleProductData: any
 }
 
 
-const ProductEditForm = ({dropdownData}: Props) => {
+const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
+
+  console.log('sssssssssssssssss::::',singleProductData)
 
   const brandDrop = dropdownData.brandResponse
   
@@ -56,13 +63,40 @@ const ProductEditForm = ({dropdownData}: Props) => {
   
   const {
     register,
+    reset,
+    setValue,
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<typeProductShema>({ resolver: zodResolver(productSchema) });
 
-  const onSubmit = (data: typeProductShema) => {
-    console.log("submittedd::", data);
+    
+  } = useForm<typeProductShema>({ resolver: zodResolver(productSchema),
+    defaultValues:{
+      name: singleProductData.name,
+      description: singleProductData.description,
+      category: singleProductData.category,
+      brand: singleProductData.brand
+    }
+   });
+
+   const router = useRouter()
+
+  const onSubmit = async(data: typeProductShema) => {
+    // console.log("submittedd::", data);
+
+    await productApi.updateProduct(singleProductData._id , data)
+
+    router.push('/tables/product')
+    router.refresh()
+  };
+
+  const handleReset = () => {
+    reset(); // Reset to default values
+    setValue("attachedFile", null); 
+    setValue("brand", "")
+    setValue("category", "")
+    setValue("name", "")
+    setValue("description", "")
   };
 
   return (
@@ -88,12 +122,12 @@ const ProductEditForm = ({dropdownData}: Props) => {
                   Name
                 </label>
                 <input
-                  {...register("productName")}
+                  {...register("name")}
                   type="text"
                   placeholder="Name"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 />
-                {errors.productName && (
+                {errors.name && (
                   <p className="mt-2 text-red">Product name is required.</p>
                 )}
               </div>
@@ -103,12 +137,12 @@ const ProductEditForm = ({dropdownData}: Props) => {
                   Description
                 </label>
                 <textarea
-                  {...register("productDesc")}
+                  {...register("description")}
                   rows={3}
                   placeholder="Description"
                   className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
                 ></textarea>
-                {errors.productName && (
+                {errors.name && (
                   <p className="mt-1 text-red">Description is required.</p>
                 )}
               </div>
@@ -163,7 +197,8 @@ const ProductEditForm = ({dropdownData}: Props) => {
 
               <div className="flex">
                 <button
-                  type="reset"
+                onClick={handleReset}
+                  type="button"
                   className="mb-2 me-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-red-500 dark:hover:bg-red-700 dark:focus:ring-gray-700"
                 >
                   Reset
