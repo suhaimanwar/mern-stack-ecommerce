@@ -75,7 +75,8 @@ const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
       name: singleProductData.name,
       description: singleProductData.description,
       category: singleProductData.category,
-      brand: singleProductData.brand
+      brand: singleProductData.brand,
+      attachedFile: process.env.NEXT_PUBLIC_STORAGE_URL + singleProductData.image,
     }
    });
 

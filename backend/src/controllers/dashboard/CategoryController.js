@@ -1,16 +1,19 @@
 import { CategoryModel } from "../../models/CategoryModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
+import { getFilePath } from "../../utils/filePath.js";
 
 export const createCategory = async (req, res, next) => {
     try {
       const { name, description } = req.body; //Destructuring name and description from req.body (aka from the model)
 
     //   console.log('reqfileee',req.file)
+
+    const categoryImage = getFilePath(req.file)
   
       await CategoryModel.create({
         name: name, //Placing the input name Here
         description: description, //Placing the nput description here.
-        image: req.file.filename,
+        image: categoryImage,
         deletedAt: null,
       });
   
@@ -89,11 +92,22 @@ export const updateCategory = async (req, res, next) => {
         
         console.log('RRRRRRRREqqqq',req.body)
 
+        
+
         const category = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
 
+       
         category.name= name;
 
         category.description = description;
+
+        
+
+        if (req.file !=null) {
+            const categoryImage = getFilePath(req.file)
+            category.image = categoryImage
+          }
+
 
         await category.save()
 

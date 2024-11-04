@@ -1,5 +1,6 @@
 import { BrandModel } from "../../models/BrandModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
+import { getFilePath } from "../../utils/filePath.js";
 
 export const createBrand = async (req, res, next) => {
   try {
@@ -7,11 +8,15 @@ export const createBrand = async (req, res, next) => {
 
     // console.log('reqbodyy',req.body)
     // console.log('reqfileee', req.file)
+    const brandLogo = getFilePath(req.file)
+
+    console.log('brandLogo::::',brandLogo)
 
     await BrandModel.create({
       name: name, //Placing the input name Here
       description: description, //Placing the nput description here.
-      image: req.file.filename,
+      // image: req.file.filename,
+      image: brandLogo,
       deletedAt: null,
     });
 
@@ -88,9 +93,6 @@ export const deleteBrand = async (req, res, next) => {
 export const updateBrand = async (req, res, next) => {
   try {
     const brandId = req.params.id;
-
-
-
     // const name = req.body.name;
     // const description = req.body.description;
 
@@ -100,8 +102,21 @@ export const updateBrand = async (req, res, next) => {
 
     const brand = await BrandModel.findOne({_id:brandId, deletedAt:null})
 
+    console.log('req::',req.file)
+
+    
+
+    // console.log('logo',brandLogo)
+
     brand.name = name;
     brand.description = description;
+
+    if (req.file !=null) {
+      const brandLogo = getFilePath(req.file)
+      brand.image = brandLogo
+    }
+
+    
 
     await brand.save()
 

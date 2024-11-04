@@ -51,7 +51,8 @@ const CategoryEditForm = ({categoryData}: Props) => {
   } = useForm<typeCategorySchema>({ resolver: zodResolver(categorySchema),
     defaultValues:{
       name: categoryData.name,
-      description: categoryData.description
+      description: categoryData.description,
+      attachedFile: process.env.NEXT_PUBLIC_STORAGE_URL + categoryData.image
     }
    });
 

@@ -5738,3 +5738,208 @@
     '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
   timestamp: '2024-11-04 10:43:11'
 }
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at createBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:12:23)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at done (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at Multipart.<anonymous> (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n' +
+    '    at Multipart.emit (node:events:519:28)\n' +
+    '    at emitCloseNT (node:internal/streams/destroy:147:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)',
+  timestamp: '2024-11-04 11:21:47'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at createBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:12:23)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at done (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at Multipart.<anonymous> (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n' +
+    '    at Multipart.emit (node:events:519:28)\n' +
+    '    at emitCloseNT (node:internal/streams/destroy:147:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)',
+  timestamp: '2024-11-04 11:22:15'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at createBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:12:23)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at done (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at Multipart.<anonymous> (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n' +
+    '    at Multipart.emit (node:events:519:28)\n' +
+    '    at emitCloseNT (node:internal/streams/destroy:147:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)',
+  timestamp: '2024-11-04 11:23:53'
+}
+{
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: test.brands index: slug_1 dup key: { slug: null }',
+    keyPattern: { slug: 1 },
+    keyValue: { slug: null }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { slug: 1 },
+  keyValue: { slug: null },
+  level: 'error',
+  message: '\tInternal Server Error E11000 duplicate key error collection: test.brands index: slug_1 dup key: { slug: null }',
+  stack: 'MongoServerError: E11000 duplicate key error collection: test.brands index: slug_1 dup key: { slug: null }\n' +
+    '    at InsertOneOperation.execute (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\insert.js:51:19)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:192:20)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async Collection.insertOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\collection.js:154:16)',
+  timestamp: '2024-11-04 11:26:08',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:18:36'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:18:55'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:19:29'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:21:37'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error File object is undefined or does not have a path property.',
+  stack: 'Error: File object is undefined or does not have a path property.\n' +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:15)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:23:45'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:24:02'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:13:23)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:24:28'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:27:38'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:105:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:28:04'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:107:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:29:16'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:107:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:29:51'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:107:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:31:05'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:107:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:32:51'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:7:35)\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:107:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:58:36'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error brandLogo is not defined',
+  stack: 'ReferenceError: brandLogo is not defined\n' +
+    '    at updateBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:109:24)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-04 13:59:20'
+}

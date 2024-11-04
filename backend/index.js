@@ -7,6 +7,7 @@ import { notFoundError } from './src/utils/errorHandler.js';
 import { statusCode } from './src/enum/StatusCodes.js';
 import DashboardRouter from './src/routes/dashboard/MainRoutes.js';
 import FrontendRouter from './src/routes/frontend/MainRoutes.js';
+import { cwd } from 'process';
 
 
 const port = 5000;
@@ -41,6 +42,7 @@ app.use(mongoSanitize())
 
 app.use('/api', DashboardRouter)
 app.use('/api/frontend', FrontendRouter)
+app.use('/uploads', express.static(cwd() + '/uploads', { maxAge: 31557600 }));
 
 ConnectMongoDB();
  

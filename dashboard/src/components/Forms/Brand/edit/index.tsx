@@ -9,6 +9,9 @@ import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 import { brandApi } from "@/api/brandApi";
 import { useRouter } from "next/navigation";
 
+
+
+
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const brandSchema = z.object({
@@ -41,6 +44,7 @@ type Props = {
 const BrandEditForm = ({ brandData }: Props) => {
   console.log("dataa::", brandData); 
 
+
   const {
     register,
     control,
@@ -52,7 +56,7 @@ const BrandEditForm = ({ brandData }: Props) => {
     defaultValues: {
       name: brandData.name,
       description: brandData.description,
-      // attachedFile: brandData.
+      attachedFile: process.env.NEXT_PUBLIC_STORAGE_URL + brandData.image
     }
   });
 
@@ -68,7 +72,7 @@ const BrandEditForm = ({ brandData }: Props) => {
 
     // await brandApi.createBrand(data)
   };
-
+ 
   const handleReset = () => {
     reset(); // Reset to default values
     setValue("attachedFile", null); 
