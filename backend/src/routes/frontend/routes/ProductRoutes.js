@@ -7,7 +7,4 @@ const ProductRouter = express.Router(); // express.router is used to to define r
 ProductRouter.get('/', getAllProducts)
 ProductRouter.get('/view/:id', getProductbyId)
 
-
-
-
 export default ProductRouter;

@@ -5680,3 +5680,61 @@
   timestamp: '2024-10-30 12:24:15',
   [Symbol(errorLabels)]: Set(0) {}
 }
+{
+  errorResponse: {
+    ok: 0,
+    errmsg: 'Invalid $project :: caused by :: Cannot do exclusion on field description in inclusion projection',
+    code: 31254,
+    codeName: 'Location31254',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1730695888, i: 31 }),
+      signature: {
+        hash: Binary.createFromBase64('X0WjfEhiWiu0KgxWG2tuNqIInLE=', 0),
+        keyId: new Long('7384019375713419269')
+      }
+    },
+    operationTime: new Timestamp({ t: 1730695888, i: 31 })
+  },
+  ok: 0,
+  code: 31254,
+  codeName: 'Location31254',
+  '$clusterTime': {
+    clusterTime: new Timestamp({ t: 1730695888, i: 31 }),
+    signature: {
+      hash: Binary.createFromBase64('X0WjfEhiWiu0KgxWG2tuNqIInLE=', 0),
+      keyId: new Long('7384019375713419269')
+    }
+  },
+  operationTime: new Timestamp({ t: 1730695888, i: 31 }),
+  level: 'error',
+  message: '\tInternal Server Error Invalid $project :: caused by :: Cannot do exclusion on field description in inclusion projection',
+  stack: 'MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field description in inclusion projection\n' +
+    '    at Connection.sendCommand (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:289:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async Connection.command (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:312:26)\n' +
+    '    at async Server.command (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\server.js:167:29)\n' +
+    '    at async AggregateOperation.executeCommand (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\command.js:73:16)\n' +
+    '    at async AggregateOperation.execute (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\aggregate.js:87:16)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:192:20)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async AggregationCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:39:26)\n' +
+    '    at async AggregationCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)',
+  timestamp: '2024-11-04 10:21:27',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error CategoryModel is not defined',
+  stack: 'ReferenceError: CategoryModel is not defined\n' +
+    '    at getAllCategories (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ShopController.js:7:28)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-11-04 10:43:11'
+}
