@@ -114,6 +114,8 @@ const BrandAddForm = () => {
                 <p className="mt-2 text-red">{errors.description?.message}</p>
               </div>
 
+              
+
               <div>
 
               <DropzoneWrapper>

@@ -17,6 +17,7 @@ const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 const productSchema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
   description: z.string().nonempty({ message: "Description is required" }),
+  price: z.string().min(1,"Price is required" ),
   
 
   attachedFile: z.any().refine(
@@ -74,6 +75,8 @@ const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
     defaultValues:{
       name: singleProductData.name,
       description: singleProductData.description,
+      price: singleProductData.price,
+    
       category: singleProductData.category,
       brand: singleProductData.brand,
       attachedFile: process.env.NEXT_PUBLIC_STORAGE_URL + singleProductData.image,
@@ -98,6 +101,7 @@ const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
     setValue("category", "")
     setValue("name", "")
     setValue("description", "")
+    setValue("price", "")
   };
 
   return (
@@ -148,12 +152,29 @@ const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
                 )}
               </div>
 
-              <BrandSelect brandDrop={brandDrop} register={register("brand")} error={errors.brand} />
+              <div>
+                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+                  Price
+                </label>
+                <input
+                  {...register("price")}
+                  type="number"
+                  placeholder="Price"
+                  className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
+                />
+                {errors.price && (
+                  <p className="mt-2 text-red">Price is required.</p>
+                )}
+              </div>
 
-              <CategorySelect categoryDrop={categoryDrop}
-                register={register("category")}
-                error={errors.category}
-              />
+              <div className="flex gap-3">
+                <BrandSelect brandDrop={brandDrop} register={register("brand")} error={errors.brand} />
+  
+                <CategorySelect categoryDrop={categoryDrop}
+                  register={register("category")}
+                  error={errors.category}
+                />
+              </div>
 
               <div>
                 {/* <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">

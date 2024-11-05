@@ -3,51 +3,22 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Image2 from "@public/images/carousel (4).png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { faTrash, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+
+import { faTrash,  } from "@fortawesome/free-solid-svg-icons";
 
 import { useCart } from "@mrvautin/react-shoppingcart";
 import Link from "next/link";
 
-// const tableData = [
-//   {
-//     src: Image2,
-//     product: "Airpods Pro",
-//     price: 8000,
-//     Quantity: 3,
-//     Subtotal: 8000,
-//   },
-//   {
-//     src: Image2,
-//     product: "Airpods Pro",
-//     price: 8000,
-//     Quantity: 3,
-//     Subtotal: 8000,
-//   },
-//   {
-//     src: Image2,
-//     product: "Airpods Pro",
-//     price: 8000,
-//     Quantity: 3,
-//     Subtotal: 8000,
-//   },
-//   {
-//     src: Image2,
-//     product: "Airpods Pro",
-//     price: 8000,
-//     Quantity: 3,
-//     Subtotal: 8000,
-//   },
-// ];
+
 
 const page = () => {
-  const { items, removeItem , updateItemQuantity,  totalItemsAmount, cartNetTotal, cartTotal} = useCart();
+  const { items, removeItem , updateItemQuantity,  totalItemsAmount, cartNetTotal} = useCart();
   
   const [isClient, setIsClient] = useState(false);
   
-  // console.log("items::::", items);
+  console.log("items::::", items);
   
   
   useEffect(() => {

@@ -1,9 +1,11 @@
-"use client"
+"use client";
 
 import { productApi } from "@/api/productApi";
 import { Package } from "@/types/package";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast, { Toaster } from "react-hot-toast";
 
 // const packageData: Package[] = [
 //   {
@@ -35,35 +37,49 @@ import { useRouter } from "next/navigation";
 type Props = {
   productData: [
     {
-      _id: string,
-      length: number,
-      name: string,
-      description: string,
-      category: string,
+      _id: string;
+      length: number;
+      name: string;
+      description: string;
+      price: string;
+      category: string;
+
+      image: string;
+    },
+  ];
+
+  brandData: any;
+
+  categoryData: any;
+};
+
+const ProductTable = ({ productData, brandData, categoryData }: Props) => {
+  const router = useRouter();
+  const onDelete = async (id: string) => {
+    const isConfirmed = confirm("Are you sure you want to delete this product?");
+    
+    if (!isConfirmed) return;
+  
+    try {
+      const deleteProduct = await productApi.deleteProduct(id);
+      if (deleteProduct.data.success) {
+        toast.success(deleteProduct.data.message);
+        router.refresh();
+      }
+    } catch (error: any) {
+      toast.error(error.message);
     }
-  ]
-
-  brandData: any,
-
-  categoryData:any,
-}
-
-const ProductTable = ({productData, brandData, categoryData}: Props) => {
-
-  const router = useRouter()
-const onDelete = async(id:string) => {
-  // console.log('id::::::',id)
-   await productApi.deleteProduct(id)
-
-   router.refresh();
-
-}
+  };
+  
   // console.log('proddddddductt::::::::',productData)
 
   // console.log('braaaaaand::',brandData)
   // console.log('caaaaaaaat::',categoryData)
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
+     <div><Toaster position="top-right"
+  reverseOrder={true}/></div>
+
       <div className="flex w-full justify-end">
         <Link href="/forms/product/add">
           <button
@@ -74,16 +90,17 @@ const onDelete = async(id:string) => {
           </button>
         </Link>
       </div>
-      
+
       <div className="max-w-full overflow-x-auto">
         <table className="w-full table-auto">
           <thead>
             <tr className="bg-[#F7F9FC] text-left dark:bg-dark-2">
+              {/* <th className="min-w-[220px] px-4 py-4 font-medium text-dark dark:text-white xl:pl-7.5"></th> */}
               <th className="min-w-[220px] px-4 py-4 font-medium text-dark dark:text-white xl:pl-7.5">
-                Product Name
+                Image ‎     | ‎  Name
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-dark dark:text-white">
-                Product Description
+                Description
               </th>
               <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
                 Price
@@ -97,15 +114,27 @@ const onDelete = async(id:string) => {
             {productData.map((item, index) => (
               <tr key={index}>
                 <td
+                  className={`border-[#eee] px-4 py-4  dark:border-dark-3 xl:pl-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
+                >
+                 <div className="flex items-center gap-5 ">
+                    <div className="relative size-20">
+                      <Image
+                        className="rounded-lg object-cover "
+                        src={"http://localhost:5000/" + item.image}
+                        fill
+                        
+                        alt="img"
+                      />
+                    </div>
+                    <h5 className="text-dark dark:text-white">{item.name}</h5>
+                 </div>
+                </td> 
+                {/* <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
-                  <h5 className="text-dark dark:text-white">
-                    {item.name}
-                  </h5>
-                  {/* <p className="mt-[3px] text-body-sm font-medium">
-                    ${item.price}
-                  </p> */}
-                </td>
+                  <h5 className="text-dark dark:text-white">{item.name}</h5>
+                  
+                </td> */}
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
@@ -114,21 +143,19 @@ const onDelete = async(id:string) => {
                   </p>
                 </td>
 
-               
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
-                  <p
-                    className={``}
-                  >
-                    {item.name}
-                  </p>
+                  <p className={``}>₹{item.price}</p>
                 </td>
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                  <Link className="flex" href={ `/forms/product/edit/${item._id}`}>
+                    <Link
+                      className="flex"
+                      href={`/forms/product/edit/${item._id}`}
+                    >
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +176,10 @@ const onDelete = async(id:string) => {
                         </svg>
                       </button>
                     </Link>
-                    <button onClick={()=>onDelete(item._id)} className="hover:text-primary">
+                    <button
+                      onClick={() => onDelete(item._id)}
+                      className="hover:text-primary"
+                    >
                       <svg
                         className="fill-current"
                         width="20"

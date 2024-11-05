@@ -6,13 +6,14 @@ import Link from "next/link";
 
 type Props = {
     name: string,
-    src:  StaticImageData 
+    src:  StaticImageData  | string,
+    id: string
 }
 
-const ShopCategory = ({name,src}:Props) => {
+const ShopCategory = ({name,src,id}:Props) => {
   return (
     <>
-      <Link href={`/shop/${name}`}>
+      <Link href={`/shop/${id}`}>
         <div className="card w-full h-60 flex justify-center items-center rounded-lg relative overflow-hidden group">
           <Image
             src={src}

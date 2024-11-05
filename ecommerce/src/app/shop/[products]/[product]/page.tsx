@@ -1,23 +1,30 @@
 import React from "react";
-import Image2 from "@public/images/carousel (4).png";
+// import Image2 from "@public/images/carousel (4).png";
 import Image from "next/image";
 import AddToCart from "./_components/AddToCart";
+import { Api } from "@/api/Api";
+import { StorageUrl } from "@/utils/BaseUrl";
 
-// const ProductData = {
-//   productTitle: "Apple AirPods Pro",
-//   productSubtitle: "Immerse yourself in unparalleled sound.",
-//   price: 249,
-//   availability: "In Stock",
-//   productDesc: `The Apple AirPods Pro offers the perfect blend of advanced noise cancellation and immersive sound. With customizable silicone tips, a 45dB active noise cancellation (ANC) system, and adaptive EQ, experience your music, podcasts, and calls like never before. Ideal for both work and play, these earphones are designed for a secure fit, ensuring comfort even during extended use. The Transparency mode lets you tune back into the world when needed.`,
-//   src: Image2,
-// };
+
+const product =  async function (id:string) {
+  const response = await Api.getProductbyId(id)
+  return response;
+}
+
 
 const page = async ({ params }: { params: { product: string } }) => {
+
+  const data = await product(params.product)
+
+  const productData = data.product[0]
+
+  console.log('hello::',productData.name)
+
   // Fetch all products
-  const res = await fetch('https://dummyjson.com/products/'+ params.product);
-  const data = await res.json();
+  // const res = await fetch('https://dummyjson.com/products/'+ params.product);
+  // const data = await res.json();
   
-  // Find the product by title
+  // Find the product by title 
   
   // const productData = data.products.find((product: any) => product.title === decodeURIComponent(params.product));
 
@@ -38,7 +45,7 @@ const page = async ({ params }: { params: { product: string } }) => {
               <div className="h-[460px] rounded-lg bg-gray-300  mb-4 relative">
                 <Image
                   className="w-full h-full object-cover rounded-lg"
-                  src={data.thumbnail}
+                  src={StorageUrl + productData.image}
                   alt="Product"
                   fill
                 />
@@ -46,22 +53,22 @@ const page = async ({ params }: { params: { product: string } }) => {
             </div>
             <div className="md:flex-1 px-4 flex flex-col justify-center">
               <h2 className="text-2xl font-bold text-gray-800  mb-2">
-                {data.title}
+                {productData.name}
               </h2>
               <p className="text-gray-600  text-sm mb-4">
-                {data.brand}
+                {productData.brand}
               </p>
               <div className="flex mb-4 ">
                 <div className="mr-4 flex gap-2">
                   <span className="font-bold text-gray-700 ">Price:</span>
-                  <span className="text-gray-600 ">${data.price}</span>
+                  <span className="text-gray-600 ">${productData.price}</span>
                 </div>
                 <div className="flex gap-2">
                   <span className="font-bold text-gray-700 ">
                     Availability:
                   </span>
                   <span className="text-gray-600 ">
-                    {data.availabilityStatus}
+                    {productData.availabilityStatus}
                   </span>
                 </div>
               </div>
@@ -99,13 +106,13 @@ const page = async ({ params }: { params: { product: string } }) => {
                   Product Description:
                 </span>
                 <p className="text-gray-600  text-sm mt-2">
-                  {data.description}
+                  {productData.description}
                 </p>
               </div>
 
               <div className="flex mt-4 mb-4">
                 <div className="w-full   ">
-                  <AddToCart id={data.id} name={data.title} price={data.price} image={data.thumbnail}  />
+                  <AddToCart id={productData._id} name={productData.name} price={productData.price} image={StorageUrl + productData.image}  />
                 </div>
                 {/* <div className="w-1/2 px-2">
                 <button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">

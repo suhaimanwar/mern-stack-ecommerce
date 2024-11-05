@@ -4,14 +4,17 @@ import { useCart } from "@mrvautin/react-shoppingcart";
 
 
 type Props = {
-  id: any;
+  id: string;
   name: string;
   image: string;
   price: number;
 };
 
 const AddToCart = (product: Props) => {
-  const { addItem,items, addShipping } = useCart();
+  const { addItem,
+    // items, 
+    addShipping } = useCart();
+  // console.log('ppro',product)
   // console.log("........items..",items)
   return (
     <>

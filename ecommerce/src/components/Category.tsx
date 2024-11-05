@@ -1,9 +1,11 @@
 import React from "react";
 import CategoryImage from "./CategoryImage";
-import Image2 from "@public/images/carousel (4).png";
+// import Image2 from "@public/images/carousel (4).png";
 import cn from "@/utils/tailwind";
 
 import { Bebas_Neue } from "next/font/google";
+import { THomeCategory } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -12,29 +14,39 @@ const bebasNeue = Bebas_Neue({
 })
 
 
-const categoryData = [
-  {
-    name: "Men",
-    src: Image2,
-  },
+// const categoryData = [
+//   {
+//     name: "Men",
+//     src: Image2,
+//   },
 
-  {
-    name: "Women",
-    src: Image2,
-  },
+//   {
+//     name: "Women",
+//     src: Image2,
+//   },
 
-  {
-    name: "Kids",
-    src: Image2,
-  },
+//   {
+//     name: "Kids",
+//     src: Image2,
+//   },
 
-  {
-    name: "Accessories",
-    src: Image2,
-  },
-];
+//   {
+//     name: "Accessories",
+//     src: Image2,
+//   },
+// ];
 
-const Category = () => {
+
+type Props = {
+  homeCategoryData : THomeCategory
+}
+
+
+const Category = ({homeCategoryData}: Props) => {
+
+  const homeCategories = homeCategoryData.categories
+
+  // console.log('HOOOOOOOME::',homeCategoryData)
   return (
     <div className={` py-5`}>
       <div className={`${bebasNeue.className} flex flex-col items-center py-5`}>
@@ -43,11 +55,11 @@ const Category = () => {
       </div>
 
       <div className="grid w-full grid-cols-3 grid-rows-2 gap-3 p-5 max-sm:grid-cols-1  ">
-        {categoryData.map((category, i) => (
+        {homeCategories.map((category, i) => (
           <CategoryImage
             key={i}
             name={category.name}
-            src={category.src}
+            src={StorageUrl + category.image}
             className={cn("col-span-1 row-span-2 h-[25rem]  ", {
               "col-span-1 row-span-1 h-auto max-sm:h-[25rem]": i == 2 || i == 3,
             })}

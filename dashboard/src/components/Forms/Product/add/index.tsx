@@ -11,6 +11,7 @@ import { Typography } from "@mui/material";
 import FileUploaderSingle from "@/components/FileUpload/SingleFileUpload";
 import { productApi } from "@/api/productApi";
 import { useRouter } from "next/navigation";
+import toast, { Toaster } from "react-hot-toast";
 
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
@@ -18,6 +19,7 @@ const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 const productSchema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
+  price: z.string().nonempty({ message: "Price is required" }),
   description: z.string().nonempty({ message: "Description is required" }),
   attachedFile: z.any().refine(
     (value) => {
@@ -50,7 +52,7 @@ type Props = {
 
 const ProductAddForm = ({dropdownData}: Props) => {
 
-  console.log('DROPPPPPPPPPPPPPP::::',dropdownData)
+  // console.log('DROPPPPPPPPPPPPPP::::',dropdownData)
 
   const brandDrop = dropdownData.brandResponse
   
@@ -77,9 +79,11 @@ const ProductAddForm = ({dropdownData}: Props) => {
   const onSubmit = async(data: typeProductShema) => {
     // console.log("submittedd::", data);
     await productApi.createProduct(data)  //Calling an API
-
+    
     router.push('/tables/product')
     router.refresh()
+  
+
   };
 
   const handleReset = () => {
@@ -90,6 +94,8 @@ const ProductAddForm = ({dropdownData}: Props) => {
   return (
     <>
       <Breadcrumb pageName="Add Product" />
+      
+
 
       <div className=" ">
         <div className="flex flex-col gap-9">
@@ -120,6 +126,8 @@ const ProductAddForm = ({dropdownData}: Props) => {
                 )}
               </div>
 
+              
+
               <div>
                 <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Description
@@ -134,6 +142,23 @@ const ProductAddForm = ({dropdownData}: Props) => {
                   <p className="mt-1 text-red">Description is required.</p>
                 )}
               </div>
+
+              <div>
+                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
+                  Price
+                </label>
+                <input
+                  {...register("price")}
+                  type="number"
+                  placeholder="Price"
+                  className="w-full rounded-[7px] border-[1.5px] border-stroke bg-transparent px-5.5 py-3 text-dark outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
+                />
+                {errors.price && (
+                  <p className="mt-2 text-red">Price is required.</p>
+                )}
+              </div>
+
+              
 
               <div className="flex gap-3">
                 <BrandSelect brandDrop={brandDrop} register={register('brand')} error={errors.brand} />

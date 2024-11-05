@@ -21,7 +21,7 @@ return res.data.data.brands
 }
 
 const TablesPage = async () => {
-  
+    
   const data = await getAllBrands()
 
   // console.log('daaaaaaata::',data)

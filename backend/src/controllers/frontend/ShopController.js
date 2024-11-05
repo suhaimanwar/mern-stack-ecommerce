@@ -14,7 +14,7 @@ export const getAllCategories = async (req, res, next) => {
             },
             {
                 $sort: {
-                    createdAt: -1, //Descending Order, 1 is ascending
+                    createdAt: 1, //Descending Order, 1 is ascending
                 }
             },
             // {
@@ -23,7 +23,7 @@ export const getAllCategories = async (req, res, next) => {
 
             {
                 $project: {
-                    _id: 0, 
+                 
                     name: 1,
                     description: 1,
                     image: 1,

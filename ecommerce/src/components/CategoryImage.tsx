@@ -4,7 +4,7 @@ import cn from "@/utils/tailwind";
 
 type Props = {
     name: string,
-    src: StaticImageData,
+    src: StaticImageData | string,
     className: string,
 }
 

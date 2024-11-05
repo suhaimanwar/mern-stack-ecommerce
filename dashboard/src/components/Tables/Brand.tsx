@@ -4,6 +4,7 @@ import { Package } from "@/types/package";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Router } from "next/router";
+import { Toaster } from "react-hot-toast";
 
 // const packageData: Package[] = [
 //   {
@@ -64,6 +65,7 @@ const BrandTable = ({data}: Props) => {
 
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
+      
       <div className="flex w-full justify-end">
         <Link href="/forms/brand/add">
           <button

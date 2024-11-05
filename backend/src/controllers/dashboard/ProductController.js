@@ -4,13 +4,14 @@ import { getFilePath } from "../../utils/filePath.js";
 
 export const createProduct = async (req, res, next) => {
   try {
-    const { name, description, brand, category } = req.body; //Destructuring name and description from req.body (aka from the model)
+    const { name, description, brand, category, price } = req.body; //Destructuring name and description from req.body (aka from the model)
 
     const productImage = getFilePath(req.file);
 
     await ProductModel.create({
       name: name, //Placing the input name Here
       description: description, //Placing the nput description here.
+      price: price,
       brand: brand,
       category: category,
       image: productImage,
@@ -86,7 +87,7 @@ export const updateProduct = async (req, res, next) => {
   try {
     const productId = req.params.id;
 
-    const { name, description, brand, category } = req.body;
+    const { name, description, brand, category,price } = req.body;
 
     const product = await ProductModel.findOne({
       _id: productId,
@@ -102,6 +103,7 @@ export const updateProduct = async (req, res, next) => {
     product.description = description;
     product.brand = brand;
     product.category = category;
+    product.price = price;
 
     await product.save();
 

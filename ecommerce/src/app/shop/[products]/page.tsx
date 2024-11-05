@@ -10,6 +10,8 @@ import React, {
 
 import { Bebas_Neue } from "next/font/google";
 import ProductsComponent from "./_components/ProductsComponent";
+import { Api } from "@/api/Api";
+import { StorageUrl } from "@/utils/BaseUrl";
 
 
 
@@ -80,14 +82,24 @@ const bebasNeue = Bebas_Neue({
 //   },
 // ];
 
+const products =  async function (id:string) {
+  const response = await Api.getProductbyCategory(id)
+  return response;
+}
+
 const Page = async ({ params }: { params: { products: string } }) => {
   const decoded = decodeURIComponent(params.products);
 
-  const res = await fetch('https://dummyjson.com/products/category/' + params.products)
-  const ProductsData = await res.json()
+  // const res = await fetch('https://dummyjson.com/products/category/' + params.products)
+  // const ProductsData = await res.json()
   // console.log(ProductsData.products)
 
-  const productss = ProductsData.products
+  // const productss = ProductsData.products
+  const productss = await products(params.products)
+
+  const productbyCategory = productss.product
+
+  console.log('proddd:::',productbyCategory)
 
   // const [products, setProducts] = useState(ProductsData);
 
@@ -114,28 +126,28 @@ const Page = async ({ params }: { params: { products: string } }) => {
           {decoded}
         </h1>
         <p className="font-bold text-2xl tracking-normal text-center">
-          Top picks just for {decoded}
+          {/* Top picks just for {decoded} */}
         </p>
       </div>
 
       <div className="flex justify-between items-center px-5 py-4 bg-gray-100">
         <p className="font-semibold text-gray-800">
-          {productss.length} Products
+          {productbyCategory.length} Products
         </p>
 
         {/* <Filter SortbyNumber={SortbyNumber} SortbyName={SortbyName} /> */}
       </div>
 
       <div className=" grid grid-cols-4 gap-3 justify-center p-5 py-10 max-md:grid-cols-2 max-sm:grid-cols-1">
-        {productss.map((data:any, i:any) => (
+        {productbyCategory.map((data:any, i:any) => (
           <ProductsComponent
             key={i}
-            id={data.id}
+            id={data._id}
             params={params.products}
-            product={data.title}
+            product={data.name}
             brand={data.brand}
             price={data.price}
-            src={data.thumbnail}
+            src={StorageUrl + data.image}
           />
         ))}
       </div>

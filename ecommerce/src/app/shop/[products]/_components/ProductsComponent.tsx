@@ -4,14 +4,15 @@ import React from 'react'
 
 type Props = {
     id: string,
-    params: any,
+    params: unknown,
     src: string | StaticImageData,
     product:  string,
     brand: string,
     price: number,
 }
 
-const ProductsComponent = ({src,product,brand,price,id,params}:Props) => {
+const 
+ProductsComponent = ({src,product,brand,price,id,params}:Props) => {
   // console.log("srccccccccccc::",src)
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow  relative">
