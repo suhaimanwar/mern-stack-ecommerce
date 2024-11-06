@@ -16,3 +16,16 @@ export type TCategory = {
     description: string,
     image: string   
 }
+
+
+export type TFeaturedProducts = {
+    products: TProducts[]
+}
+
+export type TProducts ={
+    _id: string,
+    name: string,
+    description: string,
+    price: string,
+    image: string   
+}

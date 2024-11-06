@@ -5,27 +5,24 @@ import AddToCart from "./_components/AddToCart";
 import { Api } from "@/api/Api";
 import { StorageUrl } from "@/utils/BaseUrl";
 
-
-const product =  async function (id:string) {
-  const response = await Api.getProductbyId(id)
+const product = async function (id: string) {
+  const response = await Api.getProductbyId(id);
   return response;
-}
-
+};
 
 const page = async ({ params }: { params: { product: string } }) => {
+  const data = await product(params.product);
 
-  const data = await product(params.product)
+  const productData = data.product[0];
 
-  const productData = data.product[0]
-
-  console.log('hello::',productData.name)
+  // console.log("hello::", productData.name);
 
   // Fetch all products
   // const res = await fetch('https://dummyjson.com/products/'+ params.product);
   // const data = await res.json();
-  
-  // Find the product by title 
-  
+
+  // Find the product by title
+
   // const productData = data.products.find((product: any) => product.title === decodeURIComponent(params.product));
 
   // console.log('dataaaaa:::',productData)
@@ -55,9 +52,7 @@ const page = async ({ params }: { params: { product: string } }) => {
               <h2 className="text-2xl font-bold text-gray-800  mb-2">
                 {productData.name}
               </h2>
-              <p className="text-gray-600  text-sm mb-4">
-                {productData.brand}
-              </p>
+              <p className="text-gray-600  text-sm mb-4">{productData.brand}</p>
               <div className="flex mb-4 ">
                 <div className="mr-4 flex gap-2">
                   <span className="font-bold text-gray-700 ">Price:</span>
@@ -112,7 +107,12 @@ const page = async ({ params }: { params: { product: string } }) => {
 
               <div className="flex mt-4 mb-4">
                 <div className="w-full   ">
-                  <AddToCart id={productData._id} name={productData.name} price={productData.price} image={StorageUrl + productData.image}  />
+                  <AddToCart
+                    id={productData._id}
+                    name={productData.name}
+                    price={productData.price}
+                    image={StorageUrl + productData.image}
+                  />
                 </div>
                 {/* <div className="w-1/2 px-2">
                 <button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">

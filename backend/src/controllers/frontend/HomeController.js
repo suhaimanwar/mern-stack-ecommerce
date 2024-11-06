@@ -65,14 +65,15 @@ export const getFeaturedProducts = async (req, res, next) => {
                     name: 1,
                     description: 1,
                     image: 1,
+                    price: 1
                 }
             }
         ])
 
         return res.status(200).json({
             success:true,
-            message: "Products Fetched Successfully",
-            data: {product : product}
+            message: "Featured Products Fetched Successfully",
+            data: {products : product}
         })
     } catch (error) {
         return next(serverError(error))

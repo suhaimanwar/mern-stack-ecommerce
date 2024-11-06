@@ -14,6 +14,7 @@ import Link from "next/link";
 
 
 const page = () => {
+  
   const { items, removeItem , updateItemQuantity,  totalItemsAmount, cartNetTotal} = useCart();
   
   const [isClient, setIsClient] = useState(false);

@@ -33,6 +33,7 @@ const productSchema = new mongoose.Schema(
     featured: {
       type: Boolean,
       required: false,
+      default:false
     },
     deletedAt: {
       type: String,

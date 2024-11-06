@@ -1,8 +1,10 @@
 import React from 'react';
 import FeaturedProductsImage from './FeaturedProductsImage';
-import Image1 from '@public/images/carousel (4).png';
+// import Image1 from '@public/images/carousel (4).png';
 
 import { Bebas_Neue } from "next/font/google";
+import { TFeaturedProducts } from '@/api/type';
+import { StorageUrl } from '@/utils/BaseUrl';
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -11,66 +13,76 @@ const bebasNeue = Bebas_Neue({
 })
 
 
-const FeaturedData = [
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+// const FeaturedData = [
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    },
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     },
 
-    {
-        src: Image1,
-        product: "Bleu De Perfume",
-        brand: "Swiss Arabia",
-        price: "₹2999"
-    }
-]
+//     {
+//         src: Image1,
+//         product: "Bleu De Perfume",
+//         brand: "Swiss Arabia",
+//         price: "₹2999"
+//     }
+// ]
 
+type Props = {
+  featuredProductsData : TFeaturedProducts
+}
 
-const FeaturedProducts = () => {
+ 
+
+const FeaturedProducts = ({featuredProductsData}: Props) => {
+
+  // console.log('feeee:::',featuredProductsData.products)
+
+  const FeaturedData = featuredProductsData.products
+
   return (
     <div className='py-5'>
       <div className={ ` ${bebasNeue.className} flex flex-col items-center`}>
@@ -82,7 +94,7 @@ const FeaturedProducts = () => {
 
 
        {FeaturedData.map((data, i)=>(
-        <FeaturedProductsImage key={i} src={data.src} product={data.product} brand={data.brand} price={data.price} />
+        <FeaturedProductsImage key={i} src={StorageUrl + data.image} product={data.name} brand={data.description} price={data.price} />
        ))}
         
         

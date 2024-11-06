@@ -22,19 +22,19 @@ const getAllProducts = async () => {
   return res.data.data.products
 }
 
-const getBrandsCategories = async () => {
-  const brandResponse = await brandApi.getAllBrands()
-  const categoryResponse = await categoryApi.getAllCategory()
+// const getBrandsCategories = async () => {
+//   const brandResponse = await brandApi.getAllBrands()
+//   const categoryResponse = await categoryApi.getAllCategory()
 
-  return {brandResponse: brandResponse.data.data.brands, 
-    categoryResponse: categoryResponse.data.data.categories}
-}
+//   return {brandResponse: brandResponse.data.data.brands, 
+//     categoryResponse: categoryResponse.data.data.categories}
+// }
 
 const TablesPage = async() => {
 
   const data = await getAllProducts()
 
-  const brandsCatData = await getBrandsCategories()
+  // const brandsCatData = await getBrandsCategories()
 
   // console.log('brandcat',brandsCatData)
 
@@ -49,7 +49,7 @@ const TablesPage = async() => {
         <TableTwo /> */}
         {/* <TableThree /> */} 
  
-        <ProductTable brandData={brandsCatData.brandResponse} categoryData={brandsCatData.categoryResponse} productData={data} />
+        <ProductTable  productData={data} />
       </div>
     </DefaultLayout>
   );

@@ -23,7 +23,6 @@ export const productApi = {
     return await axios.get(`http://localhost:5000/api/products/view/${id}`);
   },
 
-
   updateProduct: async function (id: string, body: any) {
     // console.log("updateeeeeee:::::", body);
 
@@ -38,4 +37,12 @@ export const productApi = {
       },
     );
   },
+
+  featuredProduct: async function (id: string) {
+    return await axios.put(
+      `http://localhost:5000/api/products/featured/${id}`,
+    );
+  },
+
+
 };

@@ -1,19 +1,27 @@
 "use client";
 import React, { useState } from "react";
-import { FieldError, FieldErrorsImpl, Merge, UseFormRegisterReturn } from "react-hook-form";
+import {
+  FieldError,
+  FieldErrorsImpl,
+  Merge,
+  UseFormRegisterReturn,
+} from "react-hook-form";
 import { string } from "zod";
 
-type Props= {
-    register: UseFormRegisterReturn;
-    error?: FieldError | Merge <FieldError, FieldErrorsImpl<any>> | undefined;
+type Props = {
+  register: UseFormRegisterReturn;
+  error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;
 
-    brandDrop:{
-      map(arg0: (item: { name: string; _id: string; }) => React.JSX.Element): React.ReactNode;_id:string, name: string
-}
-}
+  brandDrop: {
+    map(
+      arg0: (item: { name: string; _id: string }) => React.JSX.Element,
+    ): React.ReactNode;
+    _id: string;
+    name: string;
+  };
+};
 
-const BrandSelect = ({brandDrop, register, error}: Props) => {
-
+const BrandSelect = ({ brandDrop, register, error }: Props) => {
   // console.log('brandDROOP',brandDrop)
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [isOptionSelected, setIsOptionSelected] = useState<boolean>(false);
@@ -30,7 +38,7 @@ const BrandSelect = ({brandDrop, register, error}: Props) => {
 
       <div className="relative z-20 bg-transparent dark:bg-dark-2">
         <select
-        {...register}
+          {...register}
           value={selectedOption}
           onChange={(e) => {
             setSelectedOption(e.target.value);
@@ -40,17 +48,16 @@ const BrandSelect = ({brandDrop, register, error}: Props) => {
             isOptionSelected ? "text-dark dark:text-white" : ""
           }`}
         >
-          <option value="" disabled  className="text-dark-6">
+          <option value="" disabled className="text-dark-6">
             Select your Brand
           </option>
 
-          {brandDrop.map((item: {name:string, _id:string}) => (
-   // eslint-disable-next-line react/jsx-key
-   <option value={item._id} className="text-dark-6">
-   {item.name}
- </option>
-))}
-
+          {brandDrop.map((item: { name: string; _id: string }) => (
+            // eslint-disable-next-line react/jsx-key
+            <option value={item._id} className="text-dark-6">
+              {item.name}
+            </option>
+          ))}
 
           {/* <option value="Adidas" className="text-dark-6">
             Adidas
@@ -80,8 +87,7 @@ const BrandSelect = ({brandDrop, register, error}: Props) => {
         </span>
       </div>
 
-          {error && <p className="text-red-500 mt-2">{`${error.message}`}</p>}
-      
+      {error && <p className="mt-2 text-red-500">{`${error.message}`}</p>}
     </div>
   );
 };

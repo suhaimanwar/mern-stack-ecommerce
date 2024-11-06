@@ -42,7 +42,7 @@ type Props = {
 }
 
 
-const Category = ({homeCategoryData}: Props) => {
+const Category = ({homeCategoryData}: Props) => {  
 
   const homeCategories = homeCategoryData.categories
 
@@ -59,6 +59,7 @@ const Category = ({homeCategoryData}: Props) => {
           <CategoryImage
             key={i}
             name={category.name}
+            id={category._id}
             src={StorageUrl + category.image}
             className={cn("col-span-1 row-span-2 h-[25rem]  ", {
               "col-span-1 row-span-1 h-auto max-sm:h-[25rem]": i == 2 || i == 3,

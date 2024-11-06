@@ -8,4 +8,9 @@ ProductRouter.get('/', getAllProducts)
 ProductRouter.get('/view/:id', getProductbyId)
 ProductRouter.get('/categories/:id', getProductsbyCategory)
 
+
+
+
+
+
 export default ProductRouter;

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
+import SwitcherOne from "../FormElements/Switchers/SwitcherOne";
 
 // const packageData: Package[] = [
 //   {
@@ -43,23 +44,22 @@ type Props = {
       description: string;
       price: string;
       category: string;
-
       image: string;
+      featured: boolean;
     },
   ];
-
-  brandData: any;
-
-  categoryData: any;
 };
 
-const ProductTable = ({ productData, brandData, categoryData }: Props) => {
+const ProductTable = ({ productData }: Props) => {
   const router = useRouter();
+
   const onDelete = async (id: string) => {
-    const isConfirmed = confirm("Are you sure you want to delete this product?");
-    
+    const isConfirmed = confirm(
+      "Are you sure you want to delete this product?",
+    );
+
     if (!isConfirmed) return;
-  
+
     try {
       const deleteProduct = await productApi.deleteProduct(id);
       if (deleteProduct.data.success) {
@@ -70,15 +70,26 @@ const ProductTable = ({ productData, brandData, categoryData }: Props) => {
       toast.error(error.message);
     }
   };
-  
+
+  const onFeature = async (id: string) => {
+    try {
+      await productApi.featuredProduct(id);
+      router.refresh();
+      toast.success("Updated Successfully")
+    } catch (error: any) {
+      toast.error(error.message);
+    }
+  };
+
   // console.log('proddddddductt::::::::',productData)
 
   // console.log('braaaaaand::',brandData)
   // console.log('caaaaaaaat::',categoryData)
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
-     <div><Toaster position="top-right"
-  reverseOrder={true}/></div>
+      <div>
+        <Toaster position="top-right" reverseOrder={true} />
+      </div>
 
       <div className="flex w-full justify-end">
         <Link href="/forms/product/add">
@@ -97,13 +108,16 @@ const ProductTable = ({ productData, brandData, categoryData }: Props) => {
             <tr className="bg-[#F7F9FC] text-left dark:bg-dark-2">
               {/* <th className="min-w-[220px] px-4 py-4 font-medium text-dark dark:text-white xl:pl-7.5"></th> */}
               <th className="min-w-[220px] px-4 py-4 font-medium text-dark dark:text-white xl:pl-7.5">
-                Image ‎     | ‎  Name
+                Image ‎ | ‎ Name
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-dark dark:text-white">
                 Description
               </th>
               <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
                 Price
+              </th>
+              <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
+                Featured
               </th>
               <th className="px-4 py-4 text-right font-medium text-dark dark:text-white xl:pr-7.5">
                 Actions
@@ -116,19 +130,18 @@ const ProductTable = ({ productData, brandData, categoryData }: Props) => {
                 <td
                   className={`border-[#eee] px-4 py-4  dark:border-dark-3 xl:pl-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
-                 <div className="flex items-center gap-5 ">
+                  <div className="flex items-center gap-5 ">
                     <div className="relative size-20">
                       <Image
                         className="rounded-lg object-cover "
                         src={"http://localhost:5000/" + item.image}
                         fill
-                        
                         alt="img"
                       />
                     </div>
                     <h5 className="text-dark dark:text-white">{item.name}</h5>
-                 </div>
-                </td> 
+                  </div>
+                </td>
                 {/* <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
@@ -147,6 +160,16 @@ const ProductTable = ({ productData, brandData, categoryData }: Props) => {
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p className={``}>₹{item.price}</p>
+                </td>
+
+                <td
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
+                >
+                  <SwitcherOne
+                    onFeature={() => onFeature(item._id)}
+                    featuredValue={item.featured}
+                    id={`toggle-${index}`}
+                  />
                 </td>
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}

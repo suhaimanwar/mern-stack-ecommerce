@@ -10,10 +10,9 @@ export const Api = {
     },
     getFeaturedProducts: async () => {
         const response = await apiAxios.get("home/featured");
-
         // console.log(response)
         return response.data.data
-    },
+    }, 
 
     getAllCategories: async () => {
         const response = await apiAxios.get("shop/categories");
@@ -34,6 +33,7 @@ export const Api = {
         return response.data.data
     },
 
+  
 
 
 

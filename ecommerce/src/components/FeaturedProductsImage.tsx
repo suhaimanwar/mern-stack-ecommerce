@@ -4,7 +4,7 @@ import React from 'react'
 
 
 type Props = {
-    src: StaticImageData,
+    src: StaticImageData | string,
     product: string,
     brand: string,
     price: string

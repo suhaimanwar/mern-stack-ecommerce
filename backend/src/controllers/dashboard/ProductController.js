@@ -87,7 +87,7 @@ export const updateProduct = async (req, res, next) => {
   try {
     const productId = req.params.id;
 
-    const { name, description, brand, category,price } = req.body;
+    const { name, description, brand, category, price } = req.body;
 
     const product = await ProductModel.findOne({
       _id: productId,
@@ -113,5 +113,37 @@ export const updateProduct = async (req, res, next) => {
     });
   } catch (error) {
     return next(serverError(error));
+  }
+};
+
+export const featured = async function (req, res, next) {
+  try {
+    const productId = req.params.id;
+
+    const product = await ProductModel.findOne({
+      deletedAt: null,
+      _id: productId,
+    });
+
+    if (!product) {
+      res.status(422).json({
+        success: false,
+        message: "Product not found",
+      });
+    }
+
+    product.featured = product.featured ? false : true;
+    //if product.featured is true then turn it to false
+    //else should be true
+
+    await product.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Updated Succesfully",
+      data: product.featured,
+    });
+  } catch (error) {
+    next(serverError(error));
   }
 };

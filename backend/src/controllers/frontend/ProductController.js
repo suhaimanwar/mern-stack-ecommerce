@@ -86,23 +86,54 @@ export const getProductsbyCategory = async function (req, res, next) {
           name: 1,
           description: 1,
           image: 1,
-       
-          price: 1
+          price: 1,
         },
       },
     ]);
 
     if (!productData) {
-        return next(validationError("Product not found!"));
-      }
+      return next(validationError("Product not found!"));
+    }
 
-      return res.status(200).json({
-        success: true,
-        message: "Products Fetched Successfully",
-        data: { product: productData },
-      });
-
+    return res.status(200).json({
+      success: true,
+      message: "Products Fetched Successfully",
+      data: { product: productData },
+    });
   } catch (error) {
     return next(serverError(error));
   }
 };
+
+// export const getFeaturedProducts = async function (req, res, next) {
+//   try {
+//     const products = await ProductModel.aggregate([
+//       {
+//         $match: {
+//           featured: true,
+//           deletedAt: null,
+//         },
+//       },
+//       {
+//         $project: {
+//           name: 1,
+//           description: 1,
+//           image: 1,
+//           price: 1,
+//         },
+//       },
+//     ]);
+
+//     if (!products) {
+//       return next(validationError("Featured Products not found!"));
+//     }
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Featured Products Fetched Successfully",
+//       data: { products: products },
+//     });
+//   } catch (error) {
+//     return next(serverError(error));
+//   }
+// };
