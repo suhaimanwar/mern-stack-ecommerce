@@ -6159,3 +6159,95 @@
     '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:421:3)',
   timestamp: '2024-11-05 16:16:49'
 }
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of null (reading 'password')",
+  stack: "TypeError: Cannot read properties of null (reading 'password')\n" +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:52:66)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-08 11:54:19'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of null (reading 'password')",
+  stack: "TypeError: Cannot read properties of null (reading 'password')\n" +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:52:66)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-08 11:55:36'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of null (reading 'password')",
+  stack: "TypeError: Cannot read properties of null (reading 'password')\n" +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:52:66)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-08 11:59:11'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of null (reading 'password')",
+  stack: "TypeError: Cannot read properties of null (reading 'password')\n" +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:52:66)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-08 11:59:29'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'path')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'path')\n" +
+    '    at getFilePath (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/utils/filePath.js:13:29)\n' +
+    '    at createBrand (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BrandController.js:11:23)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at done (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at Multipart.<anonymous> (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n' +
+    '    at Multipart.emit (node:events:519:28)\n' +
+    '    at emitCloseNT (node:internal/streams/destroy:147:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)',
+  timestamp: '2024-11-08 12:34:07'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error password is not defined',
+  stack: 'ReferenceError: password is not defined\n' +
+    '    at updatePassword (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:96:42)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-09 10:50:22'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error data and hash arguments required',
+  stack: 'Error: data and hash arguments required\n' +
+    '    at Object.compareSync (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bcrypt\\bcrypt.js:166:15)\n' +
+    '    at updatePassword (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:85:34)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-09 10:54:49'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error data and hash arguments required',
+  stack: 'Error: data and hash arguments required\n' +
+    '    at Object.compareSync (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bcrypt\\bcrypt.js:166:15)\n' +
+    '    at updatePassword (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:85:34)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-09 10:55:36'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error data and hash arguments required',
+  stack: 'Error: data and hash arguments required\n' +
+    '    at Object.compareSync (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bcrypt\\bcrypt.js:166:15)\n' +
+    '    at updatePassword (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:85:34)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-09 10:56:07'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error data and hash arguments required',
+  stack: 'Error: data and hash arguments required\n' +
+    '    at Object.compareSync (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bcrypt\\bcrypt.js:166:15)\n' +
+    '    at updatePassword (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:85:34)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-09 10:56:08'
+}

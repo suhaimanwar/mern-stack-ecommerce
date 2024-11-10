@@ -73,6 +73,7 @@ export const getProductbyId = async (req, res, next) => {
 
 export const getProductsbyCategory = async function (req, res, next) {
   try {
+
     const categoryId = req.params.id;
     const productData = await ProductModel.aggregate([
       {
@@ -104,6 +105,8 @@ export const getProductsbyCategory = async function (req, res, next) {
     return next(serverError(error));
   }
 };
+
+
 
 // export const getFeaturedProducts = async function (req, res, next) {
 //   try {

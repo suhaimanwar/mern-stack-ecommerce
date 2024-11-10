@@ -24,64 +24,6 @@ const bebasNeue = Bebas_Neue({
   display: 'swap', adjustFontFallback: false
 });
 
-// const ProductsData = [
-//   {
-//     src: Image1,
-//     product: "Bleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 2999,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "Bleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 999,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "cleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 299,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "Bleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 2299,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "Bleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 229,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "aleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 5000,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "Bleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 2399,
-//   },
-
-//   {
-//     src: Image1,
-//     product: "zleu De Perfume",
-//     brand: "Swiss Arabia",
-//     price: 299,
-//   },
-// ];
-
 const products =  async function (id:string) {
   const response = await Api.getProductbyCategory(id)
   return response;
@@ -99,7 +41,7 @@ const Page = async ({ params }: { params: { products: string } }) => {
 
   const productbyCategory = productss.product
 
-  console.log('proddd:::',productbyCategory)
+  // console.log('proddd:::',productbyCategory)
 
   // const [products, setProducts] = useState(ProductsData);
 

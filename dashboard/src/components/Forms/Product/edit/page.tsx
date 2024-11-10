@@ -56,7 +56,7 @@ type Props = {
 
 const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
 
-  console.log('sssssssssssssssss::::',singleProductData)
+  // console.log('sssssssssssssssss::::',singleProductData)
 
   const brandDrop = dropdownData.brandResponse
   

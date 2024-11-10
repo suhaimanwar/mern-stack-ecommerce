@@ -4,7 +4,7 @@ import { getFilePath } from "../../utils/filePath.js";
 
 export const createBrand = async (req, res, next) => {
   try {
-    const { name, description } = req.body; //Destructuring name and description from req.body (aka from the Model)
+    const { name, description } = req.body; //Destructuring name and description from req.body (aka from the frontend)
 
     // console.log('reqbodyy',req.body)
     // console.log('reqfileee', req.file)

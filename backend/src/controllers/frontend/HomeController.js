@@ -53,7 +53,7 @@ export const getFeaturedProducts = async (req, res, next) => {
             },
             {
                 $sort: {
-                    createdAt: -1, //Descending Order, 1 is ascending
+                    createdAt: 1, //Descending Order, 1 is ascending
                 }
             },
             {

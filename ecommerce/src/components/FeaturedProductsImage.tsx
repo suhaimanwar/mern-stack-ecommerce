@@ -7,19 +7,19 @@ type Props = {
     src: StaticImageData | string,
     product: string,
     brand: string,
-    price: string
+    price: string,
+    id: string
 }
 
-const FeaturedProductsImage = ({src, product, brand, price}:Props) => {
+const FeaturedProductsImage = ({src, product, brand, price, id}:Props) => {
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow  relative">
-    <Link href="#">
+    <Link href={`shop/featured/${id}`}>
       <div className='relative h-[18.75rem] w-full'>
           <Image
             className="rounded-t-lg object-cover"
             src={src}
             alt="Featured product"
-            
             fill
           />
       </div>

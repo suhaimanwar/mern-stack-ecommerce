@@ -15,9 +15,9 @@ type Props = {
 
 const CategoryImage = async({id, name, src, className }: Props) => {
   return (
-    <div className={cn("relative h-full w-full", className)}>
+    <div className={cn("relative h-full w-full ", className)}>
       <Link href={`/shop/${id}`}>
-        <Image src={src} alt="Image" className="object-cover" fill />
+        <Image src={src} alt="Image" className="object-cover  " fill />
 
         <div className="absolute bottom-5 left-5 bg-white p-3  font-bold uppercase">
           {name}

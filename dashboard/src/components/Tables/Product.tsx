@@ -88,7 +88,7 @@ const ProductTable = ({ productData }: Props) => {
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
       <div>
-        <Toaster position="top-right" reverseOrder={true} />
+        {/* <Toaster position="top-right" reverseOrder={true} /> */}
       </div>
 
       <div className="flex w-full justify-end">

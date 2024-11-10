@@ -33,8 +33,4 @@ export const Api = {
         return response.data.data
     },
 
-  
-
-
-
 }

@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import React from "react";
 import BrandTable from "@/components/Tables/Brand";
+import LoginPage from "./login/page";
 
 export const metadata: Metadata = {
   title:
@@ -13,11 +14,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <DefaultLayout>
+      {/* <DefaultLayout>
         <ECommerce />
-        {/* <BrandTable/> */}
+      
         
-      </DefaultLayout>
+      </DefaultLayout> */}
+
+      <LoginPage/>
     </>
   );
 }

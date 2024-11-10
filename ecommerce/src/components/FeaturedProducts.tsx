@@ -79,7 +79,7 @@ type Props = {
 
 const FeaturedProducts = ({featuredProductsData}: Props) => {
 
-  // console.log('feeee:::',featuredProductsData.products)
+  console.log('feeee:::',featuredProductsData.products)
 
   const FeaturedData = featuredProductsData.products
 
@@ -94,7 +94,7 @@ const FeaturedProducts = ({featuredProductsData}: Props) => {
 
 
        {FeaturedData.map((data, i)=>(
-        <FeaturedProductsImage key={i} src={StorageUrl + data.image} product={data.name} brand={data.description} price={data.price} />
+        <FeaturedProductsImage key={i} src={StorageUrl + data.image} product={data.name} id={data._id} brand={data.description} price={data.price} />
        ))}
         
         

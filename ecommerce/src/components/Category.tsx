@@ -13,34 +13,9 @@ const bebasNeue = Bebas_Neue({
   display: 'swap', adjustFontFallback: false
 })
 
-
-// const categoryData = [
-//   {
-//     name: "Men",
-//     src: Image2,
-//   },
-
-//   {
-//     name: "Women",
-//     src: Image2,
-//   },
-
-//   {
-//     name: "Kids",
-//     src: Image2,
-//   },
-
-//   {
-//     name: "Accessories",
-//     src: Image2,
-//   },
-// ];
-
-
 type Props = {
   homeCategoryData : THomeCategory
 }
-
 
 const Category = ({homeCategoryData}: Props) => {  
 
@@ -61,13 +36,13 @@ const Category = ({homeCategoryData}: Props) => {
             name={category.name}
             id={category._id}
             src={StorageUrl + category.image}
-            className={cn("col-span-1 row-span-2 h-[25rem]  ", {
-              "col-span-1 row-span-1 h-auto max-sm:h-[25rem]": i == 2 || i == 3,
+            className={cn("col-span-1 row-span-2 h-[25rem] shadow-lg shadow-slate-500/40  ", {
+              "col-span-1 row-span-1 h-auto max-sm:h-[25rem] ": i == 2 || i == 3,
             })}
           />
-          //  cn explanation - 'default classes in all '
+          //  cn explanation - 'default classes in all'
         ))}
-
+  
         {/* <CategoryImage name="Men" src={Image2} className="col-span-1 row-span-2 h-[25rem]" />
           <CategoryImage name="Women" src={Image2} className="col-span-1 row-span-2" />
           <CategoryImage name="Kids" src={Image2} className="col-span-1 row-span-1"/>
