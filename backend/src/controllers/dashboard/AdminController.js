@@ -1,7 +1,10 @@
 import { AdminModel } from "../../models/AdminModel.js";
 import { serverError } from "../../utils/errorHandler.js";
 
+import jwt from 'jsonwebtoken' 
+
 import bcrypt from "bcrypt";
+import env from "../../env.js";
 
 export const createAdmin = async (req, res, next) => {
   try {
@@ -58,9 +61,14 @@ export const loginAdmin = async (req, res, next) => {
       });
     }
 
+    const accessToken = jwt.sign({adminId: findAdmin._id}, env.ADMIN_JWT_SECRET_KEY, {expiresIn: env.JWT_EXPIRES}); //Assigning Tokens, With Dynamic ID,Admin Secret Key, and the expiry date 
+    const userData = {username: findAdmin.username, role: 'admin'} //assigning roles
+
     return res.status(200).json({
       success: true,
+      accessToken: accessToken, //Call the accessToken with a key value
       message: "Login Successful",
+      userData: userData //Call the userData - includes role - with a key value
     });
   } catch (error) {
     next(serverError(error));

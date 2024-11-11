@@ -10,6 +10,8 @@ import { adminApi } from "@/api/adminApi";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 
+import Cookies from "js-cookie";
+
 const LoginPage = () => {
   const loginSchema = z.object({
     username: z.string().min(1, "Username is required."),
@@ -38,12 +40,18 @@ const LoginPage = () => {
       toast.success(response.data.message)
 
       if (response.data.success) {
+        window.localStorage.setItem("accessToken",response.data.accessToken) //Storing access token in the local storage
+        Cookies.set("accessToken", response.data.accessToken)//Storing access token in the browser cookies
         router.push("/tables/brand");
+        router.refresh()
       }  
+      // else {
+      //   toast.error(response.data.message)
+      // }
+      
     } catch (error: any) {
       // console.log(error.response?.data);
       toast.error(error.response?.data.message)
-     
     }
   };
 

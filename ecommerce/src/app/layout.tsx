@@ -5,10 +5,14 @@ import Header from "./_layout/Header";
 import Footer from "./_layout/Footer";
 import { Montserrat } from "next/font/google";
 import ProviderClient from "./provider/Providers";
+import { Toaster } from "react-hot-toast";
 
-
-
-const montserrat = Montserrat({ subsets: ["latin"], display: 'swap', adjustFontFallback: false});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "200", "400", "700"],
+  adjustFontFallback: false,
+});
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -33,21 +37,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` ${montserrat.className}`  }
-      >
-        
-
+      <body className={` ${montserrat.className}`}>
         <ProviderClient>
-        
-        <Header/>
-        {children}
-        <Footer/>
-        
+          
+          <Toaster position="top-right" reverseOrder={false} />
+
+          <Header />
+          {children}
+          <Footer />
         </ProviderClient>
-        
-
-
       </body>
     </html>
   );

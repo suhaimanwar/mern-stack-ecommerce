@@ -6251,3 +6251,85 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-11-09 10:56:08'
 }
+{
+  level: 'error',
+  message: '\tInternal Server Error bcrypt is not defined',
+  stack: 'ReferenceError: bcrypt is not defined\n' +
+    '    at createUser (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/UserController.js:24:20)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-10 15:53:46'
+}
+{
+  errorResponse: {
+    ok: 0,
+    errmsg: "path option to $unwind stage should be prefixed with a '$': brandName",
+    code: 28818,
+    codeName: 'Location28818',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1731302833, i: 15 }),
+      signature: {
+        hash: Binary.createFromBase64('52UTRW2slhUXJU+iLfJZtEw6PO8=', 0),
+        keyId: new Long('7384019375713419269')
+      }
+    },
+    operationTime: new Timestamp({ t: 1731302833, i: 15 })
+  },
+  ok: 0,
+  code: 28818,
+  codeName: 'Location28818',
+  '$clusterTime': {
+    clusterTime: new Timestamp({ t: 1731302833, i: 15 }),
+    signature: {
+      hash: Binary.createFromBase64('52UTRW2slhUXJU+iLfJZtEw6PO8=', 0),
+      keyId: new Long('7384019375713419269')
+    }
+  },
+  operationTime: new Timestamp({ t: 1731302833, i: 15 }),
+  level: 'error',
+  message: "\tInternal Server Error path option to $unwind stage should be prefixed with a '$': brandName",
+  stack: "MongoServerError: path option to $unwind stage should be prefixed with a '$': brandName\n" +
+    '    at Connection.sendCommand (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:289:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async Connection.command (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:312:26)\n' +
+    '    at async Server.command (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\server.js:167:29)\n' +
+    '    at async AggregateOperation.executeCommand (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\command.js:73:16)\n' +
+    '    at async AggregateOperation.execute (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\aggregate.js:87:16)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:192:20)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async AggregationCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:39:26)\n' +
+    '    at async AggregationCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)',
+  timestamp: '2024-11-11 10:57:13',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error productData.at is not a function',
+  stack: 'TypeError: productData.at is not a function\n' +
+    '    at getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ProductController.js:78:36)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-11 11:00:36'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error productData.at is not a function',
+  stack: 'TypeError: productData.at is not a function\n' +
+    '    at getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ProductController.js:78:36)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-11 11:00:38'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error env is not defined',
+  stack: 'ReferenceError: env is not defined\n' +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:63:60)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-11 11:50:05'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error env is not defined',
+  stack: 'ReferenceError: env is not defined\n' +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:63:60)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-11 11:50:07'
+}

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { ProductModel } from "../../models/ProductModel.js";
 import { serverError } from "../../utils/errorHandler.js";
+import { BrandModel } from "../../models/BrandModel.js";
 
 export const getAllProducts = async (req, res, next) => {
   try {
@@ -48,14 +49,33 @@ export const getProductbyId = async (req, res, next) => {
         },
       },
       {
+        $lookup: {
+          from: BrandModel.modelName, //Importing BrandModel
+          localField: "brand", //Specification on which field the ID is stored (this controller) 
+          foreignField: "_id", // _id in the BrandModel - has to be the same
+          as: "brandName",// at what Name
+          pipeline: [ //To add condition
+            {
+              $match: { deletedAt: null },
+            },
+            { $project: { name: 1 } }, // Just project the name from the model
+          ],
+        },
+      },
+      {$unwind: "$brandName"},    //to remove the aggregate array
+      {
         $project: {
           name: 1,
           description: 1,
           image: 1,
           price: 1,
+          brand: 1,
+          brandName: '$brandName.name', //assigning name onto brandName
         },
       },
     ]);
+
+    console.log("Name",productData.at(0))
 
     if (!productData) {
       return next(validationError("Product not found!"));
@@ -73,7 +93,6 @@ export const getProductbyId = async (req, res, next) => {
 
 export const getProductsbyCategory = async function (req, res, next) {
   try {
-
     const categoryId = req.params.id;
     const productData = await ProductModel.aggregate([
       {
@@ -105,8 +124,6 @@ export const getProductsbyCategory = async function (req, res, next) {
     return next(serverError(error));
   }
 };
-
-
 
 // export const getFeaturedProducts = async function (req, res, next) {
 //   try {

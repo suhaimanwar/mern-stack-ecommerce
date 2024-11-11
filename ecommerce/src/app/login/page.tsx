@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useState } from "react";
@@ -8,12 +9,15 @@ import Link from "next/link";
 import Eye from "../svg/eye";
 import EyeOff from "../svg/eye-off";
 
-import { motion } from "framer-motion";
+import { calcLength, motion } from "framer-motion";
 
 import { useForm } from "react-hook-form";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Api } from "@/api/Api";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -43,8 +47,23 @@ const Page = () => {
     resolver: zodResolver(loginSchema),
   });
 
+  const router = useRouter();
+
   const submit = async (data: TLoginSchema) => {
-    // console.log("submitteddata::::", data.username);
+    // console.log("submitteddata::::", data);
+
+    try {
+      const response = await Api.loginUser(data);
+
+      // console.log("response::",response.message)
+      toast.success(response.message);
+
+      if (response.success) {
+        router.push("/");
+      }
+    } catch (error: any) {
+      toast.error(error.response?.data.message);
+    }
   };
 
   const [showPassword, setShowPassword] = useState(false);

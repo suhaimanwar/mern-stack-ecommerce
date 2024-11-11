@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import apiAxios from "./configs/axiosConfig"
 
 
@@ -31,6 +32,17 @@ export const Api = {
         const response = await apiAxios.get(`products/view/${id}`);
         // console.log(response) 
         return response.data.data
+    },
+
+    createUser: async (body:any) => {
+        const response = await apiAxios.post("user/create", body);
+        // console.log("responseAPI::",response.data) 
+        return response.data
+    },
+    loginUser: async (body:any) => {
+        const response = await apiAxios.post("user/login", body);
+        // console.log("responseAPI::",response.data) 
+        return response.data
     },
 
 }

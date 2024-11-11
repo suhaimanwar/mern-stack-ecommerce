@@ -79,7 +79,7 @@ type Props = {
 
 const FeaturedProducts = ({featuredProductsData}: Props) => {
 
-  console.log('feeee:::',featuredProductsData.products)
+  // console.log('feeee:::',featuredProductsData.products)
 
   const FeaturedData = featuredProductsData.products
 
