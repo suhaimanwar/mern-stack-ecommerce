@@ -45,4 +45,10 @@ export const Api = {
         return response.data
     },
 
+    getAllBanners: async () => {
+        const response = await apiAxios.get("home/banners");
+        // console.log(response)
+        return response.data.data
+    }, 
+
 }

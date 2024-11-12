@@ -16,7 +16,7 @@ const bebasNeue = Bebas_Neue({
 type Props = {
   homeCategoryData : THomeCategory
 }
-
+ 
 const Category = ({homeCategoryData}: Props) => {  
 
   const homeCategories = homeCategoryData.categories

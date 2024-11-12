@@ -9,11 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons/faChevronCircleLeft";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import cn from "@/utils/tailwind";
-
+ 
 
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Bebas_Neue } from "next/font/google";
+import { TBannerData, TBanners } from "@/api/type";
 
 
 const bebasNeue = Bebas_Neue({
@@ -51,7 +52,11 @@ const gallery = [
   },
 ];
 
-const Carousel = () => {
+type Props = {
+  bannerData : TBanners
+}
+
+const Carousel = ({bannerData}: Props) => {
   const [activeImage, setActiveImage] = useState(0);
   //activeImage index = 2.  (0,1,2)
 

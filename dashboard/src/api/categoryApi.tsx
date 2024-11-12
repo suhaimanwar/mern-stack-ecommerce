@@ -1,11 +1,12 @@
 import axios from "axios";
+import { axiosClient } from "./config/axiosConfig";
 
 export const categoryApi = {
   createCategory: async function (body: any) {
     console.log("bodyyyy::::", body);
 
-    return await axios.post(
-      "http://localhost:5000/api/categories/create",
+    return await axiosClient.post(
+      "categories/create",
       body,
       {
         headers: {
@@ -16,27 +17,27 @@ export const categoryApi = {
   },
 
   getAllCategory: async function () {
-    return await axios.get(
-      "http://localhost:5000/api/categories/",
+    return await axiosClient.get(
+      "categories/",
       //While getting the data, We won't add any body here.
     );
   },
 
   deleteCategory: async function (id: string) {
-    return await axios.delete(
-      `http://localhost:5000/api/categories/delete/${id}`,
+    return await axiosClient.delete(
+      `categories/delete/${id}`,
     );
   },
 
   getCategorybyId: async function (id: string) {
-    return await axios.get(`http://localhost:5000/api/categories/view/${id}`);
+    return await axiosClient.get(`categories/view/${id}`);
   },
 
   updateCategory: async function (id: string, body: any) {
     // console.log("updateeeeeee:::::", body);
 
-    return await axios.put(
-      `http://localhost:5000/api/categories/update/${id}`, //Add the api route as per the brand router from the backend, it includes the port
+    return await axiosClient.put(
+      `categories/update/${id}`, //Add the api route as per the brand router from the backend, it includes the port
       body, //Will include name, description, etc. etc.
 
       {

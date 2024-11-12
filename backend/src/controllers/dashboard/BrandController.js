@@ -8,9 +8,9 @@ export const createBrand = async (req, res, next) => {
 
     // console.log('reqbodyy',req.body)
     // console.log('reqfileee', req.file)
-    const brandLogo = getFilePath(req.file)
+    const brandLogo = getFilePath(req.file) 
 
-    console.log('brandLogo::::',brandLogo)
+    // console.log('brandLogo::::',brandLogo)
 
     await BrandModel.create({
       name: name, //Placing the input name Here

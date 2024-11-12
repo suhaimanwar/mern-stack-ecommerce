@@ -29,3 +29,18 @@ export type TProducts ={
     price: string,
     image: string   
 }
+
+export type TBanners = {
+    at(activeImage: number): unknown
+    banners: TBannerData[]
+}
+
+export type TBannerData ={
+    _id: string,
+    subtitle: string,
+    title: string,
+    description: string,
+    image: string   
+}
+
+

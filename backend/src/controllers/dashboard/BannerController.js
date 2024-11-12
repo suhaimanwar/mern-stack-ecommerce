@@ -1,0 +1,128 @@
+import { BannerModel } from "../../models/BannerModel.js";
+import { serverError } from "../../utils/errorHandler.js";
+import { getFilePath } from "../../utils/filePath.js";
+
+export const createBanner = async (req, res, next) => {
+  try {
+    const { subtitle, title, description } = req.body; //Destructuring name and description from req.body (aka from the frontend)
+
+    // console.log('reqbodyy',req.body)
+    // console.log('reqfileee', req.file)
+    const bannerImage = getFilePath(req.file);
+
+    // console.log('bannerImage::::',bannerImage)
+
+    await BannerModel.create({
+      image: bannerImage,
+      subtitle: subtitle,
+      title: title,
+      description: description,
+      // image: req.file.filename,
+      deletedAt: null,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Banner Created Successfully",
+    });
+  } catch (error) {
+    return next(serverError(error));
+  }
+};
+
+export const getAllBanners = async (req, res, next) => {
+  try {
+    const banners = await BannerModel.find({ deletedAt: null }); //If getAllBanners is called
+    return res.status(200).json({
+      success: true,
+      message: "Banners Fetched Succesfully",
+      data: { banners: banners }, //All the Brands are given as a response. - Here the key value is "banners" given to banners.
+    });
+  } catch (error) {
+    return next(serverError(error));
+  }
+};
+
+export const getBannerbyId = async (req, res, next) => {
+  try {
+    const bannerId = req.params.id; //Fetching the bannerId from params
+    const bannerData = await BannerModel.findOne({
+      _id: bannerId,
+      deletedAt: null,
+    }); //Returns Object //
+
+    if (!bannerData) {
+      return next(validationError("Brand not found!"));
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Banner Fetched Successfully",
+      data: { banner: bannerData },
+    });
+  } catch (error) {
+    return next(serverError(error));
+  }
+};
+
+export const deleteBanner = async (req, res, next) => {
+  try {
+    const bannerId = req.params.id;
+
+    //   console.log('bannerID:::::',bannerId)
+
+    // await BannerModel.deleteOne({ _id: bannerId }); //Hard Delete
+
+    const bannerToDelete = await BannerModel.findOne({ _id: bannerId });
+
+    bannerToDelete.deletedAt = new Date(); //Soft Delete -- It will add the deleted date to the deletedAt property.
+
+    await bannerToDelete.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Banner Deleted Successfully",
+    });
+  } catch (error) {
+    return next(serverError(error));
+  }
+};
+
+export const updateBanner = async (req, res, next) => {
+  try {
+    const bannerId = req.params.id;
+    // const name = req.body.name;
+    // const description = req.body.description;
+
+    const { subtitle, title, description } = req.body;
+
+    // console.log('""""""',req.body)
+
+    const banner = await BannerModel.findOne({
+      _id: bannerId,
+      deletedAt: null,
+    });
+
+    // console.log("req::", req.file);
+
+    // console.log('logo',bannerLogo)
+
+    banner.subtitle = subtitle;
+    banner.title = title;
+    banner.description = description;
+
+    // if (req.file != null) {
+    //   const brandLogo = getFilePath(req.file);
+    //   brand.image = brandLogo;
+    // }
+
+    await banner.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Brand Updated Successfully",
+    });
+  } catch (error) {
+    next(serverError(error));
+  }
+};

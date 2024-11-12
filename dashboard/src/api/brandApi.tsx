@@ -1,15 +1,16 @@
 import axios from 'axios'
+import { axiosClient } from './config/axiosConfig'
 
 export const brandApi = {
     createBrand: async function (body:any) {
         
         // console.log('bodyyyyy',body) 
 
-        return await axios.post(
-            "http://localhost:5000/api/brands/create", //Add the api route as per the brand router from the backend, it includes the port
+        return await axiosClient.post(
+            "brands/create", //Add the api route as per the brand router from the backend, it includes the port
             body, //Will include name, description, etc. etc. 
             
-            {
+            { 
                 headers:{
                     "Content-Type": "multipart/form-data" //If image is present, We have to pass the content type as this,
                 }
@@ -19,20 +20,20 @@ export const brandApi = {
 
     getAllBrands: async function () {
         
-        return await axios.get(
-            "http://localhost:5000/api/brands/", //Add the api route as per the brand router from the backend, it includes the port
+        return await axiosClient.get(
+            "brands/", //Add the api route as per the brand router from the backend, it includes the port
             //While getting the data, We won't add any body here.
         )
     },
 
 
     deleteBrand: async function (id:string) {
-        return await axios.delete(`http://localhost:5000/api/brands/delete/${id}`)
+        return await axiosClient.delete(`brands/delete/${id}`)
     },
 
     getBrandbyId: async function (id:string) {
-        return await axios.get(
-            `http://localhost:5000/api/brands/view/${id}`
+        return await axiosClient.get(
+            `brands/view/${id}`
         )
     },
 
@@ -40,8 +41,8 @@ export const brandApi = {
         
         console.log('updateeeeeee:::::',body)
 
-        return await axios.put(
-            `http://localhost:5000/api/brands/update/${id}`, //Add the api route as per the brand router from the backend, it includes the port
+        return await axiosClient.put(
+            `brands/update/${id}`, //Add the api route as per the brand router from the backend, it includes the port
             body, //Will include name, description, etc. etc. 
 
             {

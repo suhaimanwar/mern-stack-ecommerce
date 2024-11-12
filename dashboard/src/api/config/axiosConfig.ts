@@ -4,7 +4,7 @@ let headers = {}
 
 if (typeof window !== "undefined"){
     headers = {
-        Authorization: "bearer " + window.localStorage.getItem("accessToken") //setup header in axiosClient = getItem - we can get access token
+        authorization: "bearer " + window.localStorage.getItem("accessToken") //setup header in axiosClient = getItem - we can get access token
     }
 }
 

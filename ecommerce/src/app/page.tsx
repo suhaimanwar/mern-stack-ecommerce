@@ -1,5 +1,5 @@
 import { Api } from "@/api/Api";
-import { TFeaturedProducts, THomeCategory } from "@/api/type";
+import { TBanners, TFeaturedProducts, THomeCategory } from "@/api/type";
 import Carousel from "@/components/Carousel";
 import Category from "@/components/Category";
 import FeaturedProducts from "@/components/FeaturedProducts";
@@ -15,6 +15,11 @@ const getFeaturedProducts = async():Promise<TFeaturedProducts> =>{
   return featuredProducts
 }
 
+const getAllBanners = async():Promise<TBanners> =>{
+  const banners = await Api.getAllBanners()
+  return banners
+}
+
 export default async function Home() {
 
   const homeCategoryData = await getHomeCategories()
@@ -23,11 +28,14 @@ export default async function Home() {
   const featuredProductsData = await getFeaturedProducts()
   // console.log('FEATTT::::::',featuredProductsData)
 
+  const bannerData = await getAllBanners()
+  // console.log("banner::",bannerData)
+
 
   return (
-    <>
+    <> 
 
-      <Carousel />
+      <Carousel bannerData={bannerData}/>
 
       <Category 
       homeCategoryData={homeCategoryData}  
