@@ -63,7 +63,7 @@ const CategoryEditForm = ({categoryData}: Props) => {
 
     await categoryApi.updateCategory(categoryData._id , data)
 
-    router.push('/tables/category')
+    router.push('/category')
     router.refresh()
   };
 

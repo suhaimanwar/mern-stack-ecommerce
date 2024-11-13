@@ -42,7 +42,9 @@ type Props = {
     bannerData: any
 }
 
+
 const BannerEditForm = ({bannerData}: Props) => {
+  console.log("banner::", bannerData)
   const {
     register,
     control,
@@ -69,7 +71,7 @@ const BannerEditForm = ({bannerData}: Props) => {
     // await bannerApi.createBanner(data)
     await bannerApi.updateBanner(bannerData._id, data)
 
-    router.push("/tables/banner");
+    router.push("/banner");
     router.refresh();
   };
 
@@ -171,26 +173,6 @@ const BannerEditForm = ({bannerData}: Props) => {
                     )}
                   />
                 </DropzoneWrapper>
-
-                {/* 
-                
-                <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
-                  Add Logo
-                </label>
-                <input
-                  {...register("attachedFile")}
-                  type="file"
-             
-                  className="w-full cursor-pointer rounded-[7px] border-[1.5px] border-stroke bg-transparent outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-stroke file:bg-[#E2E8F0] file:px-6.5 file:py-[13px] file:text-body-sm file:font-medium file:text-dark-5 file:hover:bg-primary file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-dark dark:border-dark-3 dark:bg-dark-2 dark:file:border-dark-3 dark:file:bg-white/30 dark:file:text-white dark:focus:border-primary"
-                />
-
-
-                {!!errors.attachedFile && (
-                  <p className="mt-2 text-red-500">
-                    Invalid Image format {!!errors.attachedFile}
-                  </p> {/* {!!errors.image && (
-                      <span style={{ color: 'red', fontSize: '14px' }}>Invalid Image format {!!errors.image}</span>
-                    )} */}
               </div>
 
               <button type="button" onClick={onImageDelete} className="p-5 ">

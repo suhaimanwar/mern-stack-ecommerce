@@ -67,7 +67,7 @@ const BrandEditForm = ({ brandData }: Props) => {
 
     await brandApi.updateBrand(brandData._id , data)
 
-    router.push('/tables/brand')
+    router.push('/brand')
     router.refresh()
 
     // await brandApi.createBrand(data)

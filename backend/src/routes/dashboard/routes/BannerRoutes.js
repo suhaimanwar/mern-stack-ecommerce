@@ -10,7 +10,7 @@ BannerRouter.post("/create",uploadImageFile('banners').single('attachedFile'), c
 BannerRouter.get("/", getAllBanners)
 BannerRouter.get("/view/:id", getBannerbyId)
 BannerRouter.delete("/delete/:id", deleteBanner)
-BannerRouter.put("/update/:id",uploadImageFile('banners').single('attachedFile'), updateBanner)
+BannerRouter.put("/update/:id", uploadImageFile('banners').single('attachedFile'), updateBanner)
 // BannerRouter.get("/", getAllBanners)
 
 

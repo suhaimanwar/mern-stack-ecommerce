@@ -57,7 +57,7 @@ const BannerAddForm = () => {
 
     await bannerApi.createBanner(data)
 
-    router.push("/tables/banner");
+    router.push("/banner");
     router.refresh();
   };
 

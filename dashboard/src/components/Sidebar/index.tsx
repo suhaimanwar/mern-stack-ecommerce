@@ -43,7 +43,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Banner",
-        route: "/tables/banner",
+        route: "/banner",
       },
       {
         icon: (
@@ -70,7 +70,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Brand",
-        route: "/tables/brand",
+        route: "/brand",
       },
       {
         icon: (
@@ -97,7 +97,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Category",
-        route: "/tables/category",
+        route: "/category",
       },
       {
         icon: (
@@ -124,7 +124,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Products",
-        route: "/tables/product",
+        route: "/product",
       },
   
     ],

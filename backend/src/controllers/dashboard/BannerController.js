@@ -111,10 +111,11 @@ export const updateBanner = async (req, res, next) => {
     banner.title = title;
     banner.description = description;
 
-    // if (req.file != null) {
-    //   const brandLogo = getFilePath(req.file);
-    //   brand.image = brandLogo;
-    // }
+
+    if (req.file != null) {
+      const bannerImage = getFilePath(req.file);
+      banner.image = bannerImage;
+    }
 
     await banner.save();
 

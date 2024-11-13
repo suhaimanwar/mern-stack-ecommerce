@@ -90,7 +90,7 @@ const ProductEditForm = ({dropdownData, singleProductData}: Props) => {
 
     await productApi.updateProduct(singleProductData._id , data)
 
-    router.push('/tables/product')
+    router.push('/product')
     router.refresh()
   };
 

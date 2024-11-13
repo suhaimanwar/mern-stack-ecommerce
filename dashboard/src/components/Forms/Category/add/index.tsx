@@ -51,7 +51,7 @@ const CategoryAddForm = () => {
 
     await categoryApi.createCategory(data);
 
-    router.push('/tables/category')
+    router.push('/category')
     router.refresh()
   };
 

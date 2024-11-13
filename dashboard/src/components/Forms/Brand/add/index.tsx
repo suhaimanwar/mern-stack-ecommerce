@@ -52,7 +52,7 @@ const BrandAddForm = () => {
     // console.log("submittedd::", data);
     await brandApi.createBrand(data); //Calling an API
 
-    router.push("/tables/brand");
+    router.push("/brand");
     router.refresh();
   };
 

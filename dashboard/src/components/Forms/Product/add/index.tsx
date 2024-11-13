@@ -80,7 +80,7 @@ const ProductAddForm = ({dropdownData}: Props) => {
     // console.log("submittedd::", data);
     await productApi.createProduct(data)  //Calling an API
     
-    router.push('/tables/product')
+    router.push('/product')
     router.refresh()
   
 
