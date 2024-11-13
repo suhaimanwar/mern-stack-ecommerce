@@ -102,7 +102,7 @@ export const updateBrand = async (req, res, next) => {
 
     const brand = await BrandModel.findOne({_id:brandId, deletedAt:null})
 
-    console.log('req::',req.file)
+    // console.log('req::',req.file)
 
     
 

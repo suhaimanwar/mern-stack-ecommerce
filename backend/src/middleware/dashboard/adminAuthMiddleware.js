@@ -8,7 +8,7 @@ export const adminAuthMiddleware = (req, res, next) => {
     const authHeader = req.headers.authorization; 
     //requesting header from the dashboard
 
-    console.log("req::::",req.headers)
+    // console.log("req::::",req.headers)
 
     if (!authHeader) {
       next(unauthorizedError());

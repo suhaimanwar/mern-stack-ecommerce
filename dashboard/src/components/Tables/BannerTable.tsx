@@ -1,39 +1,10 @@
 "use client";
 import { bannerApi } from "@/api/bannerApi";
-import { brandApi } from "@/api/brandApi";
-import { Package } from "@/types/package";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Router } from "next/router";
-import { Toaster } from "react-hot-toast";
-
-// const packageData: Package[] = [
-//   {
-//     name: "Brand",
-//     price: 0.0,
-//     invoiceDate: `Jan 13,2023`,
-//     status: "Paid",
-//   },
-//   {
-//     name: "Standard Package",
-//     price: 59.0,
-//     invoiceDate: `Jan 13,2023`,
-//     status: "Paid",
-//   },
-//   {
-//     name: "Business Package",
-//     price: 99.0,
-//     invoiceDate: `Jan 13,2023`,
-//     status: "Unpaid",
-//   },
-//   {
-//     name: "Standard Package",
-//     price: 59.0,
-//     invoiceDate: `Jan 13,2023`,
-//     status: "Pending",
-//   },
-// ];
+import AlertDialog from "../Dialog/Dialog";
+import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from "react";
 
 type Props = {
   data: [
@@ -42,7 +13,7 @@ type Props = {
       title: string;
       subtitle: string;
       description: string;
-      image: string
+      image: string;
     },
   ];
 };
@@ -52,16 +23,27 @@ const BannerTable = ({ data }: Props) => {
 
   const router = useRouter();
 
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const onClickDelete = () => {
+    setDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setDialogOpen(false);
+  };
+
+
   const onDelete = async (id: string) => {
     // console.log('id::::::',id)
-    //  await brandApi.deleteBrand(id)
     await bannerApi.deleteBanner(id);
-
     router.refresh();
   };
 
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
+     
+
       <div className="flex w-full justify-end">
         <Link href="/banner/add">
           <button
@@ -87,7 +69,7 @@ const BannerTable = ({ data }: Props) => {
                 Title
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-dark dark:text-white">
-             Description
+                Description
               </th>
               {/* <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
                 Status
@@ -98,8 +80,10 @@ const BannerTable = ({ data }: Props) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => (
+            {data.map((item: { _id: string; image: string; subtitle: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }, index: Key | null | undefined) => (
+              
               <tr key={index}>
+                 <AlertDialog open={dialogOpen} onClose={handleCloseDialog} onConfirmDelete={() => onDelete(item._id)} />
                 <td
                   className={`border-[#eee] px-4 py-4  dark:border-dark-3 xl:pl-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
@@ -112,7 +96,6 @@ const BannerTable = ({ data }: Props) => {
                         alt="img"
                       />
                     </div>
-                   
                   </div>
                 </td>
                 <td
@@ -157,10 +140,7 @@ const BannerTable = ({ data }: Props) => {
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                    <Link
-                      className="flex"
-                      href={`/banner/edit/${item._id}`}
-                    >
+                    <Link className="flex" href={`/banner/edit/${item._id}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +162,8 @@ const BannerTable = ({ data }: Props) => {
                       </button>
                     </Link>
                     <button
-                      onClick={() => onDelete(item._id)}
+                      // onClick={() => onDelete(item._id)}
+                      onClick={onClickDelete}
                       className="hover:text-primary"
                     >
                       <svg

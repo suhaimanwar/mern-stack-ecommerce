@@ -6534,3 +6534,36 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-11-12 19:27:01'
 }
+{
+  stringValue: '"undefined"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+      at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast.js:389:32)
+      at Query.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4868:12)
+      at Query._castConditions (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2265:10)
+      at model.Query._findOne (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:2589:8)
+      at model.Query.exec (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\query.js:4412:80),
+  valueType: 'string',
+  level: 'error',
+  message: '\tInternal Server Error Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "banners"',
+  stack: 'CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "banners"\n' +
+    '    at SchemaObjectId.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:250:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1236:12)\n' +
+    '    at SchemaType.castForQuery (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\schemaType.js:1653:17)\n' +
+    '    at cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\cast.js:389:32)\n' +
+    '    at Query.cast (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4868:12)\n' +
+    '    at Query._castConditions (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2265:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:2589:8)\n' +
+    '    at model.Query.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\query.js:4412:80)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async deleteBanner (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/BannerController.js:76:28)',
+  timestamp: '2024-11-13 16:18:15'
+}
