@@ -63,7 +63,7 @@ const BannerTable = ({ data }: Props) => {
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
       <div className="flex w-full justify-end">
-        <Link href="/forms/banner/add">
+        <Link href="/banner/add">
           <button
             type="button"
             className="mb-2 me-2 rounded-full bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
@@ -159,7 +159,7 @@ const BannerTable = ({ data }: Props) => {
                   <div className="flex items-center justify-end space-x-3.5">
                     <Link
                       className="flex"
-                      href={`/forms/banner/edit/${item._id}`}
+                      href={`/banner/edit/${item._id}`}
                     >
                       <button className="hover:text-primary">
                         <svg

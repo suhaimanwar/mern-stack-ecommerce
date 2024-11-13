@@ -92,7 +92,7 @@ const ProductTable = ({ productData }: Props) => {
       </div>
 
       <div className="flex w-full justify-end">
-        <Link href="/forms/product/add">
+        <Link href="/product/add">
           <button
             type="button"
             className="mb-2 me-2 rounded-full bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
@@ -177,7 +177,7 @@ const ProductTable = ({ productData }: Props) => {
                   <div className="flex items-center justify-end space-x-3.5">
                     <Link
                       className="flex"
-                      href={`/forms/product/edit/${item._id}`}
+                      href={`/product/edit/${item._id}`}
                     >
                       <button className="hover:text-primary">
                         <svg
