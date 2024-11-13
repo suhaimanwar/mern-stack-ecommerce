@@ -6525,3 +6525,12 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)',
   timestamp: '2024-11-12 14:38:26'
 }
+{
+  level: 'error',
+  message: '\tInternal Server Error [envalid] Env var JWT_EXPIRES was accessed but not validated. This var is set in the environment; please add an envalid validator for it.',
+  stack: 'ReferenceError: [envalid] Env var JWT_EXPIRES was accessed but not validated. This var is set in the environment; please add an envalid validator for it.\n' +
+    '    at Object.get (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\envalid\\dist\\middleware.js:41:27)\n' +
+    '    at loginAdmin (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/AdminController.js:64:102)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-12 19:27:01'
+}

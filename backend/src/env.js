@@ -12,13 +12,14 @@ const env = cleanEnv(process.env,{
     }),
     ADMIN_JWT_SECRET_KEY: str({
         default:
-            "aDmiN.blaCkHat.lksadshfeoiwh" //Token Secret code for Admin - Give Random Codes
+            'aDmiN.blaCkHat.lksadshfeoiwh' //Token Secret code for Admin - Give Random Codes
     }),
     USER_JWT_SECRET_KEY: str({
         default:
-            "UsER.blaCkHat.sjhfslihfseihf" //Token for User - Give Random Codes
+            'UsER.blaCkHat.sjhfslihfseihf' //Token for User - Give Random Codes
     }),
-    JWT_EXPIRES: str({default: "7 days"}) //expiry date
+    JWT_EXPIRES: str({default: '7 days'}) 
+    //expiry date
 })
 
 export default env

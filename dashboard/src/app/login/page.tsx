@@ -40,7 +40,8 @@ const LoginPage = () => {
       toast.success(response.data.message)
 
       if (response.data.success) {
-        window.localStorage.setItem("accessToken",response.data.accessToken) //Storing access token in the local storage
+        window.localStorage.setItem("accessToken",response.data.accessToken) 
+        //Storing access token in the local storage
         Cookies.set("accessToken", response.data.accessToken)//Storing access token in the browser cookies
         router.push("/tables/brand");
         router.refresh()

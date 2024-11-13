@@ -2,9 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Carousel1 from "@public/images/carousel (1).png";
-import Carousel2 from "@public/images/carousel (5).png";
-import Carousel3 from "@public/images/carousel (4).png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons/faChevronCircleLeft";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +12,8 @@ import cn from "@/utils/tailwind";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Bebas_Neue } from "next/font/google";
-import { TBannerData, TBanners } from "@/api/type";
+import { TBanners } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
 
 
 const bebasNeue = Bebas_Neue({
@@ -23,40 +22,43 @@ const bebasNeue = Bebas_Neue({
   display: 'swap', adjustFontFallback: false
 });
 
-const gallery = [
-  {
-    image: Carousel1,
-    text: {
-      subHeading: "SUMMER 2024",
-      heading: "BLACK FRIDAY",
-      description:
-        "Discover unbeatable deals and offers, perfect for your summer essentials.",
-    },
-  },
-  {
-    image: Carousel2,
-    text: {
-      subHeading: "SUMMER 2024",
-      heading: "NEW COLLECTION",
-      description:
-        "Explore our latest collection, where style meets innovation.",
-    },
-  },
-  {
-    image: Carousel3,
-    text: {
-      subHeading: "LIMITED EDITION",
-      heading: "EXCLUSIVE OFFER",
-      description: "Unlock special pricing on our newest releases. Elevate your style with our limited-time collection.",
-    },
-  },
-];
+// const gallery = [
+//   {
+//     image: Carousel1,
+//     text: {
+//       subHeading: "SUMMER 2024",
+//       heading: "BLACK FRIDAY",
+//       description:
+//         "Discover unbeatable deals and offers, perfect for your summer essentials.",
+//     },
+//   },
+//   {
+//     image: Carousel2,
+//     text: {
+//       subHeading: "SUMMER 2024",
+//       heading: "NEW COLLECTION",
+//       description:
+//         "Explore our latest collection, where style meets innovation.",
+//     },
+//   },
+//   {
+//     image: Carousel3,
+//     text: {
+//       subHeading: "LIMITED EDITION",
+//       heading: "EXCLUSIVE OFFER",
+//       description: "Unlock special pricing on our newest releases. Elevate your style with our limited-time collection.",
+//     },
+//   },
+// ];
 
 type Props = {
   bannerData : TBanners
 }
 
 const Carousel = ({bannerData}: Props) => {
+
+  // console.log("banner:::",bannerData)
+  const gallery = bannerData.banners
   const [activeImage, setActiveImage] = useState(0);
   //activeImage index = 2.  (0,1,2)
 
@@ -73,7 +75,7 @@ const Carousel = ({bannerData}: Props) => {
 
   const previous = () => {
     if (activeImage == 0) {
-      setActiveImage(2);
+      setActiveImage(totalImages - 1);
     } else {
       setActiveImage(activeImage - 1);
     }
@@ -110,8 +112,9 @@ const Carousel = ({bannerData}: Props) => {
             >
               <Image
                 alt="Carousel"
-                src={gallery!.at(activeImage)!.image}
-                className="select-none absolute inset-0 h-full w-full object-cover"
+                fill
+                src={StorageUrl + gallery!.at(activeImage)!.image}
+                className="select-none absolute  inset-0 h-full w-full object-cover"
               />
 
               {/* 
@@ -139,14 +142,14 @@ const Carousel = ({bannerData}: Props) => {
 
             <p className={` ${bebasNeue.className} tracking-wider font-bold text-2xl text-white max-sm:text-center`}>
               {" "}
-              {gallery!.at(activeImage)!.text.subHeading}
+              {gallery!.at(activeImage)!.subtitle}
             </p>
             <h3 className={`${bebasNeue.className} font-bold text-8xl  text-white max-sm:text-6xl max-sm:text-center`}>
-              {gallery!.at(activeImage)!.text.heading}{" "}
+              {gallery!.at(activeImage)!.title}{" "}
             </h3>
             <h5 className={` ${bebasNeue.className}  font-bold text-xl tracking-wider text-white max-sm:text-center`}>
               {" "}
-              {gallery!.at(activeImage)?.text.description}
+              {gallery!.at(activeImage)?.description}
             </h5>
           </motion.div>
         </div>
