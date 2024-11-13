@@ -51,7 +51,6 @@ const SignupForm = () => {
     // console.log('submitteddata::::', data)
     try {
       const response = await Api.createUser(data);
-
       // console.log('response:::',response)
       toast.success(response.message);
 

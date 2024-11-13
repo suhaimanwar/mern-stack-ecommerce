@@ -49,19 +49,19 @@ export const createUser = async (req, res, next) => {
 
   export const loginUser = async (req, res, next) => {
     try {
-      const { username, password } = req.body;
+      const { email, password } = req.body;
   
-      const findUser = await UserModel.findOne({
-        username: username,
+      const findEmail = await UserModel.findOne({
+        email: email,
       });
   
-      if (!findUser) {
+      if (!findEmail) {
         return res.status(422).json({
           success: false,
-          message: "Cannot Find User",
+          message: "Cannot Find Email",
         });
       }
-      const passwordCheck = bcrypt.compareSync(password, findUser.password);
+      const passwordCheck = bcrypt.compareSync(password, findEmail.password);
   
       if (!passwordCheck) {
         return res.status(422).json({

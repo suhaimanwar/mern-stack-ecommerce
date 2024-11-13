@@ -33,7 +33,7 @@ const containerVariants = {
 
 const Page = () => {
   const loginSchema = z.object({
-    username: z.string().min(1, "This field is required."),
+    email: z.string().min(1, "This field is required."),
     password: z.string().min(1, "This field is required."),
   });
 
@@ -54,7 +54,6 @@ const Page = () => {
 
     try {
       const response = await Api.loginUser(data);
-
       // console.log("response::",response.message)
       toast.success(response.message);
 
@@ -102,14 +101,14 @@ const Page = () => {
           action=""
         >
           <input
-            {...register("username")}
+            {...register("email")}
             className="rounded-md pl-3 py-3 bg-white/80 w-full text-black outline-none focus:ring-2 focus:ring-white focus:bg-white"
-            type="text"
-            placeholder="Username"
+            type="email"
+            placeholder="Email"
           />
 
-          {errors.username && (
-            <p className="text-red-500 text-left  mt-1">{`${errors.username.message}`}</p>
+          {errors.email && (
+            <p className="text-red-500 text-left  mt-1">{`${errors.email.message}`}</p>
           )}
 
           <div className="relative">
