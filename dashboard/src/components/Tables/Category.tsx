@@ -3,6 +3,8 @@ import { categoryApi } from "@/api/categoryApi";
 import { Package } from "@/types/package";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import AlertDialog from "../Dialog/Dialog";
+import { useState } from "react";
 
 // const data: Package[] = [
 //   {
@@ -46,13 +48,26 @@ const CategoryTable = ({categoryData}: Props) => {
 
   const router = useRouter();
 
-  const onDelete = async(id:string) => {
+  
+  const [open, setOpen] = useState(false);
+
+  const [deleteId, setDeleteId] = useState<string>();
+
+  const onClickDelete = (id: string) => {
+    setDeleteId(id);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const onDelete = async(id:any) => {
     // console.log('id::::::',id)
      await categoryApi.deleteCategory(id)
-
      router.refresh();
-
   }
+
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
       <div className="flex w-full justify-end">
@@ -87,6 +102,14 @@ const CategoryTable = ({categoryData}: Props) => {
           <tbody>
             {categoryData.map((categoryData, index) => (
               <tr key={index}>
+                 <AlertDialog
+                  open={open}
+                  onClose={handleClose}
+                  // key={index}
+                  onConfirmDelete={() => {
+                    onDelete(deleteId);
+                  }}
+                />
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === categoryData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
@@ -144,7 +167,7 @@ const CategoryTable = ({categoryData}: Props) => {
                         </svg>
                       </button>
                     </Link>
-                    <button onClick={()=>onDelete(categoryData._id)} className="hover:text-primary">
+                    <button  onClick={() => onClickDelete(categoryData._id)} className="hover:text-primary">
                       <svg
                         className="fill-current"
                         width="20"

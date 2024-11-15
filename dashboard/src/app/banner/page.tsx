@@ -10,26 +10,21 @@ export const metadata: Metadata = {
   description: "This is Next.js Tables page for NextAdmin Dashboard Kit",
 };
 
-
 const getAllBanners = async () => {
-    const res = await bannerApi.getAllBanners()
+  const res = await bannerApi.getAllBanners();
 
-    // console.log("res::", res.data.data.banners)
-    return res.data.data.banners
-}
+  // console.log("res::", res.data.data.banners)
+  return res.data.data.banners;
+};
 
+const TablesPage = async () => {
+  const data = await getAllBanners();
 
-const TablesPage = async() => {
-
-    const data = await getAllBanners()
-  
-  return ( 
+  return (
     <DefaultLayout>
       <Breadcrumb pageName="Banners" />
 
       <div className="flex flex-col gap-10">
-
- 
         <BannerTable data={data} />
       </div>
     </DefaultLayout>

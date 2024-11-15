@@ -187,24 +187,26 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-center gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
           <Link href="/">
-            <Image
-              width={110}
-              height={32}
-              src={"/images/logo/logo-bl.png"}
-              alt="Logo"
-              priority
-              className="dark:hidden"
-              style={{ width: "auto", height: "auto" }}
-            />
-            <Image
-              width={110}
-              height={32}
-              src={"/images/logo/logo-wh.png"}
-              alt="Logo"
-              priority
-              className="hidden dark:block"
-              style={{ width: "auto", height: "auto" }}
-            />
+            <div className="relative h-full w-full">
+              <Image
+                width={110}
+                height={32}
+                src={"/images/logo/logo-bl.png"}
+                alt="Logo"
+                priority
+                className="dark:hidden"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <Image
+                width={110}
+                height={32}
+                src={"/images/logo/logo-wh.png"}
+                alt="Logo"
+                priority
+                className="hidden dark:block"
+                style={{ width: "auto", height: "auto" }}
+              />
+            </div>
           </Link>
 
           <button

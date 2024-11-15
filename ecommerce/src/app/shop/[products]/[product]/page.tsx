@@ -15,6 +15,8 @@ const page = async ({ params }: { params: { product: string } }) => {
 
   const productData = data.product[0];
 
+  console.log("image:::", productData);
+
   // console.log("hello::", productData.name);
 
   // Fetch all products
@@ -52,7 +54,9 @@ const page = async ({ params }: { params: { product: string } }) => {
               <h2 className="text-2xl font-bold text-gray-800  mb-2">
                 {productData.name}
               </h2>
-              <p className="text-gray-600  text-sm mb-4">{productData.brandName}</p>
+              <p className="text-gray-600  text-sm mb-4">
+                {productData.brandName}
+              </p>
               <div className="flex mb-4 ">
                 <div className="mr-4 flex gap-2">
                   <span className="font-bold text-gray-700 ">Price:</span>

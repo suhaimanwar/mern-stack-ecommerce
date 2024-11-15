@@ -75,7 +75,7 @@ export const getProductbyId = async (req, res, next) => {
       },
     ]);
 
-    console.log("Name",productData.at(0))
+    // console.log("Name",productData.at(0))
 
     if (!productData) {
       return next(validationError("Product not found!"));

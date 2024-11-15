@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 import SwitcherOne from "../FormElements/Switchers/SwitcherOne";
+import { useState } from "react";
+import AlertDialog from "../Dialog/Dialog";
 
 // const packageData: Package[] = [
 //   {
@@ -53,13 +55,20 @@ type Props = {
 const ProductTable = ({ productData }: Props) => {
   const router = useRouter();
 
-  const onDelete = async (id: string) => {
-    const isConfirmed = confirm(
-      "Are you sure you want to delete this product?",
-    );
+  const [open, setOpen] = useState(false);
 
-    if (!isConfirmed) return;
+  const [deleteId, setDeleteId] = useState<string>();
 
+  const onClickDelete = (id: string) => {
+    setDeleteId(id);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const onDelete = async (id: any) => {
     try {
       const deleteProduct = await productApi.deleteProduct(id);
       if (deleteProduct.data.success) {
@@ -75,7 +84,7 @@ const ProductTable = ({ productData }: Props) => {
     try {
       await productApi.featuredProduct(id);
       router.refresh();
-      toast.success("Updated Successfully")
+      toast.success("Updated Successfully");
     } catch (error: any) {
       toast.error(error.message);
     }
@@ -87,9 +96,7 @@ const ProductTable = ({ productData }: Props) => {
   // console.log('caaaaaaaat::',categoryData)
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
-      <div>
-        {/* <Toaster position="top-right" reverseOrder={true} /> */}
-      </div>
+      <div>{/* <Toaster position="top-right" reverseOrder={true} /> */}</div>
 
       <div className="flex w-full justify-end">
         <Link href="/product/add">
@@ -127,6 +134,14 @@ const ProductTable = ({ productData }: Props) => {
           <tbody>
             {productData.map((item, index) => (
               <tr key={index}>
+                <AlertDialog
+                  open={open}
+                  onClose={handleClose}
+                  // key={index}
+                  onConfirmDelete={() => {
+                    onDelete(deleteId);
+                  }}
+                />
                 <td
                   className={`border-[#eee] px-4 py-4  dark:border-dark-3 xl:pl-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
@@ -175,10 +190,7 @@ const ProductTable = ({ productData }: Props) => {
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                    <Link
-                      className="flex"
-                      href={`/product/edit/${item._id}`}
-                    >
+                    <Link className="flex" href={`/product/edit/${item._id}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +212,8 @@ const ProductTable = ({ productData }: Props) => {
                       </button>
                     </Link>
                     <button
-                      onClick={() => onDelete(item._id)}
+                      // onClick={() => onDelete(item._id)}
+                      onClick={() => onClickDelete(item._id)}
                       className="hover:text-primary"
                     >
                       <svg

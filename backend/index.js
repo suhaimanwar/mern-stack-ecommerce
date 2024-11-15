@@ -9,6 +9,7 @@ import { statusCode } from './src/enum/StatusCodes.js';
 import FrontendRouter from './src/routes/frontend/MainRoutes.js';
 import { cwd } from 'process';
 import { DashboardRouter } from './src/routes/dashboard/DashboardRoutes.js';
+import { createAdmin } from './src/utils/createAdmin.js';
 
 
 const port = 5000;
@@ -79,6 +80,7 @@ app.use((err, req, res, next)=>{
 
 app.listen(port, async ()=>{
     console.log(`Server is listening to port ${port}`)
+    await createAdmin()
 })
 
 //Run it - npm run dev
