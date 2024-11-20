@@ -181,7 +181,6 @@ import AlertDialog from "../Dialog/Dialog";
 import { useDebounce } from "@/hooks/useDebounce";
 import ServerSideToolbar from "@/utils/ServerSideToolbar";
 
-
 type Props = {
   data: [
     {
@@ -189,46 +188,43 @@ type Props = {
       _id: string;
       name: string;
       description: string;
+      slug: string;
     },
   ];
 };
 
 export default function DataGridDemo() {
-
   const router = useRouter();
 
+  const [total, setTotal] = React.useState<number>(0);
+  const [rows, setRows] = React.useState<any[]>([]);
+  const [searchValue, setSearchValue] = React.useState<string>("");
+  const [paginationModel, setPaginationModel] = React.useState<any>(0);
 
-  const [total, setTotal] = React.useState<number>(0)
-  const [rows, setRows] = React.useState<any[]>([])
-  const [searchValue, setSearchValue] = React.useState<string>("")
-  const [paginationModel, setPaginationModel] = React.useState<any>(0)
+  const query: any = useDebounce(searchValue, 0);
 
-  const query: any = useDebounce(searchValue, 0)
+  type SortType = "asc" | "desc" | undefined | null;
 
-  type SortType = 'asc' | 'desc' | undefined | null
-
-  const fetchTableData = React.useCallback( 
-    async(sort: SortType, q:string) => {
-      await brandApi.getAllBrands({query: {sort,q, page: paginationModel.page + 1}}).then(res => {
-
-        console.log("response::::",res)
-        setTotal(res.data.data?.totalCount)
-        setRows(res.data.data?.paginatedResults)
-      })
+  const fetchTableData = React.useCallback(
+    async (sort: SortType, q: string) => {
+      await brandApi
+        .getAllBrands({ query: { sort, q, page: paginationModel.page + 1 } })
+        .then((res) => {
+          // console.log("response::::",res)
+          setTotal(res.data.data?.totalCount);
+          setRows(res.data.data?.paginatedResults);
+        });
     },
-    [paginationModel]
+    [paginationModel],
+  );
 
-  )
+  React.useEffect(() => {
+    fetchTableData("asc", query);
+  }, [fetchTableData, query]);
 
-  React.useEffect(()=>{
-    fetchTableData('asc', query)
-  }, [fetchTableData, query])
-
-  const handleSearch = (value: string)=>{
-    setSearchValue(value)
-  }
-  
- 
+  const handleSearch = (value: string) => {
+    setSearchValue(value);
+  };
 
   const [open, setOpen] = React.useState(false);
 
@@ -246,7 +242,7 @@ export default function DataGridDemo() {
   const onDelete = async (id: any) => {
     // console.log('id::::::',id)
     await brandApi.deleteBrand(id);
-    fetchTableData('asc', query)
+    fetchTableData("asc", query);
   };
   const columns: GridColDef<(typeof rows)[number]>[] = [
     // { field: "id", headerName: "ID", width: 90 },
@@ -255,19 +251,19 @@ export default function DataGridDemo() {
       headerName: "Image",
       // flex: 1,
       width: 100,
-      cellClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
-      headerClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200 ", 
-
+      cellClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
+      headerClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200 ",
 
       editable: false,
       renderCell: (params: any) => {
         const { row } = params;
 
         return (
-          <Box sx={{ display: "flex", alignItems: "center"  }}>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box
-              sx={{ display: "flex", flexDirection: "column", height: "100%" ,}}
-              
+              sx={{ display: "flex", flexDirection: "column", height: "100%" }}
             >
               <div className="flex h-full w-full flex-col items-center justify-center ">
                 <Image
@@ -288,28 +284,31 @@ export default function DataGridDemo() {
       headerName: "Name",
       flex: 1,
       editable: false,
-      cellClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
-      headerClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200", 
-      
+      cellClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
+      headerClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
     },
     {
       field: "description",
       headerName: "Description",
       flex: 1,
-      
-      editable: false,
-      cellClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
-      headerClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200", 
 
+      editable: false,
+      cellClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
+      headerClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
     },
 
     {
       field: "actions",
       headerName: "Actions",
       flex: 1,
-      cellClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
-      headerClassName: "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200", 
-
+      cellClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
+      headerClassName:
+        "dark:bg-gray-dark bg-white text-gray-800 dark:text-gray-200",
 
       editable: false,
       renderCell: (params: any) => {
@@ -317,7 +316,7 @@ export default function DataGridDemo() {
 
         return (
           <div className="flex h-full items-center  space-x-3.5 ">
-            <Link className="flex" href={`/brand/edit/${row._id}`}>
+            <Link className="flex" href={`/brand/edit/${row.slug}`}>
               <button className="hover:text-primary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +374,6 @@ export default function DataGridDemo() {
         );
       },
     },
-
   ];
   // const rows = data.map((item) => ({
   //   id: item._id, // Assigning _id to id
@@ -387,30 +385,30 @@ export default function DataGridDemo() {
   // console.log("datas:::::", data);
   return (
     <Box
-    sx={{
-      height: 400,
-      width: "100%",
-      "& .MuiDataGrid-root": {
-        borderColor: "#6b72804c !important", // Set border color for the entire DataGrid
-        borderWidth: 1, // Optional: Adjust the border width
-      },
-      "& .MuiDataGrid-columnHeaders": {
-        borderColor: "#6b72804c !important", // Customize the column header border
-        borderWidth: 1,
-        borderBottom: "1px solid #6b72804c !important", // Explicitly add bottom border
-      },
-      "& .MuiDataGrid-cell": {
-        borderColor: "#6b72804c !important", // Customize cell borders
-      },
-      "& .MuiDataGrid-footerContainer": {
-        borderColor: "#6b72804c !important", // Customize the footer border
-        borderTop: "1px solid #6b72804c !important", // Add top border for footer
-      },
-      "& .MuiDataGrid-virtualScroller": {
-        borderColor: "#6b72804c !important", // Border color around the scrolling area
-      },
-    }}
-  >
+      sx={{
+        height: 400,
+        width: "100%",
+        "& .MuiDataGrid-root": {
+          borderColor: "#6b72804c !important", // Set border color for the entire DataGrid
+          borderWidth: 1, // Optional: Adjust the border width
+        },
+        "& .MuiDataGrid-columnHeaders": {
+          borderColor: "#6b72804c !important", // Customize the column header border
+          borderWidth: 1,
+          borderBottom: "1px solid #6b72804c !important", // Explicitly add bottom border
+        },
+        "& .MuiDataGrid-cell": {
+          borderColor: "#6b72804c !important", // Customize cell borders
+        },
+        "& .MuiDataGrid-footerContainer": {
+          borderColor: "#6b72804c !important", // Customize the footer border
+          borderTop: "1px solid #6b72804c !important", // Add top border for footer
+        },
+        "& .MuiDataGrid-virtualScroller": {
+          borderColor: "#6b72804c !important", // Border color around the scrolling area
+        },
+      }}
+    >
       <AlertDialog
         open={open}
         onClose={handleClose}
@@ -430,8 +428,8 @@ export default function DataGridDemo() {
           </button>
         </Link>
       </div>
-      <div className="overflow-x-auto custom-scrollbar">
-      {/* <DataGrid
+      <div className="custom-scrollbar overflow-x-auto">
+        {/* <DataGrid
       
       className= "dark:bg-gray-dark bg-white w-[71rem] text-gray-800 "
       
@@ -453,18 +451,17 @@ export default function DataGridDemo() {
         
       /> */}
 
-<DataGrid
+        <DataGrid
           autoHeight
           rows={rows || []}
           rowCount={total}
           columns={columns}
-          getRowId={row => row._id}
+          getRowId={(row) => row._id}
           pagination
-          sortingMode='server'
-          paginationMode='server'
+          sortingMode="server"
+          paginationMode="server"
           // pageSizeOptions={[5,15, 50]}
           initialState={{
-            
             pagination: {
               paginationModel: {
                 pageSize: 5,
@@ -475,8 +472,8 @@ export default function DataGridDemo() {
           slots={{ toolbar: ServerSideToolbar }}
           slotProps={{
             baseButton: {
-              size: 'medium',
-              variant: 'tonal'
+              size: "medium",
+              variant: "tonal",
             },
             toolbar: {
               csvOptions: { disableToolbarButton: true },
@@ -484,13 +481,13 @@ export default function DataGridDemo() {
               showQuickFilter: true,
               quickFilterProps: { debounceMs: 1000 },
               value: searchValue,
-              clearSearch: () => handleSearch(''),
-              onChange: (event: React.ChangeEvent<HTMLInputElement>) => handleSearch(event.target.value)
-            }
-          }}
-        />
+              clearSearch: () => handleSearch(""),
+              onChange: (event: React.ChangeEvent<HTMLInputElement>) =>
+                handleSearch(event.target.value),
+            },
+          }}
+        />
       </div>
     </Box>
   );
 }
-

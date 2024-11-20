@@ -2,6 +2,7 @@ import { ProductModel } from "../../models/ProductModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
 import { singleFileRemover } from "../../utils/fileRemover.js";
+import { createSlug } from "../../utils/slug.js";
 
 export const createProduct = async (req, res, next) => {
   try {
@@ -16,6 +17,7 @@ export const createProduct = async (req, res, next) => {
       brand: brand,
       category: category,
       image: productImage,
+      slug: await createSlug(name,ProductModel),
       deletedAt: null,
     });
 
@@ -45,9 +47,9 @@ export const getAllProducts = async (req, res, next) => {
 
 export const getProductbyId = async (req, res, next) => {
   try {
-    const productId = req.params.id;
+    const slug = req.params.id;
     const productData = await ProductModel.findOne({
-      _id: productId,
+      slug: slug,
       deletedAt: null,
     });
 
@@ -108,6 +110,8 @@ export const updateProduct = async (req, res, next) => {
     product.brand = brand;
     product.category = category;
     product.price = price;
+    product.slug = await createSlug(name,ProductModel);
+
 
     await product.save();
 

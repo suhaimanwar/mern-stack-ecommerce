@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const getDropdown = async () => {
-  const brandResponse = await brandApi.getAllBrands()
+  const brandResponse = await brandApi.getBrandsDropdown()
   const categoryResponse = await categoryApi.getAllCategory()
 
   return {brandResponse: brandResponse.data.data.brands, 

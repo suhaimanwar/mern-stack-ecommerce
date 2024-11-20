@@ -2,6 +2,7 @@ import { BannerModel } from "../../models/BannerModel.js";
 import { serverError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
 import { singleFileRemover } from "../../utils/fileRemover.js";
+import { createSlug } from "../../utils/slug.js";
 
 export const createBanner = async (req, res, next) => {
   try {
@@ -19,6 +20,7 @@ export const createBanner = async (req, res, next) => {
       title: title,
       description: description,
       // image: req.file.filename,
+      slug: await createSlug(title,BannerModel),
       deletedAt: null,
     });
 
@@ -46,9 +48,9 @@ export const getAllBanners = async (req, res, next) => {
 
 export const getBannerbyId = async (req, res, next) => {
   try {
-    const bannerId = req.params.id; //Fetching the bannerId from params
+    const slug = req.params.id; //Fetching the slug from params
     const bannerData = await BannerModel.findOne({
-      _id: bannerId,
+      slug: slug,
       deletedAt: null,
     }); //Returns Object //
 
@@ -113,6 +115,7 @@ export const updateBanner = async (req, res, next) => {
     banner.subtitle = subtitle;
     banner.title = title;
     banner.description = description;
+    banner.slug = await createSlug(title, BannerModel)
 
 
     if (req.file != null) {

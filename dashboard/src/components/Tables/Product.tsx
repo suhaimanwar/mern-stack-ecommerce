@@ -48,6 +48,7 @@ type Props = {
       category: string;
       image: string;
       featured: boolean;
+      slug: string;
     },
   ];
 };
@@ -190,7 +191,7 @@ const ProductTable = ({ productData }: Props) => {
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === productData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                    <Link className="flex" href={`/product/edit/${item._id}`}>
+                    <Link className="flex" href={`/product/edit/${item.slug}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

@@ -14,6 +14,10 @@ const categorySchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    slug: {
+      type: String,
+      required: false,
+    },
     deletedAt: {
       type: Date,
       required: false,

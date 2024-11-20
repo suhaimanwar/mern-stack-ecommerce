@@ -8,9 +8,10 @@ type Props = {
   src: StaticImageData | string;
   className: string;
   id: string;
+  slug: string
 };
 
-const CategoryImage = async ({ id, name, src, className }: Props) => {
+const CategoryImage = async ({ id, name, src, className,slug }: Props) => {
   return (
     <div className={cn("relative h-full w-full ", className)}>
       <Link href={`/shop/${id}`}>

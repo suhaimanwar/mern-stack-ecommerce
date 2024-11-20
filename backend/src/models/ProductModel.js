@@ -30,6 +30,10 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    slug: {
+      type: String,
+      required: false,
+    },
     featured: {
       type: Boolean,
       required: false,

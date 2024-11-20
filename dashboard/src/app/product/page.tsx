@@ -7,8 +7,6 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import ProductTable from "@/components/Tables/Product";
 import { productApi } from "@/api/productApi";
-import { brandApi } from "@/api/brandApi";
-import { categoryApi } from "@/api/categoryApi";
 
 
 export const metadata: Metadata = {

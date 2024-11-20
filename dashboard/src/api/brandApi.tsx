@@ -27,6 +27,13 @@ export const brandApi = {
         )
     },
 
+    getBrandsDropdown: async function () {
+        return await axiosClient.get(
+          "brands/dropdown",
+          //While getting the data, We won't add any body here.
+        );
+      },
+
 
     deleteBrand: async function (id:string) {
         return await axiosClient.delete(`brands/delete/${id}`)

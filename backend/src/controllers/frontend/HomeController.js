@@ -29,6 +29,7 @@ export const getHomeCategories = async (req, res, next) => {
           _id: 1,
           name: 1,
           image: 1,
+          slug: 1
         },
       },
     ]);

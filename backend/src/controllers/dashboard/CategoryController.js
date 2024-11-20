@@ -2,6 +2,7 @@ import { CategoryModel } from "../../models/CategoryModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
 import { singleFileRemover } from "../../utils/fileRemover.js";
+import { createSlug } from "../../utils/slug.js";
 
 export const createCategory = async (req, res, next) => {
     try {
@@ -15,6 +16,7 @@ export const createCategory = async (req, res, next) => {
         name: name, //Placing the input name Here
         description: description, //Placing the nput description here.
         image: categoryImage,
+        slug: await createSlug(name,CategoryModel),
         deletedAt: null,
       });
   
@@ -45,8 +47,10 @@ export const getAllCategories = async (req, res, next) => {
 
 export const getCategorybyId = async (req, res, next) => {
     try {
-        const categoryId = req.params.id;
-        const categoryData = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
+        // const categoryId = req.params.id;
+        const categorySlug = req.params.id;
+        // console.log("catSLug::",categorySlug)
+        const categoryData = await CategoryModel.findOne({slug: categorySlug, deletedAt:null})
 
         if (!categoryData) {
             return next(validationError("Category not found!"));
@@ -91,9 +95,7 @@ export const updateCategory = async (req, res, next) => {
 
         const {name, description} = req.body
         
-        console.log('RRRRRRRREqqqq',req.body)
-
-        
+        // console.log('RRRRRRRREqqqq',req.body)
 
         const category = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
 
@@ -101,6 +103,7 @@ export const updateCategory = async (req, res, next) => {
         category.name= name;
 
         category.description = description;
+        category.slug = await createSlug(name,CategoryModel)
 
         
 

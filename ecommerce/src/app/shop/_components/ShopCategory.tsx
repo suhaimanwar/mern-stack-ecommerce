@@ -7,7 +7,8 @@ import Link from "next/link";
 type Props = {
     name: string,
     src:  StaticImageData  | string,
-    id: string
+    id: string,
+    
 }
 
 const ShopCategory = ({name,src,id}:Props) => {

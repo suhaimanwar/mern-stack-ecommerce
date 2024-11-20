@@ -14,7 +14,7 @@ export const createBrand = async (req, res, next) => {
 
     // console.log('brandLogo::::',brandLogo)
 
-    const slug = createSlug(name)
+    // const slug = createSlug(name, BrandModel)
 
     // console.log("slugg::", slug)
 
@@ -24,8 +24,10 @@ export const createBrand = async (req, res, next) => {
       // image: req.file.filename,
       image: brandLogo,
       deletedAt: null,
-      slug: slug
+      slug: await createSlug(name,BrandModel)
     });
+
+    // console.log("slugg:::",slug)
 
     return res.status(200).json({
       // If the data is send as a response successfully, this message should be displayed.
@@ -33,22 +35,12 @@ export const createBrand = async (req, res, next) => {
       message: "Brand Created Successfully",
     });
   } catch (error) {
+    console.log("errrrrrrrrrrrrr")
     return next(serverError(error)); //The error will be logged here. serverError is from errorHandler.
   }
 };
 
-// export const getAllBrands = async (req, res, next) => {
-//   try {
-//     const brands = await BrandModel.find({deletedAt: null}); //If getAllBrands is called
-//     return res.status(200).json({
-//       success: true,
-//       message: "Brands Fetched Succesfully",
-//       data: { brands: brands }, //All the Brands are given as a response. - Here the key value is "brands" given to brands.
-//     });
-//   } catch (error) {
-//     return next(serverError(error));
-//   }
-// };
+
 
 export const getAllBrands = async (req, res, next) => {
   try {
@@ -80,6 +72,7 @@ export const getAllBrands = async (req, res, next) => {
           name: 1,
           description: 1,
           image: 1,
+          slug: 1
         },
       },
 
@@ -139,11 +132,63 @@ export const getAllBrands = async (req, res, next) => {
   }
 };
 
+
+export const getBrandsDropdown = async (req, res, next) => {
+  try {
+    const brands = await BrandModel.aggregate([
+      {
+        $match: {
+          deletedAt: null,
+        },
+      },
+      {
+        $project: {
+     
+          name: 1,
+         
+        },
+      },
+
+    ]); //If getAllBrands is called
+    return res.status(200).json({
+      success: true,
+      message: "Brands Fetched Succesfully",
+      data: { brands: brands }, //All the Brands are given as a response. - Here the key value is "brands" given to brands.
+    });
+  } catch (error) {
+    return next(serverError(error));
+  }
+};
+
+// export const getBrandById = async (req, res, next) => {
+//   try {
+//     const brandId = req.params.id; //Fetching the brandId from params
+//     const brandData = await BrandModel.findOne({
+//       _id: brandId,
+//       deletedAt: null,
+//     }); //Returns Object //
+
+//     if (!brandData) {
+//       return next(validationError("Brand not found!"));
+//     }
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Brand Fetched Successfully",
+//       data: { brand: brandData },
+//     });
+//   } catch (error) {
+//     return next(serverError(error));
+//   }
+// };
+
 export const getBrandById = async (req, res, next) => {
   try {
-    const brandId = req.params.id; //Fetching the brandId from params
+    // const brandId = req.params.id; 
+    const brandSlug = req.params.id; 
+    //Fetching the brandId from params
     const brandData = await BrandModel.findOne({
-      _id: brandId,
+      slug: brandSlug,
       deletedAt: null,
     }); //Returns Object //
 
@@ -204,6 +249,8 @@ export const updateBrand = async (req, res, next) => {
 
     brand.name = name;
     brand.description = description;
+    brand.slug = await createSlug(name, BrandModel)
+
 
     if (req.file != null) {
       singleFileRemover(brand.image);

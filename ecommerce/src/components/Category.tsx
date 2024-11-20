@@ -21,7 +21,7 @@ const Category = ({homeCategoryData}: Props) => {
 
   const homeCategories = homeCategoryData.categories
 
-  // console.log('HOOOOOOOME::',homeCategoryData)
+  console.log('HOOOOOOOME::',homeCategoryData)
   return (
     <div className={` py-5`}>
       <div className={`${bebasNeue.className} flex flex-col items-center py-5`}>
@@ -32,7 +32,8 @@ const Category = ({homeCategoryData}: Props) => {
       <div className="grid w-full grid-cols-3 grid-rows-2 gap-3 p-5 max-sm:grid-cols-1  ">
         {homeCategories.map((category, i) => (
           <CategoryImage
-            key={i}
+            slug={category.slug}
+            key={i} 
             name={category.name}
             id={category._id}
             src={StorageUrl + category.image}

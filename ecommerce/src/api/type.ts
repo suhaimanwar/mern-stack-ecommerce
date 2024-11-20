@@ -4,7 +4,8 @@ export type THomeCategory = {
 export type THomeCategoryData = {
     _id: string,
     name: string,
-    image: string
+    image: string,
+    slug: string
 }
 
 export type TShopCategory = {

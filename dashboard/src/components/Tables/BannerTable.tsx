@@ -16,6 +16,7 @@ type Props = {
       subtitle: string;
       description: string;
       image: string;
+      slug:string
     },
   ];
 };
@@ -128,7 +129,7 @@ const BannerTable = ({ data }: Props) => {
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === data.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                    <Link className="flex" href={`/banner/edit/${item._id}`}>
+                    <Link className="flex" href={`/banner/edit/${item.slug}`}>
                       <button className="hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
