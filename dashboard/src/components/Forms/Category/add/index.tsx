@@ -62,7 +62,7 @@ const CategoryAddForm = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Add Category" />
+      {/* <Breadcrumb pageName="Add Category" /> */}
 
       <div className=" ">
         <div className="flex flex-col gap-9">

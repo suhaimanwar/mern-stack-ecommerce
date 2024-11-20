@@ -18,10 +18,11 @@ export const brandApi = {
         )
     },
 
-    getAllBrands: async function () {
-        
+    getAllBrands: async function ({query} : {query?:{}}) {
+        const urlParams = new URLSearchParams(query ?? '')
+
         return await axiosClient.get(
-            "brands/", //Add the api route as per the brand router from the backend, it includes the port
+            `brands?${urlParams}`, //Add the api route as per the brand router from the backend, it includes the port
             //While getting the data, We won't add any body here.
         )
     },

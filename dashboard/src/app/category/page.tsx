@@ -19,13 +19,25 @@ const getAllCategory = async () => {
   return res.data.data.categories
 }
 
+const navigationData = [
+  {
+    name: "Dashboard",
+    link: "/"
+  },
+  {
+    name: " / Category",
+    link: "/category"
+  },
+
+]
+
 const TablesPage = async() => {
 
   const data = await getAllCategory()
 
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Categories" />
+      <Breadcrumb pageName="Categories" navigation={navigationData} />
 
       <div className="flex flex-col gap-10">
         {/* <TableOne />

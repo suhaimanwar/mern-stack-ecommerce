@@ -14,28 +14,42 @@ export const metadata: Metadata = {
 };
 
 const getAllBrands = async () => {
-  const res = await brandApi.getAllBrands() // calling getAllBrands from brandApi
+  // const res = await brandApi.getAllBrands() 
+  // calling getAllBrands from brandApi
 // console.log('responsee:::', res.data.data.brands)
 
-return res.data.data.brands
+// return res.data.data.brands
 }
 
+const navigationData = [
+  {
+    name: "Dashboard",
+    link: "/"
+  },
+  {
+    name: " / Brand",
+    link: "/brand"
+  },
+ 
+]
 const TablesPage = async () => {
     
   const data = await getAllBrands()
 
-  // console.log('daaaaaaata::',data)
+  // console.log('daaaaaaata::',data.name)
 
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Brands" />
+      <Breadcrumb pageName="Brands" navigation={navigationData} />
 
       <div className="flex flex-col gap-10">
         {/* <TableOne />
         <TableTwo /> */}
         {/* <TableThree /> */}
  
-        <BrandTable data={data} /> 
+        <BrandTable 
+        // data={data}   
+        /> 
       </div>
     </DefaultLayout>
   );

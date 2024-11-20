@@ -39,7 +39,7 @@ const page = () => {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        transition={{ duration: 0.3, type: "tween" }}
+        transition={{ duration: 0.3, type: "linear" }}
         className="relative flex flex-col h-full justify-center gap-2"
       >
         <h1

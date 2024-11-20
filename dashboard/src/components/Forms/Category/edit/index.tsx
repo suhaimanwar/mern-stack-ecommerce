@@ -77,7 +77,7 @@ const CategoryEditForm = ({categoryData}: Props) => {
 
   return (
     <>
-      <Breadcrumb pageName="Edit Category" />
+      {/* <Breadcrumb pageName="Edit Category" /> */}
 
       <div className=" ">
         <div className="flex flex-col gap-9">

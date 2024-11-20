@@ -22,27 +22,27 @@ const getAllProducts = async () => {
   return res.data.data.products
 }
 
-// const getBrandsCategories = async () => {
-//   const brandResponse = await brandApi.getAllBrands()
-//   const categoryResponse = await categoryApi.getAllCategory()
+const navigationData = [
+  {
+    name: "Dashboard",
+    link: "/"
+  },
+  {
+    name: " / Product",
+    link: "/product"
+  },
 
-//   return {brandResponse: brandResponse.data.data.brands, 
-//     categoryResponse: categoryResponse.data.data.categories}
-// }
+]
 
 const TablesPage = async() => {
 
   const data = await getAllProducts()
 
-  // const brandsCatData = await getBrandsCategories()
 
-  // console.log('brandcat',brandsCatData)
-
-  // console.log('dattaaa',data)
   
   return ( 
     <DefaultLayout>
-      <Breadcrumb pageName="Products" />
+      <Breadcrumb pageName="Products" navigation={navigationData} />
 
       <div className="flex flex-col gap-10">
         {/* <TableOne /> 

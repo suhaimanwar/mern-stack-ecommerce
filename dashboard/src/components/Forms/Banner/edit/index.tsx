@@ -93,8 +93,9 @@ const BannerEditForm = ({bannerData}: Props) => {
 
   return (
     <>
-      <Breadcrumb pageName="Edit Banner" />
+      {/* <Breadcrumb pageName="Edit Banner" /> */}
 
+      
       <div className=" ">
         <div className="flex flex-col gap-9">
           {/* <!-- Input Fields --> */}

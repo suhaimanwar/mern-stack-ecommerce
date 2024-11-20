@@ -1,6 +1,7 @@
 import { BannerModel } from "../../models/BannerModel.js";
 import { serverError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
+import { singleFileRemover } from "../../utils/fileRemover.js";
 
 export const createBanner = async (req, res, next) => {
   try {
@@ -77,6 +78,8 @@ export const deleteBanner = async (req, res, next) => {
 
     bannerToDelete.deletedAt = new Date(); //Soft Delete -- It will add the deleted date to the deletedAt property.
 
+    singleFileRemover(bannerToDelete.image);
+
     await bannerToDelete.save();
 
     return res.status(200).json({
@@ -113,6 +116,7 @@ export const updateBanner = async (req, res, next) => {
 
 
     if (req.file != null) {
+      singleFileRemover(banner.image);
       const bannerImage = getFilePath(req.file);
       banner.image = bannerImage;
     }

@@ -18,7 +18,7 @@ type Props = {
 };
 
 const FormElementsPage = async ({ params }: Props) => {
-  console.log("paraaaams:::::", params);
+  // console.log("paraaaams:::::", params);
 //   const res = await brandApi.getBrandbyId(params.id);
 
 

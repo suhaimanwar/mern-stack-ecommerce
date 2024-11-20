@@ -10,7 +10,7 @@ export const createUser = async (req, res, next) => {
       const existingEmail = await UserModel.findOne({
         email: email,
       });
-  
+
       if (existingEmail) {
         // console.log("ex:::::::",existingUser)
         return res.status(422).json({
@@ -78,3 +78,6 @@ export const createUser = async (req, res, next) => {
       next(serverError(error));
     }
   };
+
+  
+

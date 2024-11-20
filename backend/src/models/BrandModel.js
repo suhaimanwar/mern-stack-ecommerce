@@ -16,6 +16,10 @@ const brandSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    slug: {
+      type: String,
+      required: false,
+    },
     deletedAt: {
       type: Date, //To soft delete - We will be passing the date.
       required: false,

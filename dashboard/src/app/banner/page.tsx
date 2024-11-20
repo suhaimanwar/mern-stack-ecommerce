@@ -17,12 +17,25 @@ const getAllBanners = async () => {
   return res.data.data.banners;
 };
 
+const navigationData = [
+  {
+    name: "Dashboard",
+    link: "/"
+  },
+  {
+    name: " / Banner",
+    link: "/banner"
+  },
+  
+
+]
+
 const TablesPage = async () => {
   const data = await getAllBanners();
 
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Banners" />
+      <Breadcrumb pageName="Banner" navigation={navigationData} />
 
       <div className="flex flex-col gap-10">
         <BannerTable data={data} />

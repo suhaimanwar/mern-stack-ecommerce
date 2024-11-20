@@ -1,6 +1,7 @@
 import { CategoryModel } from "../../models/CategoryModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
+import { singleFileRemover } from "../../utils/fileRemover.js";
 
 export const createCategory = async (req, res, next) => {
     try {
@@ -70,7 +71,7 @@ export const deleteCategory = async (req, res, next) => {
         const categoryToDelete = await CategoryModel.findOne({_id: categoryId})
 
         categoryToDelete.deletedAt = new Date()
-
+        singleFileRemover(categoryToDelete.image);
         categoryToDelete.save()
 
         return res.status(200).json({
@@ -104,6 +105,7 @@ export const updateCategory = async (req, res, next) => {
         
 
         if (req.file !=null) {
+            singleFileRemover(banner.image);
             const categoryImage = getFilePath(req.file)
             category.image = categoryImage
           }

@@ -1,6 +1,7 @@
 import { ProductModel } from "../../models/ProductModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
+import { singleFileRemover } from "../../utils/fileRemover.js";
 
 export const createProduct = async (req, res, next) => {
   try {
@@ -72,6 +73,8 @@ export const deleteProduct = async (req, res, next) => {
 
     productToDelete.deletedAt = new Date();
 
+    singleFileRemover(productToDelete.image);
+
     productToDelete.save();
 
     return res.status(200).json({
@@ -95,6 +98,7 @@ export const updateProduct = async (req, res, next) => {
     });
 
     if (req.file != null) {
+      singleFileRemover(product.image);
       const productImage = getFilePath(req.file);
       product.image = productImage;
     }

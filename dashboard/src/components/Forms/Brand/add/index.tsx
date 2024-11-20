@@ -74,7 +74,7 @@ const BrandAddForm = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Add Brand" />
+      {/* <Breadcrumb pageName="Add Brand" /> */}
 
       <div className=" ">
         <div className="flex flex-col gap-9">

@@ -82,7 +82,7 @@ const BrandEditForm = ({ brandData }: Props) => {
 
   return (
     <>
-      <Breadcrumb pageName="Edit Brand" />
+      {/* <Breadcrumb pageName="Edit Brand" /> */}
 
       <div className=" ">
         <div className="flex flex-col gap-9">

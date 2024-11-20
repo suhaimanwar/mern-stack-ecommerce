@@ -7,6 +7,7 @@ import CategoryAddForm from "@/components/Forms/Category/add";
 import ProductAddForm from "@/components/Forms/Product/add";
 import { categoryApi } from "@/api/categoryApi";
 import { brandApi } from "@/api/brandApi";
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Next.js Form Elements Page | NextAdmin - Next.js Dashboard Kit",
@@ -21,6 +22,22 @@ const getDropdown = async () => {
     categoryResponse: categoryResponse.data.data.categories}
 }
 
+const navigationData = [
+  {
+    name: "Dashboard",
+    link: "/"
+  },
+  {
+    name: " / Product",
+    link: "/product"
+  },
+  {
+    name: " / Add",
+    link: ""
+  },
+
+]
+
 const FormElementsPage = async() => {
 
   const dropdownData = await getDropdown()
@@ -29,6 +46,8 @@ const FormElementsPage = async() => {
   return (
  
     <DefaultLayout> 
+      <Breadcrumb pageName="Products" navigation={navigationData} />
+
       <ProductAddForm dropdownData={dropdownData} />
     </DefaultLayout> 
   );
