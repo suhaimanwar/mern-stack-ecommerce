@@ -9,12 +9,13 @@ type Props = {
     brand: string,
     price: string,
     id: string
+    slug: string
 }
 
-const FeaturedProductsImage = ({src, product, brand, price, id}:Props) => {
+const FeaturedProductsImage = ({src, product, brand, price, slug}:Props) => {
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow  relative">
-    <Link href={`shop/featured/${id}`}>
+    <Link href={`shop/featured/${slug}`}>
       <div className='relative h-[18.75rem] w-full'>
           <Image
             className="rounded-t-lg object-cover"

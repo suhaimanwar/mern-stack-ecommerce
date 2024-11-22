@@ -82,8 +82,6 @@ const ProductAddForm = ({dropdownData}: Props) => {
     
     router.push('/product')
     router.refresh()
-  
-
   };
 
   const handleReset = () => {
@@ -94,8 +92,6 @@ const ProductAddForm = ({dropdownData}: Props) => {
   return (
     <>
       {/* <Breadcrumb pageName="Add Product" /> */}
-      
-
 
       <div className=" ">
         <div className="flex flex-col gap-9">

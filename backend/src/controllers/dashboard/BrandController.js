@@ -218,7 +218,7 @@ export const deleteBrand = async (req, res, next) => {
 
     brandToDelete.deletedAt = new Date(); //Soft Delete -- It will add the deleted date to the deletedAt property.
 
-    const brand = await BrandModel.findOne({ _id: brandId, deletedAt: null });
+    // const brand = await BrandModel.findOne({ _id: brandId, deletedAt: null });
     singleFileRemover(brandToDelete.image);
 
     await brandToDelete.save();

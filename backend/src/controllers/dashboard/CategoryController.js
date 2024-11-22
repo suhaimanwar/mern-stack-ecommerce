@@ -94,7 +94,6 @@ export const updateCategory = async (req, res, next) => {
         const categoryId = req.params.id;
 
         const {name, description} = req.body
-        
         // console.log('RRRRRRRREqqqq',req.body)
 
         const category = await CategoryModel.findOne({_id: categoryId, deletedAt:null})
@@ -108,7 +107,7 @@ export const updateCategory = async (req, res, next) => {
         
 
         if (req.file !=null) {
-            singleFileRemover(banner.image);
+            singleFileRemover(category.image);
             const categoryImage = getFilePath(req.file)
             category.image = categoryImage
           }

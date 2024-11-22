@@ -11,10 +11,10 @@ type Props = {
   slug: string
 };
 
-const CategoryImage = async ({ id, name, src, className,slug }: Props) => {
+const CategoryImage = async ({  name, src, className,slug }: Props) => {
   return (
     <div className={cn("relative h-full w-full ", className)}>
-      <Link href={`/shop/${id}`}>
+      <Link href={`/shop/${slug}`}>
         <div className="relative h-full w-full">
           <Image src={src} alt="Image" className="object-cover  " fill />
         </div>

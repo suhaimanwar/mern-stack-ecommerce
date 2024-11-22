@@ -12,6 +12,7 @@ export type TShopCategory = {
     categories: TCategory[]
 }
 export type TCategory = {
+    slug: string
     _id: string,
     name: string,
     description: string,
@@ -24,6 +25,7 @@ export type TFeaturedProducts = {
 }
 
 export type TProducts ={
+    slug: any
     _id: string,
     name: string,
     description: string,

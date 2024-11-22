@@ -2,8 +2,12 @@ import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema(
   {
+    // category: {
+    //   type: mongoose.Types.ObjectId,
+    //   required: false,
+    // },
     category: {
-      type: mongoose.Types.ObjectId,
+      type: String,
       required: false,
     },
     subCategory: {

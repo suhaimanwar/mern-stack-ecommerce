@@ -70,6 +70,7 @@ export const getFeaturedProducts = async (req, res, next) => {
           description: 1,
           image: 1,
           price: 1,
+          slug: 1
         },
       },
     ]);

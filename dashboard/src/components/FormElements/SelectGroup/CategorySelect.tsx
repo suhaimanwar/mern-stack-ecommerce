@@ -8,11 +8,12 @@ type Props= {
     error?: FieldError | Merge <FieldError, FieldErrorsImpl<any>> | undefined;
 
     categoryDrop:{
-      map(arg0: (item: { name: string; _id: string; }) => React.JSX.Element): React.ReactNode;_id:string, name: string
+      map(arg0: (item: { name: string; _id: string; slug: string}) => React.JSX.Element): React.ReactNode;_id:string, name: string, slug: string,
 }
 }
 
 const CategorySelect = ({categoryDrop,register,error}:Props) => {
+  // console.log("catDAt::::",categoryDrop)
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [isOptionSelected, setIsOptionSelected] = useState<boolean>(false);
 
@@ -42,9 +43,9 @@ const CategorySelect = ({categoryDrop,register,error}:Props) => {
             Select your Category
           </option>
 
-          {categoryDrop.map((item: {name:string, _id:string})=>(
+          {categoryDrop.map((item: {name:string, slug:string, })=>(
             // eslint-disable-next-line react/jsx-key
-            <option value={item._id} className="text-dark-6">
+            <option value={item.slug} className="text-dark-6">
             {item.name}
           </option>
           ))}

@@ -27,6 +27,7 @@ export const getAllCategories = async (req, res, next) => {
                     name: 1,
                     description: 1,
                     image: 1,
+                    slug: 1
 
                 }
             }

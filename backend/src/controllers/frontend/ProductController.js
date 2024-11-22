@@ -40,11 +40,12 @@ export const getAllProducts = async (req, res, next) => {
 
 export const getProductbyId = async (req, res, next) => {
   try {
-    const productId = req.params.id;
+    const slug = req.params.id;
     const productData = await ProductModel.aggregate([
       {
         $match: {
-          _id: new mongoose.Types.ObjectId(productId),
+          // _id: new mongoose.Types.ObjectId(productId),
+          slug: slug,
           deletedAt: null,
         },
       },
@@ -93,11 +94,12 @@ export const getProductbyId = async (req, res, next) => {
 
 export const getProductsbyCategory = async function (req, res, next) {
   try {
-    const categoryId = req.params.id;
+    const slug = req.params.id;
+
     const productData = await ProductModel.aggregate([
       {
         $match: {
-          category: new mongoose.Types.ObjectId(categoryId),
+          category: slug,
           deletedAt: null,
         },
       },
@@ -107,6 +109,7 @@ export const getProductsbyCategory = async function (req, res, next) {
           description: 1,
           image: 1,
           price: 1,
+          slug: 1
         },
       },
     ]);

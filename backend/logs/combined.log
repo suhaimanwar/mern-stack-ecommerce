@@ -8195,3 +8195,570 @@
     '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:421:3)',
   timestamp: '2024-11-20 19:46:18'
 }
+{
+  level: 'error',
+  message: '\tInternal Server Error input must be a 24 character hex string, 12 byte Uint8Array, or an integer',
+  stack: 'BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer\n' +
+    '    at new ObjectId (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bson\\lib\\bson.cjs:2362:23)\n' +
+    '    at getProductsbyCategory (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ProductController.js:100:21)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:421:3)',
+  timestamp: '2024-11-20 20:42:11'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error input must be a 24 character hex string, 12 byte Uint8Array, or an integer',
+  stack: 'BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer\n' +
+    '    at new ObjectId (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bson\\lib\\bson.cjs:2362:23)\n' +
+    '    at getProductsbyCategory (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ProductController.js:100:21)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:421:3)',
+  timestamp: '2024-11-20 20:42:11'
+}
+{
+  errors: {
+    category: CastError: Cast to ObjectId failed for value "shish-tawuk" (type string) at path "category" because of "BSONError"
+        at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"shish-tawuk"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'shish-tawuk',
+      path: 'category',
+      reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+          at new ObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\bson\lib\bson.cjs:2362:23)
+          at castObjectId (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at SchemaObjectId.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20,
+      valueType: 'string'
+    }
+  },
+  _message: 'products validation failed',
+  level: 'error',
+  message: '\tInternal Server Error products validation failed: category: Cast to ObjectId failed for value "shish-tawuk" (type string) at path "category" because of "BSONError"',
+  stack: 'ValidationError: products validation failed: category: Cast to ObjectId failed for value "shish-tawuk" (type string) at path "category" because of "BSONError"\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at createProduct (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/ProductController.js:13:24)',
+  timestamp: '2024-11-21 10:27:29'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error input must be a 24 character hex string, 12 byte Uint8Array, or an integer',
+  stack: 'BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer\n' +
+    '    at new ObjectId (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bson\\lib\\bson.cjs:2362:23)\n' +
+    '    at getProductsbyCategory (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ProductController.js:100:21)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:421:3)',
+  timestamp: '2024-11-21 10:30:09'
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597202488,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597202487,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597202488,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000091'),
+    maxSetVersion: 144,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async AggregationCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:39:26)\n' +
+    '    at async AggregationCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async AggregationCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async AggregationCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async AggregationCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async Aggregate.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\aggregate.js:1058:14)',
+  timestamp: '2024-11-21 10:37:17',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597205584,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597205580,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597205581,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000091'),
+    maxSetVersion: 144,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async AggregationCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:39:26)\n' +
+    '    at async AggregationCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async AggregationCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async AggregationCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async AggregationCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async Aggregate.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\aggregate.js:1058:14)',
+  timestamp: '2024-11-21 10:37:20',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597208155,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597208154,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-01.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      },
+      'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017' => ServerDescription {
+        address: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 597208154,
+        lastWriteDate: 0,
+        error: MongoNetworkError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+            at connectionFailureError (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:356:20)
+            at TLSSocket.<anonymous> (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongodb\lib\cmap\connect.js:272:44)
+            at Object.onceWrapper (node:events:634:26)
+            at TLSSocket.emit (node:events:519:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net
+              at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+            errno: -3008,
+            code: 'ENOTFOUND',
+            syscall: 'getaddrinfo',
+            hostname: 'ac-tikuljs-shard-00-02.lkqvvrp.mongodb.net'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-6rcfx0-shard-0',
+    maxElectionId: new ObjectId('7fffffff0000000000000091'),
+    maxSetVersion: 144,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net',
+  stack: 'MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tikuljs-shard-00-00.lkqvvrp.mongodb.net\n' +
+    '    at Topology.selectServer (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:303:38)\n' +
+    '    at async tryOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:138:18)\n' +
+    '    at async executeOperation (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:69:16)\n' +
+    '    at async AggregationCursor._initialize (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:39:26)\n' +
+    '    at async AggregationCursor.cursorInit (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:495:27)\n' +
+    '    at async AggregationCursor.fetchBatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:527:13)\n' +
+    '    at async AggregationCursor.next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:239:13)\n' +
+    '    at async [Symbol.asyncIterator] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:170:34)\n' +
+    '    at async AggregationCursor.toArray (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:300:26)\n' +
+    '    at async Aggregate.exec (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\aggregate.js:1058:14)',
+  timestamp: '2024-11-21 10:37:23',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error input must be a 24 character hex string, 12 byte Uint8Array, or an integer',
+  stack: 'BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer\n' +
+    '    at new ObjectId (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\bson\\lib\\bson.cjs:2362:23)\n' +
+    '    at getProductbyId (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/ProductController.js:47:16)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:421:3)',
+  timestamp: '2024-11-21 12:47:47'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error banner is not defined',
+  stack: 'ReferenceError: banner is not defined\n' +
+    '    at updateCategory (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/CategoryController.js:111:31)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-21 13:08:08'
+}

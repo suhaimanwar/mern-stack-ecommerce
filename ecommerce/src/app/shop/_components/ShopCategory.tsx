@@ -8,13 +8,14 @@ type Props = {
     name: string,
     src:  StaticImageData  | string,
     id: string,
+    slug: string
     
 }
 
-const ShopCategory = ({name,src,id}:Props) => {
+const ShopCategory = ({name,src,slug}:Props) => {
   return (
     <>
-      <Link href={`/shop/${id}`}>
+      <Link href={`/shop/${slug}`}>
         <div className="card w-full h-60 flex justify-center items-center rounded-lg relative overflow-hidden group">
           <Image
             src={src}

@@ -87,6 +87,7 @@ const Shop = async () => {
         <div className="grid w-full grid-cols-4 max-md:grid-cols-1 gap-2 mb-1 px-1">
           {shopCategories.map((data, i) => (
             <ShopCategory key={i} name={data.name} id={data._id} 
+            slug={data.slug}
             src={StorageUrl + data.image}
              />
           ))}

@@ -41,7 +41,7 @@ const Page = async ({ params }: { params: { products: string } }) => {
 
   const productbyCategory = productss.product
 
-  // console.log('proddd:::',productbyCategory)
+  console.log('proddd:::',productbyCategory)
 
   // const [products, setProducts] = useState(ProductsData);
 
@@ -84,6 +84,7 @@ const Page = async ({ params }: { params: { products: string } }) => {
         {productbyCategory.map((data:any, i:any) => (
           <ProductsComponent
             key={i}
+            slug={data.slug}
             id={data._id}
             params={params.products}
             product={data.name}
