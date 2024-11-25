@@ -25,7 +25,7 @@ export type TFeaturedProducts = {
 }
 
 export type TProducts ={
-    slug: any
+    slug: string,
     _id: string,
     name: string,
     description: string,

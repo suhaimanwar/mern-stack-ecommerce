@@ -1,35 +1,35 @@
-import axios from "axios"
-
+import axios from "axios";
 import Cookies from "js-cookie";
 
-let headers = {}
+let getAccessToken = (): string | undefined => {
+  // Default: assume client-side (browser)
+  if (typeof window !== "undefined") {
+    return Cookies.get("accessToken"); 
+  }
 
-// if (typeof window !== "undefined"){
-//     const accessToken = window.localStorage.getItem("accessToken")
-//     console.log("access::::",accessToken)
-//     headers = {
-//         authorization: "bearer " + accessToken  //setup header in axiosClient = getItem - we can get access token
-//     }
-// }
+  // If server-side, dynamically import next/headers
+  const { cookies } = require("next/headers");
+  const serverCookies = cookies();
+  return serverCookies.get("accessToken")?.value;
+};
 
+// Create Axios client instance
+export const axiosClient = axios.create({
+  baseURL: "http://localhost:5000/api/",
+});
 
+// Add a request interceptor to inject the token dynamically
+axiosClient.interceptors.request.use(
+  (config) => {
+    const accessToken = getAccessToken();
 
-// let headers;
-if (typeof window !== "undefined") {
-    const accessToken = Cookies.get("accessToken") || "";
-    console.log("accesstokennn:::::", accessToken); // Log the access token to the console
-    
-    headers = {
-        authorization: "bearer " + accessToken
-    };
-}
-
-
-
-
-export const axiosClient = axios.create(
-    {
-        baseURL: 'http://localhost:5000/api/', //to setup baseUrl
-        headers: headers
+    if (accessToken) {
+      config.headers = {
+        ...config.headers, // Preserve existing headers
+        authorization: `Bearer ${accessToken}`,
+      };
     }
-)
+    return config;
+  },
+  (error) => Promise.reject(error)
+);

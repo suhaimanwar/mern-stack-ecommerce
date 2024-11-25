@@ -10,7 +10,7 @@ import { adminAuthMiddleware } from '../../middleware/dashboard/adminAuthMiddlew
 
 const DashboardAuthRouter = express.Router()
 
-// DashboardAuthRouter.use(adminAuthMiddleware) 
+DashboardAuthRouter.use(adminAuthMiddleware) 
 //Calling the Auth Middleware on top automatically applies the middleware to everything in the bottom.
 
 DashboardAuthRouter.use('/brands', BrandRouter)

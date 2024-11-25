@@ -20,10 +20,9 @@ const CancelButton = styled(Button)({
 
 const DeleteButton = styled(Button)({
   color: '#fff',
-  backgroundColor: '#d32f2f', // strong red color for delete button
+  backgroundColor: '#d32f2f',
   padding: '6px 16px',
-  // fontWeight: 'bold',
-  // boxShadow: '0 4px 10px rgba(211, 47, 47, 0.3)', 
+
   transition: 'transform 0.2s',
   '&:hover': {
     backgroundColor: '#b71c1c', // darker red on hover
