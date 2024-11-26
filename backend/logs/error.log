@@ -8762,3 +8762,27 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-11-21 13:08:08'
 }
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot set properties of null (setting 'name')",
+  stack: "TypeError: Cannot set properties of null (setting 'name')\n" +
+    '    at updateProduct (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/ProductController.js:108:18)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-25 15:18:26'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error ProductModel is not defined',
+  stack: 'ReferenceError: ProductModel is not defined\n' +
+    '    at updateCategory (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/CategoryController.js:149:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-25 16:18:06'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error ProductModel is not defined',
+  stack: 'ReferenceError: ProductModel is not defined\n' +
+    '    at updateCategory (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/dashboard/CategoryController.js:149:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-25 16:18:08'
+}

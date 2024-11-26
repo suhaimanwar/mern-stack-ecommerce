@@ -46,7 +46,7 @@ export const loginAdmin = async (req, res, next) => {
       username: username,
     });
 
-    if (!findAdmin) {
+    if (!findAdmin) { 
       return res.status(422).json({
         success: false,
         message: "Cannot Find Admin",

@@ -1,3 +1,4 @@
+import { CategoryModel } from "../../models/CategoryModel.js";
 import { ProductModel } from "../../models/ProductModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
@@ -108,7 +109,7 @@ export const updateProduct = async (req, res, next) => {
     product.name = name;
     product.description = description;
     product.brand = brand;
-    product.category = category;
+    product.category = category ;
     product.price = price;
     product.slug = await createSlug(name,ProductModel);
 

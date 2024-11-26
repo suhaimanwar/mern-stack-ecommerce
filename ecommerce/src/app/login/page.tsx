@@ -19,6 +19,8 @@ import { Api } from "@/api/Api";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
+import Cookies from "js-cookie";
+
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
@@ -58,6 +60,9 @@ const Page = () => {
       toast.success(response.message);
 
       if (response.success) {
+        window.localStorage.setItem("accessToken",response.data.accessToken) 
+        //Storing access token in the local storage
+        Cookies.set("accessToken", response.data.accessToken)//Storing access token in the browser cookies
         router.push("/");
       }
     } catch (error: any) {

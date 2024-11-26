@@ -13,8 +13,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 const CheckoutForm = () => {
   const checkoutSchema = z.object({
-    firstname: z.string().min(1, "This field is required."),
-    lastname: z.string().min(1, "This field is required."),
+    firstName: z.string().min(1, "This field is required."),
+    lastName: z.string().min(1, "This field is required."),
     phone: z.string().min(1, "This field is required."),
     email: z.string().email("Please enter a valid email."),
     address: z.string().min(1, "This field is required."),
@@ -35,7 +35,7 @@ const CheckoutForm = () => {
   }); 
 
   const submit = async (data: TCheckoutSchema) => {
-    // console.log("submitteddata::::", data.firstname);
+    console.log("submitteddata::::", data); 
   };
 
   return (
@@ -43,14 +43,14 @@ const CheckoutForm = () => {
       <form onSubmit={handleSubmit(submit)} className="space-y-4">
        <div className="flex w-full gap-2">
             <CheckoutInput
-              register={register("firstname")}
-              error={errors.firstname}
+              register={register("firstName")}
+              error={errors.firstName}
               type="text"
               placeholder="First Name"
             />
             <CheckoutInput
-              register={register("lastname")}
-              error={errors.lastname}
+              register={register("lastName")}
+              error={errors.lastName}
               type="text"
               placeholder="Last Name"
             />

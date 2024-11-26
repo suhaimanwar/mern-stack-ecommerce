@@ -1,4 +1,5 @@
 import { CategoryModel } from "../../models/CategoryModel.js";
+import { ProductModel } from "../../models/ProductModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import { getFilePath } from "../../utils/filePath.js";
 import { singleFileRemover } from "../../utils/fileRemover.js";
@@ -87,36 +88,88 @@ export const deleteCategory = async (req, res, next) => {
   }
 };
 
+// export const updateCategory = async (req, res, next) => {
+//   try {
+//     const categoryId = req.params.id;
+
+//     const { name, description } = req.body;
+//     // console.log('RRRRRRRREqqqq',req.body)
+
+//     const category = await CategoryModel.findOne({
+//       _id: categoryId,
+//       deletedAt: null,
+//     });
+
+//     category.name = name;
+
+//     category.description = description;
+//     category.slug = await createSlug(name, CategoryModel);
+
+//     if (req.file != null) {
+//       singleFileRemover(category.image);
+//       const categoryImage = getFilePath(req.file);
+//       category.image = categoryImage;
+//     }
+
+//     await category.save();
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Category Updated Successfully",
+//     });
+//   } catch (error) {
+//     return next(serverError(error));
+//   }
+// };
+
 export const updateCategory = async (req, res, next) => {
-  try {
-    const categoryId = req.params.id;
-
-    const { name, description } = req.body;
-    // console.log('RRRRRRRREqqqq',req.body)
-
-    const category = await CategoryModel.findOne({
-      _id: categoryId,
-      deletedAt: null,
-    });
-
-    category.name = name;
-
-    category.description = description;
-    category.slug = await createSlug(name, CategoryModel);
-
-    if (req.file != null) {
-      singleFileRemover(category.image);
-      const categoryImage = getFilePath(req.file);
-      category.image = categoryImage;
+    try {
+      const categoryId = req.params.id;
+      const { name, description } = req.body;
+  
+      // Fetch the category to be updated
+      const category = await CategoryModel.findOne({
+        _id: categoryId,
+        deletedAt: null,
+      });
+  
+      if (!category) {
+        return res.status(404).json({
+          success: false,
+          message: "Category not found",
+        });
+      }
+  
+      // Store the old slug before updating
+      const oldSlug = category.slug;
+  
+      // Update category details
+      category.name = name;
+      category.description = description;
+      category.slug = await createSlug(name, CategoryModel);
+  
+      // Update the image if a new file is provided
+      if (req.file != null) {
+        singleFileRemover(category.image); // Remove old image
+        const categoryImage = getFilePath(req.file); // Get new image path
+        category.image = categoryImage;
+      }
+  
+      await category.save();
+      
+      
+      // update the products using the old slug
+      await ProductModel.updateMany(
+        { category: oldSlug }, // find products with the old slug
+        { category: category.slug } // update them to the new slug
+      );
+  
+      return res.status(200).json({
+        success: true,
+        message: "Category and related products updated successfully",
+      });
+    } catch (error) {
+      return next(serverError(error)); // Handle errors
     }
-
-    await category.save();
-
-    return res.status(200).json({
-      success: true,
-      message: "Category Updated Successfully",
-    });
-  } catch (error) {
-    return next(serverError(error));
-  }
-};
+  };
+  

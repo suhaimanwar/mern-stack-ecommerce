@@ -2,6 +2,9 @@ import bcrypt from "bcrypt"
 import { UserModel } from "../../models/UserModel.js";
 import { serverError } from "../../utils/errorHandler.js";
 
+import jwt from 'jsonwebtoken' 
+import env from "../../env.js";
+
 
 export const createUser = async (req, res, next) => {
     try {
@@ -67,12 +70,17 @@ export const createUser = async (req, res, next) => {
         return res.status(422).json({
           success: false,
           message: "Login Failed",
-        }); 
+        });  
       }
-  
+
+      const accessToken = jwt.sign({userId: findEmail._id}, env.USER_JWT_SECRET_KEY, {expiresIn: env.JWT_EXPIRES})
+      const userData = {username: findEmail.username, role: 'user'} 
+
       return res.status(200).json({
         success: true,
+        accessToken: accessToken,
         message: "Login Successful",
+        userData: userData
       });
     } catch (error) {
       next(serverError(error));
