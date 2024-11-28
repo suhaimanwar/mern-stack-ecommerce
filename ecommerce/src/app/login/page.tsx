@@ -56,14 +56,18 @@ const Page = () => {
 
     try {
       const response = await Api.loginUser(data);
-      // console.log("response::",response.message)
-      toast.success(response.message);
+      console.log("response::",response)
+      
 
       if (response.success) {
-        window.localStorage.setItem("accessToken",response.data.accessToken) 
+        
+        window.localStorage.setItem("userAccessToken",response.userAccessToken) 
         //Storing access token in the local storage
-        Cookies.set("accessToken", response.data.accessToken)//Storing access token in the browser cookies
+        Cookies.set("userAccessToken", response.userAccessToken)//Storing access token in the browser cookies
+        toast.success(response.message);
+       
         router.push("/");
+
       }
     } catch (error: any) {
       toast.error(error.response?.data.message);

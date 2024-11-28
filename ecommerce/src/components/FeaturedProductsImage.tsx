@@ -31,7 +31,7 @@ const FeaturedProductsImage = ({src, product, brand, price, slug}:Props) => {
         <p className="mb-0 font-normal text-gray-700 ">
           {brand}
         </p>
-        <p className="">{price}</p>
+        <p className="font-semibold mt-2">₹{price}</p>
       </div>
     </Link>
   </div>

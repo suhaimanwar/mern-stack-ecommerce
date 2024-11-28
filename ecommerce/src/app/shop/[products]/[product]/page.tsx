@@ -15,7 +15,7 @@ const page = async ({ params }: { params: { product: string } }) => {
 
   const productData = data.product[0];
 
-  console.log("image:::", productData);
+  // console.log("image:::", productData);
 
   // console.log("hello::", productData.name);
 
@@ -60,7 +60,7 @@ const page = async ({ params }: { params: { product: string } }) => {
               <div className="flex mb-4 ">
                 <div className="mr-4 flex gap-2">
                   <span className="font-bold text-gray-700 ">Price:</span>
-                  <span className="text-gray-600 ">${productData.price}</span>
+                  <span className="text-gray-600 ">₹{productData.price}</span>
                 </div>
                 <div className="flex gap-2">
                   <span className="font-bold text-gray-700 ">

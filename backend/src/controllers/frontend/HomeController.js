@@ -60,9 +60,9 @@ export const getFeaturedProducts = async (req, res, next) => {
           createdAt: 1, //Descending Order, 1 is ascending
         },
       },
-      {
-        $limit: 8,
-      },
+      // {
+      //   $limit: 8,
+      // },
       {
         $project: {
           // _id: 0,
