@@ -6,6 +6,6 @@ import { userAuthMiddleware } from '../../../middleware/frontend/userAuthMiddlew
 
 const ShopRouter = express.Router()
 
-ShopRouter.get('/categories', userAuthMiddleware, getAllCategories)
+ShopRouter.get('/categories', getAllCategories)
 
 export default ShopRouter

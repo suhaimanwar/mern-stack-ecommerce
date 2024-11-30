@@ -2,7 +2,8 @@
 "use client"
 
 import useClient from "@/app/hook/useClient";
-import { useCart } from "@mrvautin/react-shoppingcart";
+
+  import { useCart } from "@mrvautin/react-shoppingcart";
 import React from "react";
 
 
@@ -11,7 +12,9 @@ const Billing = () => {
   const client = useClient()
     if (!client) return;
 
-    const { cartNetTotal, cartTotal, totalShippingAmount } = useCart();
+    const { cartNetTotal, cartTotal, totalShippingAmount, items } = useCart();
+
+    console.log("checkoutitemsss:::::",items)
   return (
     <>
       <div className="flex justify-between items-center">

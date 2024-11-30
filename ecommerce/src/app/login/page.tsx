@@ -9,7 +9,7 @@ import Link from "next/link";
 import Eye from "../svg/eye";
 import EyeOff from "../svg/eye-off";
 
-import { calcLength, motion } from "framer-motion";
+import { calcLength, motion } from "framer-motion"; 
 
 import { useForm } from "react-hook-form";
 

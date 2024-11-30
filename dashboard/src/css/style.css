@@ -518,3 +518,23 @@ input[type="search"]::-webkit-search-cancel-button {
 .MuiDataGrid-cellEmpty{
     display: none !important;
 } */
+
+
+.css-r363y4-MuiButtonBase-root-MuiIconButton-root{
+    display: none !important;
+}
+.css-1n5qiej-MuiIcon-root{
+    display: none !important;
+}
+
+.css-1mnoz6i-MuiInputBase-root-MuiOutlinedInput-root {
+    padding: 0 !important;
+}
+
+.css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 7.5px 0px;
+}
+
+.css-1aq1z8c{
+    padding: 10px !important;
+}

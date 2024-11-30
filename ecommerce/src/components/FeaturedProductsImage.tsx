@@ -9,7 +9,7 @@ type Props = {
     brand: string,
     price: string,
     id: string
-    slug: string
+    slug: string 
 }
 
 const FeaturedProductsImage = ({src, product, brand, price, slug}:Props) => {

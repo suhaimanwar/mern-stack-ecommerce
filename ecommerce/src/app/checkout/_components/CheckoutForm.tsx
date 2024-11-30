@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
@@ -8,10 +9,10 @@ import { useForm } from "react-hook-form";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Api } from "@/api/Api";
+import toast from "react-hot-toast";
 
-
-
-const CheckoutForm = () => {
+const CheckoutForm = ({items}:any) => {
   const checkoutSchema = z.object({
     firstName: z.string().min(1, "This field is required."),
     lastName: z.string().min(1, "This field is required."),
@@ -34,9 +35,40 @@ const CheckoutForm = () => {
     resolver: zodResolver(checkoutSchema),
   }); 
 
-  const submit = async (data: TCheckoutSchema) => {
-    console.log("submitteddata::::", data); 
+  const submit = async (shippingDetails: TCheckoutSchema) => {
+
+    try {
+      const cartItems =  items.map((item: { quantity: any; id: any; })=>{
+        return {
+          quantity: item.quantity,
+          productId: item.id
+        }
+      })
+      
+      // console.log("submitteddata::::", {shippingDetails ,cartItems}); 
+
+      const bothDatas = { shippingDetails, cartItems}
+      // console.log("bothhh:::",bothDatas)
+
+      const response = await Api.orderCheckout(bothDatas)
+
+      console.log("res:::::",response)
+
+      if (response.success) {
+        toast.success(response.message)
+      }
+
+
+
+    } catch (error:any) {
+      toast.error(error.response.data.message)
+      // console.  ("errr::::",error)
+    }
+    
+    
   };
+
+
 
   return (
     <>

@@ -51,4 +51,9 @@ export const Api = {
         return response.data.data
     }, 
 
+    orderCheckout: async (body:any) => {
+        const response = await apiAxios.post("order", body)
+        return response.data
+    }
+
 }

@@ -41,7 +41,7 @@ const Page = async ({ params }: { params: { products: string } }) => {
 
   const productbyCategory = productss.product
 
-  console.log('proddd:::',productbyCategory)
+  // console.log('proddd:::',productbyCategory)
 
   // const [products, setProducts] = useState(ProductsData);
 

@@ -8786,3 +8786,716 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-11-25 16:18:08'
 }
+{
+  level: 'error',
+  message: '\tInternal Server Error cartItems.isArray is not a function',
+  stack: 'TypeError: cartItems.isArray is not a function\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:10:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-11-29 10:46:02'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot destructure property 'userId' of 'req.user' as it is undefined.",
+  stack: "TypeError: Cannot destructure property 'userId' of 'req.user' as it is undefined.\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:7:12)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-11-29 11:55:12'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot destructure property 'userId' of 'req.user' as it is undefined.",
+  stack: "TypeError: Cannot destructure property 'userId' of 'req.user' as it is undefined.\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:7:12)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-11-29 11:55:51'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:66:36)',
+  timestamp: '2024-11-29 12:22:20'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:66:36)',
+  timestamp: '2024-11-29 12:25:19'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:36)',
+  timestamp: '2024-11-29 12:30:32'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:91:36)',
+  timestamp: '2024-11-29 12:32:23'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:91:36)',
+  timestamp: '2024-11-29 12:32:58'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:91:36)',
+  timestamp: '2024-11-29 12:33:22'
+}
+{
+  errors: {
+    grandTotal: CastError: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+        at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+        at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+        at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+        at Array.map (<anonymous>)
+        at Function.create (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2632:34) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'grandTotal',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.$set (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at model.Document (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:177:12)
+          at model.Model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:125:12)
+          at new model (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:4611:15)
+          at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\model.js:2644:20
+          at Array.map (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    'items.0.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    'items.1.price': ValidatorError: Path `price` is required.
+        at validate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\Suhaim\Desktop\mern-stack-ecommerce\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `price` is required.',
+        type: 'required',
+        path: 'price',
+        fullPath: undefined,
+        value: undefined
+      },
+      kind: 'required',
+      path: 'price',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed',
+  level: 'error',
+  message: '\tInternal Server Error orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.',
+  stack: 'ValidationError: orders validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal", items.0.price: Path `price` is required., items.1.price: Path `price` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:3318:32)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1474:12)\n' +
+    '    at model.$set (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:1128:16)\n' +
+    '    at model.Document (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\document.js:177:12)\n' +
+    '    at model.Model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:125:12)\n' +
+    '    at new model (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:4611:15)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2644:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Function.create (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\model.js:2632:34)\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:93:36)',
+  timestamp: '2024-11-29 12:33:52'
+}
