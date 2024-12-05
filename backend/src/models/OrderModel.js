@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { OrderStatusEnum } from "../enum/OrderStatusEnum.js";
 
 const orderSchema = new mongoose.Schema(
   {
@@ -70,6 +71,26 @@ const orderSchema = new mongoose.Schema(
             type: Number,
             required: false
         },
+    },
+
+    payment:{
+        sessionId: {
+            type: String,
+            required:false
+        },
+        paymentId: {
+            type: String,
+            required:false
+        },
+        paymentStatus: {
+            type: String,
+            enum: Object.values(OrderStatusEnum),
+            default: OrderStatusEnum.created
+        },
+        updatedOn: {
+            type: Date,
+            required: false
+        }
     },
 
     deletedAt: {

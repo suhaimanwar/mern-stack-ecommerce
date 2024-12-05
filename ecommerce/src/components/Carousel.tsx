@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,6 +58,10 @@ type Props = {
 
 const Carousel = ({bannerData}: Props) => {
 
+
+ 
+
+
   // console.log("banner:::",bannerData)
   const gallery = bannerData.banners
   const [activeImage, setActiveImage] = useState(0);
@@ -80,6 +85,11 @@ const Carousel = ({bannerData}: Props) => {
       setActiveImage(activeImage - 1);
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(next, 4000); // Change image every 5 seconds
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [activeImage]);
 
   return (
     <>

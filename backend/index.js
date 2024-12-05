@@ -10,12 +10,17 @@ import FrontendRouter from './src/routes/frontend/MainRoutes.js';
 import { cwd } from 'process';
 import { DashboardRouter } from './src/routes/dashboard/DashboardRoutes.js';
 import { createAdmin } from './src/utils/createAdmin.js';
+import WebhookRouter from './src/routes/frontend/routes/WebhookRouter.js';
 
 
 const port = 5000;
 
+
 //Run the express function in app
 const app = express()
+
+
+app.use('/api/webhook', express.raw({type: 'application/json'}), WebhookRouter)
 
 //App should use express in .json format and cors
 

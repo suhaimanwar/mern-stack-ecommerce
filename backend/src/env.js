@@ -21,6 +21,9 @@ const env = cleanEnv(process.env, {
   JWT_EXPIRES: str({ default: "7 days" }),
   STRIPE_SECRET_KEY: str({
     default: 'sk_test_51QQQs0C1kUuLig01bjR9zG24e6PuOZjauMBlmFr0qYhtMfs2tXxJAR9ulebMnXsfiJ1QXu0hdf4nzW3f8QVTXJgC00caj98ATA'
+  }),
+  ENDPOINT_SECRET_KEY: str({
+    default: 'whsec_GSXI41ohb3vMjnf9ByvmapB1iGcx5CGn'
   })
   //expiry date
 });

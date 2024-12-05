@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import FeaturedProductsImage from './FeaturedProductsImage';
 // import Image1 from '@public/images/carousel (4).png';
@@ -5,6 +7,7 @@ import FeaturedProductsImage from './FeaturedProductsImage';
 import { Bebas_Neue } from "next/font/google";
 import { TFeaturedProducts } from '@/api/type';
 import { StorageUrl } from '@/utils/BaseUrl';
+import { motion } from 'framer-motion';
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -75,7 +78,10 @@ type Props = {
   featuredProductsData : TFeaturedProducts
 }
 
- 
+const containerVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const FeaturedProducts = ({featuredProductsData}: Props) => {
 
@@ -90,7 +96,7 @@ const FeaturedProducts = ({featuredProductsData}: Props) => {
         <p className='font-bold text-2xl tracking-normal text-center'>Top picks just for you</p>
       </div>
 
-      <div className=" grid grid-cols-4 gap-3 justify-center p-5 py-10 max-md:grid-cols-2 max-sm:grid-cols-1">
+      <motion.div initial="hidden" animate="visible" transition={{ duration: 0.3, type: "linear" }} variants={containerVariants}  className=" grid grid-cols-4 gap-3 justify-center p-5 py-10 max-md:grid-cols-2 max-sm:grid-cols-1">
 
 
        {FeaturedData.map((data, i)=>(
@@ -98,7 +104,7 @@ const FeaturedProducts = ({featuredProductsData}: Props) => {
        ))}
         
         
-      </div>
+      </motion.div>
     </div>
   );
 };

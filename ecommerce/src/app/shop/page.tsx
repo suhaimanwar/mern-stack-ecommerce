@@ -78,21 +78,38 @@ const Shop = async () => {
 
   return (
     <>
-      <div className="min-h-[31.9rem] flex flex-col justify-center ">
-        <div className={`${bebasNeue.className} flex flex-col items-center py-5`}>
-          <h2 className="font-bold text-6xl tracking-wide">Categories</h2>
-          <p className="font-bold text-2xl tracking-normal">Shop by category</p>
-        </div>
-  
-        <div className="grid w-full grid-cols-4 max-md:grid-cols-1 gap-2 mb-1 px-1">
-          {shopCategories.map((data, i) => (
-            <ShopCategory key={i} name={data.name} id={data._id} 
-            slug={data.slug}
-            src={StorageUrl + data.image}
-             />
-          ))}
-        </div>
+     <div className="min-h-[31.9rem] flex flex-col justify-center bg-gray-50 px-4 md:px-8">
+  {/* Header Section */}
+  <div className={`${bebasNeue.className} flex flex-col items-center py-8`}>
+    <h2 className="font-bold text-4xl md:text-6xl tracking-wide text-gray-800">
+      Categories
+    </h2>
+    <p className="font-medium text-lg md:text-2xl tracking-normal text-gray-600 mt-2">
+      Shop by category
+    </p>
+  </div>
+
+  {/* Categories Grid */}
+  <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+    {shopCategories.map((data, i) => (
+      <div
+        key={i}
+        className="group relative overflow-hidden rounded-lg  bg-white w-full"
+      >
+        <ShopCategory
+          name={data.name}
+          id={data._id}
+          slug={data.slug}
+          src={StorageUrl + data.image}
+        />
+        {/* Hover Effect */}
+       
       </div>
+    ))}
+  </div>
+</div>
+
+
     </>
   );
 };

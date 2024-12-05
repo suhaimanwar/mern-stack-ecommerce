@@ -11,6 +11,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Api } from "@/api/Api";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const CheckoutForm = ({items}:any) => {
   const checkoutSchema = z.object({
@@ -35,6 +36,8 @@ const CheckoutForm = ({items}:any) => {
     resolver: zodResolver(checkoutSchema),
   }); 
 
+  const router = useRouter()
+
   const submit = async (shippingDetails: TCheckoutSchema) => {
 
     try {
@@ -56,13 +59,13 @@ const CheckoutForm = ({items}:any) => {
 
       if (response.success) {
         toast.success(response.message)
+        router.push(`/payment/?orderID=${response.data.orderID}`)
       }
-
 
 
     } catch (error:any) {
       toast.error(error.response.data.message)
-      // console.  ("errr::::",error)
+      // console.log  ("errr::::",error)
     }
     
     

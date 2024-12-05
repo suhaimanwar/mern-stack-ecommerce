@@ -9499,3 +9499,535 @@
     '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:93:36)',
   timestamp: '2024-11-29 12:33:52'
 }
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:84:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:19:51'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:86:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:20:57'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:86:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:21:47'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:86:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:22:43'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:86:53)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:22:59'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:86:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:23:10'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:86:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:24:25'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:25:20'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:26:02'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:29:17'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:37:02'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'create')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'create')\n" +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:45)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 11:37:12'
+}
+{
+  type: 'StripeInvalidRequestError',
+  raw: {
+    code: 'parameter_unknown',
+    doc_url: 'https://stripe.com/docs/error-codes/parameter-unknown',
+    message: 'Received unknown parameter: meradata. Did you mean metadata?',
+    param: 'meradata',
+    request_log_url: 'https://dashboard.stripe.com/test/logs/req_yIehKWgMk7ruwB?t=1733121006',
+    type: 'invalid_request_error',
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 02 Dec 2024 06:30:06 GMT',
+      'content-type': 'application/json',
+      'content-length': '363',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+      'access-control-max-age': '300',
+      'cache-control': 'no-cache, no-store',
+      'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+      'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+      'idempotency-key': 'stripe-node-retry-81035498-143d-4781-855c-9c8c69893efd',
+      'original-request': 'req_yIehKWgMk7ruwB',
+      'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+      'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+      'request-id': 'req_yIehKWgMk7ruwB',
+      'stripe-version': '2024-11-20.acacia',
+      vary: 'Origin',
+      'x-content-type-options': 'nosniff',
+      'x-stripe-priority-routing-enabled': 'true',
+      'x-stripe-routing-context-priority-tier': 'api-testmode',
+      'x-wc': 'A',
+      'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+    },
+    statusCode: 400,
+    requestId: 'req_yIehKWgMk7ruwB'
+  },
+  rawType: 'invalid_request_error',
+  code: 'parameter_unknown',
+  doc_url: 'https://stripe.com/docs/error-codes/parameter-unknown',
+  param: 'meradata',
+  detail: undefined,
+  headers: {
+    server: 'nginx',
+    date: 'Mon, 02 Dec 2024 06:30:06 GMT',
+    'content-type': 'application/json',
+    'content-length': '363',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+    'access-control-allow-origin': '*',
+    'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+    'access-control-max-age': '300',
+    'cache-control': 'no-cache, no-store',
+    'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+    'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+    'idempotency-key': 'stripe-node-retry-81035498-143d-4781-855c-9c8c69893efd',
+    'original-request': 'req_yIehKWgMk7ruwB',
+    'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+    'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+    'request-id': 'req_yIehKWgMk7ruwB',
+    'stripe-version': '2024-11-20.acacia',
+    vary: 'Origin',
+    'x-content-type-options': 'nosniff',
+    'x-stripe-priority-routing-enabled': 'true',
+    'x-stripe-routing-context-priority-tier': 'api-testmode',
+    'x-wc': 'A',
+    'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+  },
+  requestId: 'req_yIehKWgMk7ruwB',
+  statusCode: 400,
+  userMessage: undefined,
+  charge: undefined,
+  decline_code: undefined,
+  payment_intent: undefined,
+  payment_method: undefined,
+  payment_method_type: undefined,
+  setup_intent: undefined,
+  source: undefined,
+  level: 'error',
+  message: '\tInternal Server Error Received unknown parameter: meradata. Did you mean metadata?',
+  stack: 'Error: Received unknown parameter: meradata. Did you mean metadata?\n' +
+    '    at generateV1Error (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/Error.js:8:20)\n' +
+    '    at res.toJSON.then.StripeAPIError.message (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/RequestSender.js:105:31)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-02 12:00:06'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'toString')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'toString')\n" +
+    '    at payment (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:144:35)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-04 12:52:08'
+}
+{
+  level: 'error',
+  message: "\tInternal Server Error Cannot read properties of undefined (reading 'toString')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'toString')\n" +
+    '    at payment (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:144:35)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-04 12:52:27'
+}
+{
+  type: 'StripeInvalidRequestError',
+  raw: {
+    code: 'parameter_invalid_integer',
+    doc_url: 'https://stripe.com/docs/error-codes/parameter-invalid-integer',
+    message: 'Invalid integer: NaN',
+    param: 'amount',
+    request_log_url: 'https://dashboard.stripe.com/test/logs/req_7oJv0JDlZyHAr9?t=1733296984',
+    type: 'invalid_request_error',
+    headers: {
+      server: 'nginx',
+      date: 'Wed, 04 Dec 2024 07:23:04 GMT',
+      'content-type': 'application/json',
+      'content-length': '337',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+      'access-control-max-age': '300',
+      'cache-control': 'no-cache, no-store',
+      'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+      'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+      'idempotency-key': 'stripe-node-retry-eb3f308b-a822-4d9b-ad8d-67cd9e09ee07',
+      'original-request': 'req_7oJv0JDlZyHAr9',
+      'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+      'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+      'request-id': 'req_7oJv0JDlZyHAr9',
+      'stripe-version': '2024-11-20.acacia',
+      vary: 'Origin',
+      'x-content-type-options': 'nosniff',
+      'x-stripe-priority-routing-enabled': 'true',
+      'x-stripe-routing-context-priority-tier': 'api-testmode',
+      'x-wc': 'A',
+      'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+    },
+    statusCode: 400,
+    requestId: 'req_7oJv0JDlZyHAr9'
+  },
+  rawType: 'invalid_request_error',
+  code: 'parameter_invalid_integer',
+  doc_url: 'https://stripe.com/docs/error-codes/parameter-invalid-integer',
+  param: 'amount',
+  detail: undefined,
+  headers: {
+    server: 'nginx',
+    date: 'Wed, 04 Dec 2024 07:23:04 GMT',
+    'content-type': 'application/json',
+    'content-length': '337',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+    'access-control-allow-origin': '*',
+    'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+    'access-control-max-age': '300',
+    'cache-control': 'no-cache, no-store',
+    'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+    'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+    'idempotency-key': 'stripe-node-retry-eb3f308b-a822-4d9b-ad8d-67cd9e09ee07',
+    'original-request': 'req_7oJv0JDlZyHAr9',
+    'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+    'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+    'request-id': 'req_7oJv0JDlZyHAr9',
+    'stripe-version': '2024-11-20.acacia',
+    vary: 'Origin',
+    'x-content-type-options': 'nosniff',
+    'x-stripe-priority-routing-enabled': 'true',
+    'x-stripe-routing-context-priority-tier': 'api-testmode',
+    'x-wc': 'A',
+    'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+  },
+  requestId: 'req_7oJv0JDlZyHAr9',
+  statusCode: 400,
+  userMessage: undefined,
+  charge: undefined,
+  decline_code: undefined,
+  payment_intent: undefined,
+  payment_method: undefined,
+  payment_method_type: undefined,
+  setup_intent: undefined,
+  source: undefined,
+  level: 'error',
+  message: '\tInternal Server Error Invalid integer: NaN',
+  stack: 'Error: Invalid integer: NaN\n' +
+    '    at generateV1Error (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/Error.js:8:20)\n' +
+    '    at res.toJSON.then.StripeAPIError.message (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/RequestSender.js:105:31)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-04 12:53:04'
+}
+{
+  type: 'StripeInvalidRequestError',
+  raw: {
+    code: 'parameter_invalid_integer',
+    doc_url: 'https://stripe.com/docs/error-codes/parameter-invalid-integer',
+    message: 'Invalid integer: NaN',
+    param: 'amount',
+    request_log_url: 'https://dashboard.stripe.com/test/logs/req_blMct1eeArW87s?t=1733297080',
+    type: 'invalid_request_error',
+    headers: {
+      server: 'nginx',
+      date: 'Wed, 04 Dec 2024 07:24:40 GMT',
+      'content-type': 'application/json',
+      'content-length': '337',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+      'access-control-max-age': '300',
+      'cache-control': 'no-cache, no-store',
+      'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+      'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+      'idempotency-key': 'stripe-node-retry-f70a9e36-7d86-4c5a-a9e9-b394f83643a4',
+      'original-request': 'req_blMct1eeArW87s',
+      'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+      'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+      'request-id': 'req_blMct1eeArW87s',
+      'stripe-version': '2024-11-20.acacia',
+      vary: 'Origin',
+      'x-content-type-options': 'nosniff',
+      'x-stripe-priority-routing-enabled': 'true',
+      'x-stripe-routing-context-priority-tier': 'api-testmode',
+      'x-wc': 'A',
+      'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+    },
+    statusCode: 400,
+    requestId: 'req_blMct1eeArW87s'
+  },
+  rawType: 'invalid_request_error',
+  code: 'parameter_invalid_integer',
+  doc_url: 'https://stripe.com/docs/error-codes/parameter-invalid-integer',
+  param: 'amount',
+  detail: undefined,
+  headers: {
+    server: 'nginx',
+    date: 'Wed, 04 Dec 2024 07:24:40 GMT',
+    'content-type': 'application/json',
+    'content-length': '337',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+    'access-control-allow-origin': '*',
+    'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+    'access-control-max-age': '300',
+    'cache-control': 'no-cache, no-store',
+    'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+    'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+    'idempotency-key': 'stripe-node-retry-f70a9e36-7d86-4c5a-a9e9-b394f83643a4',
+    'original-request': 'req_blMct1eeArW87s',
+    'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+    'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+    'request-id': 'req_blMct1eeArW87s',
+    'stripe-version': '2024-11-20.acacia',
+    vary: 'Origin',
+    'x-content-type-options': 'nosniff',
+    'x-stripe-priority-routing-enabled': 'true',
+    'x-stripe-routing-context-priority-tier': 'api-testmode',
+    'x-wc': 'A',
+    'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+  },
+  requestId: 'req_blMct1eeArW87s',
+  statusCode: 400,
+  userMessage: undefined,
+  charge: undefined,
+  decline_code: undefined,
+  payment_intent: undefined,
+  payment_method: undefined,
+  payment_method_type: undefined,
+  setup_intent: undefined,
+  source: undefined,
+  level: 'error',
+  message: '\tInternal Server Error Invalid integer: NaN',
+  stack: 'Error: Invalid integer: NaN\n' +
+    '    at generateV1Error (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/Error.js:8:20)\n' +
+    '    at res.toJSON.then.StripeAPIError.message (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/RequestSender.js:105:31)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-04 12:54:39'
+}
+{
+  type: 'StripeInvalidRequestError',
+  raw: {
+    code: 'parameter_missing',
+    doc_url: 'https://stripe.com/docs/error-codes/parameter-missing',
+    message: 'Missing required param: shipping[name].',
+    param: 'shipping[name]',
+    request_log_url: 'https://dashboard.stripe.com/test/logs/req_QPSMevOxoGrJwa?t=1733297126',
+    type: 'invalid_request_error',
+    headers: {
+      server: 'nginx',
+      date: 'Wed, 04 Dec 2024 07:25:26 GMT',
+      'content-type': 'application/json',
+      'content-length': '348',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+      'access-control-max-age': '300',
+      'cache-control': 'no-cache, no-store',
+      'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+      'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+      'idempotency-key': 'stripe-node-retry-3d526008-98ee-4602-aba8-4fade5a838e7',
+      'original-request': 'req_QPSMevOxoGrJwa',
+      'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+      'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+      'request-id': 'req_QPSMevOxoGrJwa',
+      'stripe-version': '2024-11-20.acacia',
+      vary: 'Origin',
+      'x-content-type-options': 'nosniff',
+      'x-stripe-priority-routing-enabled': 'true',
+      'x-stripe-routing-context-priority-tier': 'api-testmode',
+      'x-wc': 'A',
+      'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+    },
+    statusCode: 400,
+    requestId: 'req_QPSMevOxoGrJwa'
+  },
+  rawType: 'invalid_request_error',
+  code: 'parameter_missing',
+  doc_url: 'https://stripe.com/docs/error-codes/parameter-missing',
+  param: 'shipping[name]',
+  detail: undefined,
+  headers: {
+    server: 'nginx',
+    date: 'Wed, 04 Dec 2024 07:25:26 GMT',
+    'content-type': 'application/json',
+    'content-length': '348',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+    'access-control-allow-origin': '*',
+    'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+    'access-control-max-age': '300',
+    'cache-control': 'no-cache, no-store',
+    'content-security-policy': "report-uri https://q.stripe.com/csp-report?p=v1%2Fpayment_intents; block-all-mixed-content; default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'",
+    'cross-origin-opener-policy-report-only': 'same-origin; report-to="coop"',
+    'idempotency-key': 'stripe-node-retry-3d526008-98ee-4602-aba8-4fade5a838e7',
+    'original-request': 'req_QPSMevOxoGrJwa',
+    'report-to': '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}',
+    'reporting-endpoints': 'coop="https://q.stripe.com/coop-report"',
+    'request-id': 'req_QPSMevOxoGrJwa',
+    'stripe-version': '2024-11-20.acacia',
+    vary: 'Origin',
+    'x-content-type-options': 'nosniff',
+    'x-stripe-priority-routing-enabled': 'true',
+    'x-stripe-routing-context-priority-tier': 'api-testmode',
+    'x-wc': 'A',
+    'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+  },
+  requestId: 'req_QPSMevOxoGrJwa',
+  statusCode: 400,
+  userMessage: undefined,
+  charge: undefined,
+  decline_code: undefined,
+  payment_intent: undefined,
+  payment_method: undefined,
+  payment_method_type: undefined,
+  setup_intent: undefined,
+  source: undefined,
+  level: 'error',
+  message: '\tInternal Server Error Missing required param: shipping[name].',
+  stack: 'Error: Missing required param: shipping[name].\n' +
+    '    at generateV1Error (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/Error.js:8:20)\n' +
+    '    at res.toJSON.then.StripeAPIError.message (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/node_modules/stripe/esm/RequestSender.js:105:31)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-04 12:55:26'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error paymentIntent is not defined',
+  stack: 'ReferenceError: paymentIntent is not defined\n' +
+    '    at createWebHook (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/webhook/PaymentWebhook.js:126:35)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-12-05 13:22:04'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error paymentIntent is not defined',
+  stack: 'ReferenceError: paymentIntent is not defined\n' +
+    '    at createWebHook (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/webhook/PaymentWebhook.js:126:35)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-12-05 13:22:05'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error paymentIntent is not defined',
+  stack: 'ReferenceError: paymentIntent is not defined\n' +
+    '    at createWebHook (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/webhook/PaymentWebhook.js:124:23)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-12-05 13:23:58'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error paymentIntent is not defined',
+  stack: 'ReferenceError: paymentIntent is not defined\n' +
+    '    at createWebHook (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/webhook/PaymentWebhook.js:124:23)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-12-05 13:23:58'
+}
