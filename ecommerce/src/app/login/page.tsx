@@ -9,7 +9,7 @@ import Link from "next/link";
 import Eye from "../svg/eye";
 import EyeOff from "../svg/eye-off";
 
-import { calcLength, motion } from "framer-motion"; 
+import { calcLength, motion } from "framer-motion";
 
 import { useForm } from "react-hook-form";
 
@@ -20,6 +20,8 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 import Cookies from "js-cookie";
+
+import { signIn } from "next-auth/react";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -51,26 +53,48 @@ const Page = () => {
 
   const router = useRouter();
 
+  // const submit = async (data: TLoginSchema) => {
+  //   // console.log("submitteddata::::", data);
+
+  //   try {
+  //     const response = await Api.loginUser(data);
+  //     console.log("response::",response)
+
+  //     if (response.success) {
+
+  //       window.localStorage.setItem("userAccessToken",response.userAccessToken)
+  //       //Storing access token in the local storage
+  //       Cookies.set("userAccessToken", response.userAccessToken)//Storing access token in the browser cookies
+  //       toast.success(response.message);
+
+  //       router.push("/");
+
+  //     }
+  //   } catch (error: any) {
+  //     toast.error(error.response?.data.message);
+  //   }
+  // };
+
   const submit = async (data: TLoginSchema) => {
     // console.log("submitteddata::::", data);
 
     try {
-      const response = await Api.loginUser(data);
-      console.log("response::",response)
-      
+      const signedIn = await signIn("credentials", {
+        redirect: false,
+        email: data.email,
+        password: data.password,
+      });
+      console.log("signedIn::", signedIn);
 
-      if (response.success) {
-        
-        window.localStorage.setItem("userAccessToken",response.userAccessToken) 
-        //Storing access token in the local storage
-        Cookies.set("userAccessToken", response.userAccessToken)//Storing access token in the browser cookies
-        toast.success(response.message);
-       
-        router.push("/");
-
+      if (signedIn?.ok) {
+        toast.success("Successfully Logged In");
+      } else {
+        toast.error("Something Went Wrong");
+        console.log(signedIn?.error);
       }
     } catch (error: any) {
-      toast.error(error.response?.data.message);
+      toast.error("error");
+      console.log(error);
     }
   };
 

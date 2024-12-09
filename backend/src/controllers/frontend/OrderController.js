@@ -9,6 +9,7 @@ export const Order = async (req, res, next) => {
 
     // const stripe = stripePackage(env.STRIPE_SECRET_KEY)
     const { userId } = req.user;
+    // console.log("reeeeeeeeeeeeeee",req.user)
 
     const { shippingDetails, cartItems } = req.body;
 

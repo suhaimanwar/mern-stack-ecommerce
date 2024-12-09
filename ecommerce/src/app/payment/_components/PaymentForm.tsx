@@ -28,7 +28,7 @@ export default function PaymentForm({dpmCheckerLink}) {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000",
+        return_url: "http://localhost:3000/payment-status",
       },
     });
 
@@ -62,9 +62,9 @@ export default function PaymentForm({dpmCheckerLink}) {
         </button>
         {/* Show any error or success messages */}
         {message && <div id="payment-message">{message}</div>}
-      </form>
-      {/* [DEV]: For demo purposes only, display dynamic payment methods annotation and integration checker */}
-      <div id="dpm-annotation">
+        </form>
+        {/* [DEV]: For demo purposes only, display dynamic payment methods annotation and integration checker */}
+        <div id="dpm-annotation">
         <p>
           Payment methods are dynamically displayed based on customer location, order amount, and currency.&nbsp;
           <a href={dpmCheckerLink} target="_blank" rel="noopener noreferrer" id="dpm-integration-checker">Preview payment methods by transaction</a>

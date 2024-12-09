@@ -6,6 +6,7 @@ import Footer from "./_layout/Footer";
 import { Montserrat } from "next/font/google";
 import ProviderClient from "./provider/Providers";
 import { Toaster } from "react-hot-toast";
+import SessionProviderClient from "./provider/SessionProviderClient";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -38,14 +39,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${montserrat.className}`}>
-        <ProviderClient>
-          
-          <Toaster position="top-right" reverseOrder={false} />
-
-          <Header />
-          {children}
-          <Footer />
-        </ProviderClient>
+        <SessionProviderClient>
+          <ProviderClient>
+            <Toaster position="top-right" reverseOrder={false} />
+            <Header />
+            {children}
+            <Footer />
+          </ProviderClient>
+        </SessionProviderClient>
+        
       </body>
     </html>
   );

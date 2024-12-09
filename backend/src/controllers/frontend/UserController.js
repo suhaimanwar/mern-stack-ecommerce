@@ -75,17 +75,21 @@ export const createUser = async (req, res, next) => {
 
       const userAccessToken = jwt.sign({userId: findEmail._id}, env.USER_JWT_SECRET_KEY, {expiresIn: env.JWT_EXPIRES})
       const userData = {username: findEmail.username, role: 'user'} 
+      
 
       return res.status(200).json({
         success: true,
         userAccessToken: userAccessToken,
         message: "Login Successful",
-        userData: userData
+        userData: {userData, email, userAccessToken}
       });
     } catch (error) {
       next(serverError(error));
     }
-  };
+  };   
+
+
+
 
   
 

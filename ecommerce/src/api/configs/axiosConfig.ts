@@ -1,13 +1,3 @@
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-require-imports */
-// import { BaseUrl } from "@/utils/BaseUrl";
-// import axios from "axios";
-
-// const apiAxios = axios.create({
-//     baseURL: BaseUrl
-// })
-
-// export default apiAxios
 
 
 import { BaseUrl } from "@/utils/BaseUrl";
@@ -17,7 +7,7 @@ import Cookies from "js-cookie";
 let getAccessToken = (): string | undefined => {
   // Default: assume client-side (browser)
   if (typeof window !== "undefined") {
-    return Cookies.get("userAccessToken"); 
+    return Cookies.get("userAccessToken");
   }
 
   // If server-side, dynamically import next/headers
@@ -27,27 +17,26 @@ let getAccessToken = (): string | undefined => {
 };
 
 // Create Axios client instance
- const apiAxios = axios.create({
+const apiAxios = axios.create({
   baseURL: BaseUrl,
 });
 
 // Add a request interceptor to inject the token dynamically
 apiAxios.interceptors.request.use(
   (config) => {
-
     const userAccessToken = getAccessToken();
 
     if (userAccessToken) {
-
       config.headers = {
         ...config.headers, // Preserve existing headers
         authorization: `Bearer ${userAccessToken}`,
       };
     }
 
-    
     return config;
   },
   (error) => Promise.reject(error)
 );
-export default apiAxios
+export default apiAxios;
+
+
