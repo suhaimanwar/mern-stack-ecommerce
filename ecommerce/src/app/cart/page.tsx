@@ -19,7 +19,7 @@ const page = () => {
   
   const [isClient, setIsClient] = useState(false);
   
-  console.log("items::::", items);
+  // console.log("items::::", items);
   
   
   useEffect(() => {

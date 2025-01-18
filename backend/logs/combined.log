@@ -10079,3 +10079,35 @@
     '    at router (C:\\Users\\Suhaim\\Desktop\\mern-stack-ecommerce\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
   timestamp: '2024-12-09 11:56:37'
 }
+{
+  level: 'error',
+  message: '\tInternal Server Error firstName is not defined',
+  stack: 'ReferenceError: firstName is not defined\n' +
+    '    at Order (file:///C:/Users/Suhaim/Desktop/mern-stack-ecommerce/backend/src/controllers/frontend/OrderController.js:88:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-11 16:12:56'
+}
+{
+  errno: -3008,
+  code: 'EDNS',
+  syscall: 'getaddrinfo',
+  hostname: 'serversmtp-relay.brevo.com',
+  command: 'CONN',
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND serversmtp-relay.brevo.com',
+  stack: 'Error: getaddrinfo ENOTFOUND serversmtp-relay.brevo.com\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)',
+  timestamp: '2024-12-11 16:14:46'
+}
+{
+  errno: -3008,
+  code: 'EDNS',
+  syscall: 'getaddrinfo',
+  hostname: 'serversmtp-relay.brevo.com',
+  command: 'CONN',
+  level: 'error',
+  message: '\tInternal Server Error getaddrinfo ENOTFOUND serversmtp-relay.brevo.com',
+  stack: 'Error: getaddrinfo ENOTFOUND serversmtp-relay.brevo.com\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)',
+  timestamp: '2024-12-11 16:15:19'
+}

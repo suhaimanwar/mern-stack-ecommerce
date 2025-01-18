@@ -9,7 +9,7 @@ export const userAuthMiddleware = (req, res, next) => {
 
     //requesting header from the dashboard
  
-    // console.log("req::::",req.headers)
+    // console.log("req::::",req.headers.authorization)
 
     if (!authHeader) { 
       return next(unauthorizedError());

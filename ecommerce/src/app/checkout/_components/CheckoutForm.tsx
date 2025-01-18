@@ -55,7 +55,7 @@ const CheckoutForm = ({items}:any) => {
 
       const response = await Api.orderCheckout(bothDatas)
 
-      console.log("res:::::",response)
+      // console.log("res:::::",response)
 
       if (response.success) {
         toast.success(response.message)

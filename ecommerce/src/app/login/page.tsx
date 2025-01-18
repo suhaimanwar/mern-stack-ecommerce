@@ -79,7 +79,7 @@ const Page = () => {
     // console.log("submitteddata::::", data);
 
     try {
-      const signedIn = await signIn("credentials", {
+      const signedIn = await signIn("Credentials", {
         redirect: false,
         email: data.email,
         password: data.password,

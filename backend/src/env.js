@@ -18,14 +18,27 @@ const env = cleanEnv(process.env, {
   USER_JWT_SECRET_KEY: str({
     default: "UsER.blaCkHat.sjhfslihfseihf", //Token for User - Give Random Codes
   }),
-  JWT_EXPIRES: str({ default: "7 days" }),
+  JWT_EXPIRES: str({ default: "7 days" }),  //expiry date
   STRIPE_SECRET_KEY: str({
-    default: 'sk_test_51QQQs0C1kUuLig01bjR9zG24e6PuOZjauMBlmFr0qYhtMfs2tXxJAR9ulebMnXsfiJ1QXu0hdf4nzW3f8QVTXJgC00caj98ATA'
+    default:
+      "sk_test_51QQQs0C1kUuLig01bjR9zG24e6PuOZjauMBlmFr0qYhtMfs2tXxJAR9ulebMnXsfiJ1QXu0hdf4nzW3f8QVTXJgC00caj98ATA",
   }),
   ENDPOINT_SECRET_KEY: str({
-    default: 'whsec_GSXI41ohb3vMjnf9ByvmapB1iGcx5CGn'
-  })
-  //expiry date
+    default: "whsec_GSXI41ohb3vMjnf9ByvmapB1iGcx5CGn",
+  }),
+  SEND_IN_BLUE_HOST: str({
+    default: "smtp-relay.brevo.com",
+  }),
+  SEND_IN_BLUE_PORT: str({
+    default: 587,
+  }),
+  SEND_IN_BLUE_USER: str({
+    default: "81ae31001@smtp-brevo.com",
+  }),
+  SEND_IN_BLUE_PASSWORD: str({
+    default: "YjMA6s0c2UNShnpZ",
+  }),
+ 
 });
 
 export default env;

@@ -57,13 +57,9 @@ type Props = {
 }
 
 const Carousel = ({bannerData}: Props) => {
-
-
- 
-
-
   // console.log("banner:::",bannerData)
   const gallery = bannerData.banners
+  
   const [activeImage, setActiveImage] = useState(0);
   //activeImage index = 2.  (0,1,2)
 

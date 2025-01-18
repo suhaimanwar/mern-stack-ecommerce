@@ -9,13 +9,16 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 export const authOptions: NextAuthOptions = {
   pages: {
-      signIn: "/login"
-  },  
+    signIn: "/login",
+  },
+  jwt: {
+    secret: process.env.NEXTAUTH_SECRET,
+  },
   providers: [
-    CredentialsProvider({
+    CredentialsProvider({ 
       // The name to display on the sign in form (e.g. "Sign in with...")
       name: "Credentials",
-      id: "credentials",
+      id: "Credentials",
       // `credentials` is used to generate a form on the sign in page.
       // You can specify which fields should be submitted, by adding keys to the `credentials` object.
       // e.g. domain, username, password, 2FA token, etc.
@@ -32,46 +35,40 @@ export const authOptions: NextAuthOptions = {
         // Add logic here to look up the user from the credentials supplied
 
         const response = await Api.loginUser({
-            email: credentials?.email,
-            password: credentials?.password
-        })
+          email: credentials?.email,
+          password: credentials?.password,
+        });
 
-        console.log("responsee:::",response)
+        // console.log("responsee:::", response);
 
-        if(!response.success){
-            throw new Error(response.message)
-        } else {
-            console.log("response.message::::", response.message)
-            console.log("response.userData:::::", response.userData)
+        if (!response.success) {
+          throw new Error(response.message);
+        // } else {
+        //   console.log("response.message::::", response.message);
+        //   console.log("response.userData:::::", response.userData);
         }
 
-        return response.userData
+        return response.userData;
       },
     }),
   ],
 
   callbacks: {
-    async jwt({token, user}) {
-
-      if (user){
+    async jwt({ token, user }) {
+      if (user) {
         token.email = user.email;
-        token.accessToken = user.userAccessToken
+        token.accessToken = user.userAccessToken;
       }
-      // console.log("token:::",token)
-      // console.log("user:::",user)
-
-        return token
+      return token;
     },
 
-    async session({token, session}){
-
+    async session({ token, session }) {
       if (token) {
         session.email = token.email ?? "";
         session.accessToken = token.accessToken;
       }
-      console.log('SESSION:::::',session)
-        return session
-    }
-  }
+      // console.log("SESSION:::::", session);
+      return session;
+    },
+  },
 };
-

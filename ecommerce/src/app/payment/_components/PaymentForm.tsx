@@ -52,23 +52,25 @@ export default function PaymentForm({dpmCheckerLink}) {
 
   return (
     <>
-      <form id="payment-form" onSubmit={handleSubmit}>
-
-        <PaymentElement id="payment-element" options={paymentElementOptions} />
-        <button disabled={isLoading || !stripe || !elements} id="submit">
-          <span id="button-text">
-            {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-          </span>
-        </button>
-        {/* Show any error or success messages */}
-        {message && <div id="payment-message">{message}</div>}
-        </form>
-        {/* [DEV]: For demo purposes only, display dynamic payment methods annotation and integration checker */}
-        <div id="dpm-annotation">
-        <p>
-          Payment methods are dynamically displayed based on customer location, order amount, and currency.&nbsp;
-          <a href={dpmCheckerLink} target="_blank" rel="noopener noreferrer" id="dpm-integration-checker">Preview payment methods by transaction</a>
-        </p>
+      <div className="h-[70vh]">
+        <form id="payment-form" className="overflow-hidden" onSubmit={handleSubmit}>
+  
+          <PaymentElement id="payment-element" options={paymentElementOptions} />
+          <button disabled={isLoading || !stripe || !elements} id="submit">
+            <span id="button-text">
+              {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+            </span>
+          </button>
+          {/* Show any error or success messages */}
+          {message && <div id="payment-message">{message}</div>}
+          </form>
+          {/* [DEV]: For demo purposes only, display dynamic payment methods annotation and integration checker */}
+          <div id="dpm-annotation">
+          <p>
+            Payment methods are dynamically displayed based on customer location, order amount, and currency.&nbsp;
+            <a href={dpmCheckerLink} target="_blank" rel="noopener noreferrer" id="dpm-integration-checker">Preview payment methods by transaction</a>
+          </p>
+        </div>
       </div>
     </>
   );

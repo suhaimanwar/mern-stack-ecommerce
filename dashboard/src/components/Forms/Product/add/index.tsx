@@ -117,9 +117,7 @@ const ProductAddForm = ({dropdownData}: Props) => {
                   <p className="mt-2 text-red">Product name is required.</p>
                 )}
               </div>
-
               
-
               <div>
                 <label className="mb-3 block text-body-sm font-medium text-dark dark:text-white">
                   Description
@@ -149,9 +147,7 @@ const ProductAddForm = ({dropdownData}: Props) => {
                   <p className="mt-2 text-red">Price is required.</p>
                 )}
               </div>
-
               
-
               <div className="flex gap-3">
                 <BrandSelect brandDrop={brandDrop} register={register('brand')} error={errors.brand} />
   

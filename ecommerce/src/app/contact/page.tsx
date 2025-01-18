@@ -34,7 +34,6 @@ const page = () => {
       <Image alt="" src={bgImage} fill className="object-cover" />
 
       <div className="absolute bg-black h-screen w-full opacity-40"></div>
-
       <motion.div
         initial="hidden"
         animate="visible"

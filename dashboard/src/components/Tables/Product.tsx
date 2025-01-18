@@ -131,7 +131,7 @@ const ProductTable = ({ productData }: Props) => {
                 Actions
               </th>
             </tr>
-          </thead>
+          </thead>  
           <tbody>
             {productData.map((item, index) => (
               <tr key={index}>

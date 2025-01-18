@@ -3,6 +3,7 @@ import { OrderModel } from "../../models/OrderModel.js";
 import { ProductModel } from "../../models/ProductModel.js";
 import { serverError, validationError } from "../../utils/errorHandler.js";
 import env from "../../env.js";
+import { orderMail } from "../../utils/mail.js";
 
 export const Order = async (req, res, next) => {
   try {
@@ -82,6 +83,9 @@ export const Order = async (req, res, next) => {
       shippingDetails: shippingDetails,
       deletedAt: null,
     });
+
+
+    await orderMail(shippingDetails.firstName, shippingDetails.email)
 
 
     // console.log('ordddddd:::',order)

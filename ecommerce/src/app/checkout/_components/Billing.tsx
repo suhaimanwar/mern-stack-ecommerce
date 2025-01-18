@@ -14,7 +14,7 @@ const Billing = () => {
 
     const { cartNetTotal, cartTotal, totalShippingAmount, items } = useCart();
 
-    console.log("checkoutitemsss:::::",items)
+    // console.log("checkoutitemsss:::::",items)
   return (
     <>
       <div className="flex justify-between items-center">
