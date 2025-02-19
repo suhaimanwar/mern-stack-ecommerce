@@ -161,7 +161,7 @@ const Carousel = ({bannerData}: Props) => {
         </div>
 
         <div className="absolute bottom-2 w-full justify-center flex gap-3">
-          <div className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 0})}></div>
+          <div  className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 0})}></div>
           <div className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 1})}></div>
           <div className={cn("bg-white rounded-full size-2 opacity-30", {"opacity-70 " : activeImage == 2})}></div>
           
