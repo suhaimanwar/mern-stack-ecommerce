@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,36 +6,28 @@ import SmallScreenMenu from "@/components/SmallScreenMenu";
 import Cart from "../svg/Cart";
 import HeaderLink from "./HeaderLink";
 
-
-
 import CartNumber from "./CartNumber";
-
 
 const Links = [
   {
-    name:"Home",
-    href:"/"
+    name: "Home",
+    href: "/",
   },
   {
-    name:"Shop",
-    href:"/shop"
+    name: "Shop",
+    href: "/shop",
   },
   {
-    name:"Contact",
-    href:"/contact"
+    name: "Contact",
+    href: "/contact",
   },
   {
-    name:"Login",
-    href:"/login"
+    name: "Login",
+    href: "/login",
   },
-  
-
-]
+];
 
 const Header = () => {
-
-
-
   return (
     <>
       <div className="bg-image w-full text-white p-3 flex justify-between  items-center sticky top-0 z-20">
@@ -45,26 +36,17 @@ const Header = () => {
         </div>
 
         <div className="flex gap-2 items-center ">
-
-          <div className="flex gap-2 max-md:hidden" >
-
-            {Links.map((items,i)=>(
+          <div className="flex gap-2 max-md:hidden">
+            {Links.map((items, i) => (
               <HeaderLink key={i} name={items.name} href={items.href} />
             ))}
-            
-            
-
           </div>
-
-         
 
           <Link href="/cart">
             <div className="relative mr-3">
               <Cart className="size-[1.5rem] " />
 
               <CartNumber />
-
-              
             </div>
           </Link>
 
