@@ -10111,3 +10111,30 @@
     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)',
   timestamp: '2024-12-11 16:15:19'
 }
+{
+  level: 'error',
+  message: '\tInternal Server Error Operation `admins.findOne()` buffering timed out after 10000ms',
+  stack: 'MongooseError: Operation `admins.findOne()` buffering timed out after 10000ms\n' +
+    '    at Timeout.<anonymous> (C:\\Users\\Suhaim\\Desktop\\Personal Projects\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n' +
+    '    at listOnTimeout (node:internal/timers:581:17)\n' +
+    '    at process.processTimers (node:internal/timers:519:7)',
+  timestamp: '2025-04-08 10:39:36'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error Operation `admins.findOne()` buffering timed out after 10000ms',
+  stack: 'MongooseError: Operation `admins.findOne()` buffering timed out after 10000ms\n' +
+    '    at Timeout.<anonymous> (C:\\Users\\Suhaim\\Desktop\\Personal Projects\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n' +
+    '    at listOnTimeout (node:internal/timers:581:17)\n' +
+    '    at process.processTimers (node:internal/timers:519:7)',
+  timestamp: '2025-04-08 10:40:11'
+}
+{
+  level: 'error',
+  message: '\tInternal Server Error Operation `admins.findOne()` buffering timed out after 10000ms',
+  stack: 'MongooseError: Operation `admins.findOne()` buffering timed out after 10000ms\n' +
+    '    at Timeout.<anonymous> (C:\\Users\\Suhaim\\Desktop\\Personal Projects\\mern-stack-ecommerce\\backend\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n' +
+    '    at listOnTimeout (node:internal/timers:581:17)\n' +
+    '    at process.processTimers (node:internal/timers:519:7)',
+  timestamp: '2025-04-08 10:42:38'
+}

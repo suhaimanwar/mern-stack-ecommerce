@@ -16,8 +16,6 @@ export default function Home() {
     <>
       <DefaultLayout>
         <ECommerce />
-      
-        
       </DefaultLayout>
 
       {/* <LoginPage/> */}
