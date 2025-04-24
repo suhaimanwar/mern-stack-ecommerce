@@ -338,9 +338,13 @@ const ProductAddForm = ({ dropdownData }: Props) => {
       const imageFile = new File(
         [imageBlob],
         `${productName.replace(/\s+/g, "-")}.png`,
+        // Takes the product name (like "Blue Widget")
+        // Replaces spaces with hyphens ("Blue-Widget")
+        // Adds ".png" at the end ("Blue-Widget.png")
         {
           type: "image/png",
           lastModified: new Date().getTime(),
+          // Sets the last modified time to now
         },
       );
 
