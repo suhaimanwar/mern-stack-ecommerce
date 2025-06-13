@@ -4,7 +4,7 @@
 import { axiosClient } from "./configs/axiosConfig";
 import { axiosServer } from "./configs/axiosServer";
 
-export const Api = {
+export const Api = { 
   getHomeCategories: async () => {
     const server = await axiosServer();
     const response = await server.get("home/categories");

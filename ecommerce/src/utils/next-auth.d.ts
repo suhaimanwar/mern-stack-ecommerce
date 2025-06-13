@@ -4,7 +4,7 @@ import type { DefaultUser } from "next-auth";
 
 import NextAuth from "next-auth/next";
 
-interface IUser extends DefaultUser {
+interface IUser extends DefaultUser { 
   firstName: string;
   lastName: string;
   email: string;

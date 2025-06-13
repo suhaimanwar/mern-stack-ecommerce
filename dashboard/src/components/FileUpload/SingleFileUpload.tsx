@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography'
 // ** Third Party Imports
 import { useDropzone } from 'react-dropzone'
 import Image from 'next/image'
-// import { storageUrl } from '@/utils/baseUrl'
 
 type Props = {
   file?: any
@@ -25,7 +24,6 @@ const FileUploaderSingle = (props: Props) => {
     },
     onDrop: acceptedFiles => {
       const selectedFile = acceptedFiles[0]
-
       props.setFile(Object.assign(selectedFile))
     },
     onDropRejected: () => {
@@ -37,7 +35,19 @@ const FileUploaderSingle = (props: Props) => {
   return (
     <Box
       {...getRootProps({ className: 'dropzone' })}
-      style={{ ...(props.error ? { border: '2px dashed red' } : {}), ...(props.file ? { height: 450 } : {}) }}
+      sx={{
+        ...(props.error ? { border: '2px dashed red' } : {}),
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: 200, // minimum height when no image
+        overflow: 'hidden', // ensures the image stays within bounds
+        '&:hover': {
+          cursor: 'pointer'
+        }
+      }}
     >
       <input {...getInputProps()} />
       {props.file ? (
@@ -45,17 +55,29 @@ const FileUploaderSingle = (props: Props) => {
           <Image
             key={props.file}
             alt={props.file}
-            className='single-file-image'
-            src={ props.file.replaceAll('\\', '/')}
-            fill
+            src={props.file.replaceAll('\\', '/')}
+            width={0} // makes width responsive
+            height={0} // makes height responsive
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
           />
         ) : (
           <Image
             key={props.file?.name || ''}
             alt={props.file?.name || ''}
-            className='single-file-image'
             src={URL.createObjectURL(props.file)}
-            fill
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
           />
         )
       ) : (

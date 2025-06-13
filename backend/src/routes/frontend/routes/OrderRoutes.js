@@ -4,7 +4,7 @@ import { userAuthMiddleware } from '../../../middleware/frontend/userAuthMiddlew
 
 const OrderRouter = express.Router()
 
-OrderRouter.post('/',userAuthMiddleware,  Order)
+OrderRouter.post('/', userAuthMiddleware,  Order)
 OrderRouter.get('/',  payment)
 
 export default OrderRouter

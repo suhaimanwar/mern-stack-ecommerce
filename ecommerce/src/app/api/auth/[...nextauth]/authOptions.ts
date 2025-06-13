@@ -10,8 +10,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 export const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/login",
-  },
-  jwt: {
+  }, 
+  jwt: { 
     secret: process.env.NEXTAUTH_SECRET,
   },
   providers: [

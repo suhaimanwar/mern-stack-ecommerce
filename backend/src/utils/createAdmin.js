@@ -1,11 +1,9 @@
-
-
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
 import env from "../env.js";
 import { AdminModel } from "../models/AdminModel.js";
 import { serverError } from "./errorHandler.js";
 
-export const createAdmin = async (req,res,next) => {
+export const createAdmin = async (req, res, next) => {
   try {
     const adminExist = await AdminModel.findOne({});
     if (adminExist) {
@@ -20,8 +18,7 @@ export const createAdmin = async (req,res,next) => {
       username: env.ADMIN_USERNAME,
       password: hash,
     });
-  
   } catch (error) {
-    return next(serverError(error));
+    return next(serverError(error));  
   }
 };

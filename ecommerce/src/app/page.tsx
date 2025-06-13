@@ -7,15 +7,15 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 // import { authOptions } from "./api/auth/[...nextauth]/authOptions";
 
 const getHomeCategories = async (): Promise<THomeCategory> => {
-  //We are importing the type from type.ts
+  //We are importing the type from type.ts 
   const homeCategories = await Api.getHomeCategories();
-  return homeCategories;
+  return homeCategories; 
 };
 
 const getFeaturedProducts = async (): Promise<TFeaturedProducts> => {
   const featuredProducts = await Api.getFeaturedProducts();
   return featuredProducts;
-};
+}; 
 
 const getAllBanners = async (): Promise<TBanners> => {
   const banners = await Api.getAllBanners();

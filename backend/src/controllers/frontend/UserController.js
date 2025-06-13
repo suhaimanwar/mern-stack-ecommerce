@@ -82,7 +82,7 @@ export const createUser = async (req, res, next) => {
         userAccessToken: userAccessToken,
         message: "Login Successful",
         userData: {userData, email, userAccessToken}
-      });
+      }); 
     } catch (error) {
       next(serverError(error));
     }
