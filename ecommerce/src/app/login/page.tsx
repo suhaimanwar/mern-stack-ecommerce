@@ -146,7 +146,6 @@ const Page = () => {
 
           <div className="relative">
             <input
-              {...register("password")}
               className="rounded-md pl-3 py-3 bg-white/80 w-full text-black outline-none focus:ring-2 focus:ring-white focus:bg-white"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
@@ -155,7 +154,7 @@ const Page = () => {
               onClick={() => setShowPassword(!showPassword)}
               className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
             >
-              {showPassword ? (
+              {showPassword === true ? (
                 <EyeOff className="h-6 w-6" />
               ) : (
                 <Eye className="h-6 w-6" />

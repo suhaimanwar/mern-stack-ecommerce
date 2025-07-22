@@ -10,6 +10,7 @@ import { useCart } from "@mrvautin/react-shoppingcart";
 const Checkout = () => {
 
   const { items } = useCart();
+  console.log("items::::",items)
 
   return (
     <div className="min-h-[33rem] flex flex-col items-center justify-center">

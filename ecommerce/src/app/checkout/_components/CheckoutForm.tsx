@@ -13,7 +13,7 @@ import { Api } from "@/api/Api";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
-const CheckoutForm = ({items}:any) => {
+const CheckoutForm = ({ items }: any) => {
   const checkoutSchema = z.object({
     firstName: z.string().min(1, "This field is required."),
     lastName: z.string().min(1, "This field is required."),
@@ -22,8 +22,8 @@ const CheckoutForm = ({items}:any) => {
     address: z.string().min(1, "This field is required."),
     zipcode: z.string().min(1, "This field is required."),
     country: z
-    .string()
-    .refine((value) => value !== "country", "Please select a country."),
+      .string()
+      .refine((value) => value !== "country", "Please select a country."),
   });
 
   type TCheckoutSchema = z.infer<typeof checkoutSchema>;
@@ -34,62 +34,54 @@ const CheckoutForm = ({items}:any) => {
     formState: { errors, isSubmitting },
   } = useForm<TCheckoutSchema>({
     resolver: zodResolver(checkoutSchema),
-  }); 
+  });
 
-  const router = useRouter()
+  const router = useRouter();
 
   const submit = async (shippingDetails: TCheckoutSchema) => {
-
     try {
-      const cartItems =  items.map((item: { quantity: any; id: any; })=>{
+      const cartItems = items.map((item: { quantity: any; id: any }) => {
         return {
           quantity: item.quantity,
-          productId: item.id
-        }
-      })
-      
-      // console.log("submitteddata::::", {shippingDetails ,cartItems}); 
+          productId: item.id,
+        };
+      });
+      // console.log("submitteddata::::", {shippingDetails ,cartItems});
 
-      const bothDatas = { shippingDetails, cartItems}
+      const bothDatas = { shippingDetails, cartItems };
       // console.log("bothhh:::",bothDatas)
 
-      const response = await Api.orderCheckout(bothDatas)
+      const response = await Api.orderCheckout(bothDatas);
 
       // console.log("res:::::",response)
 
       if (response.success) {
-        toast.success(response.message)
-        router.push(`/payment/?orderID=${response.data.orderID}`)
+        toast.success(response.message);
+        // router.push(`/payment/?orderID=${response.data.orderID}`)
       }
-
-
-    } catch (error:any) {
-      toast.error(error.response.data.message)
+    } catch (error: any) {
+      toast.error(error.response.data.message);
       // console.log  ("errr::::",error)
     }
-    
-    
   };
-
-
 
   return (
     <>
       <form onSubmit={handleSubmit(submit)} className="space-y-4">
-       <div className="flex w-full gap-2">
-            <CheckoutInput
-              register={register("firstName")}
-              error={errors.firstName}
-              type="text"
-              placeholder="First Name"
-            />
-            <CheckoutInput
-              register={register("lastName")}
-              error={errors.lastName}
-              type="text"
-              placeholder="Last Name"
-            />
-       </div>
+        <div className="flex w-full gap-2">
+          <CheckoutInput
+            register={register("firstName")}
+            error={errors.firstName}
+            type="text"
+            placeholder="First Name"
+          />
+          <CheckoutInput
+            register={register("lastName")}
+            error={errors.lastName}
+            type="text"
+            placeholder="Last Name"
+          />
+        </div>
         <CheckoutInput
           register={register("phone")}
           error={errors.phone}
@@ -120,7 +112,7 @@ const CheckoutForm = ({items}:any) => {
           {...register("country")}
         >
           <option value="country" disabled selected>
-          Country / Region
+            Country / Region
           </option>
           <option value="Sri Lanka">Sri Lanka</option>
           <option value="India">India</option>
@@ -134,7 +126,7 @@ const CheckoutForm = ({items}:any) => {
         )}
 
         <button
-        disabled={isSubmitting} 
+          disabled={isSubmitting}
           type="submit"
           className="w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
         >

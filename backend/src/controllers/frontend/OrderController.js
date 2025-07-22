@@ -7,7 +7,6 @@ import { orderMail } from "../../utils/mail.js";
 
 export const Order = async (req, res, next) => {
   try {
-
     // const stripe = stripePackage(env.STRIPE_SECRET_KEY)
     const { userId } = req.user;
     // console.log("reeeeeeeeeeeeeee",req.user)
@@ -23,6 +22,7 @@ export const Order = async (req, res, next) => {
     }
 
     // console.log("shipDet::", req.body)
+
     if (!Array.isArray(cartItems) || cartItems.length === 0) {
       return res.status(422).json({
         success: false,
@@ -35,12 +35,15 @@ export const Order = async (req, res, next) => {
 
     const itemIds = cartItems.map((item) => item.productId);
 
+    //itemIds - array 
+
+    //itemId - Name Declaration
     for (const itemId of itemIds) {
       const products = await ProductModel.find({
         _id: itemId,
         deletedAt: null,
       }).lean(); // lean is used for removing unneccessary datas.
-      matchedProducts.push(...products);
+      matchedProducts.push(...products); //will push the product datas
     }
 
     if (cartItems.length != matchedProducts.length) {
@@ -55,7 +58,7 @@ export const Order = async (req, res, next) => {
     let total = 0;
 
     // console.log("matchhhhhhhh::::", matchedProducts);
-
+    //cartitemsil - id
     const orderItems = cartItems.map((cartItem) => {
       const price = matchedProducts.find(
         (item) => item._id.toString() === cartItem.productId.toString()
@@ -84,9 +87,7 @@ export const Order = async (req, res, next) => {
       deletedAt: null,
     });
 
-
-    await orderMail(shippingDetails.firstName, shippingDetails.email)
-
+    // await orderMail(shippingDetails.firstName, shippingDetails.email);
 
     // console.log('ordddddd:::',order)
     //payment
@@ -97,39 +98,40 @@ export const Order = async (req, res, next) => {
     return res.status(200).json({
       success: true,
       message: "Order Placed",
-      data: { orderID : order._id },
-
+      data: { orderID: order._id },
     });
   } catch (error) {
     return next(serverError(error));
   }
 };
 
-
-export const payment = async (req,res,next) => {
+export const payment = async (req, res, next) => {
   try {
-    const stripe = stripePackage(env.STRIPE_SECRET_KEY)
+    const stripe = stripePackage(env.STRIPE_SECRET_KEY); //STRIPE ACCOUNT CREATE - SECRET KEY IN ENV
 
-    const { orderID } = req.query
+    const { orderID } = req.query; //rEQUEST FROM QUERY
 
-    const orderDetails = await OrderModel.findOne({_id:orderID, deletedAt:null})
+    const orderDetails = await OrderModel.findOne({
+      _id: orderID,
+      deletedAt: null,
+    });
 
     // console.log("orderDETAI:::::::::",orderDetails)
-  
+
     const customer = await stripe.customers.create({
       name: orderDetails.shippingDetails.firstName,
       address: {
         line1: orderDetails.shippingDetails.address,
         postal_code: orderDetails.shippingDetails.zipcode,
-        city: 'Kannur',
-        state: 'Kerala',
+        city: "Kannur",
+        state: "Kerala",
         country: orderDetails.shippingDetails.country,
       },
     });
 
     // console.log("cust:::::",customer)
 
-     const session = await stripe.paymentIntents.create({
+    const session = await stripe.paymentIntents.create({
       customer: customer.id,
       amount: orderDetails.grandTotal * 100,
       currency: "inr",
@@ -144,30 +146,27 @@ export const payment = async (req,res,next) => {
       },
 
       automatic_payment_methods: {
-        enabled: true
+        enabled: true,
       },
 
-      description: 'order',
+      description: "order",
 
       metadata: {
         orderId: orderID.toString(),
-        type: 'order'
+        type: "order",
       },
-      receipt_email: orderDetails.email
+      receipt_email: orderDetails.email,
     });
 
-    
     return res.status(200).json({
       success: true,
       message: "Order Fetched",
-      data: { sessionId: session.client_secret,  amount:session.amount },
-      
+      data: { sessionId: session.client_secret, amount: session.amount },
     });
-
   } catch (error) {
     return next(serverError(error));
   }
-}
+};
 
 // export const Order = async (req, res, next) => {
 //   try {
@@ -247,7 +246,6 @@ export const payment = async (req,res,next) => {
 //       deletedAt: null,
 //     });
 
-
 //     console.log('ordddddd:::',order)
 //     //payment
 //     //Create Customer
@@ -293,8 +291,6 @@ export const payment = async (req,res,next) => {
 //     });
 
 //     // console.log("sess::::",session.client_secret)
-
-
 
 //     return res.status(200).json({
 //       success: true,

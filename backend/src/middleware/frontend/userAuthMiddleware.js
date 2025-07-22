@@ -18,6 +18,7 @@ export const userAuthMiddleware = (req, res, next) => {
     const token = authHeader.split(" ").at(1); //split the auth header - calling the index value
     const decodeData = jwt.verify(token, env.USER_JWT_SECRET_KEY); // jwt - verifying the token with the secret key we have stored.
 
+    
     if (!decodeData) {
       return next(unauthorizedError());
     }
